@@ -23,7 +23,7 @@ public class CharacterMovement : MonoBehaviour
         {
             MouseClick();
         }
-        if(Vector3.Distance(transform.position, destination) > 0.1f)
+        if(Vector3.Distance(transform.position, destination) > 0f) //set to zero so that it goes exactly on the tile
         {
             transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
         }
@@ -37,6 +37,8 @@ public class CharacterMovement : MonoBehaviour
         if(map.HasTile(gridPosition))
         {
             destination = mousePosition;
+            //snap to the centre of the grid cell
+            destination = map.GetCellCenterWorld(gridPosition);
         }
     }
 }
