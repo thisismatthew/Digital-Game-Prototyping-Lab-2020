@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class GridMovement : MonoBehaviour
+public class GridMovement : Ability
 {
     public Tilemap map;
     private Vector3 destination;
@@ -19,6 +19,8 @@ public class GridMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ShowRange(gameObject, map);
+
         if (Input.GetMouseButtonDown(0))
         {
             MouseClick();
