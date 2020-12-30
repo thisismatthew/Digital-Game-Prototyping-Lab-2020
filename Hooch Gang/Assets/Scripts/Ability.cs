@@ -13,7 +13,10 @@ public abstract class Ability : MonoBehaviour
 
     public void ShowRange(GameObject p, Tilemap t)
     {
-        for (int i = 1; i <= range; i++) //x increasing
+        Vector3 nextTile = p.transform.position;
+        t.SetTile(Vector3Int.FloorToInt(nextTile), inRangeTile);
+
+        /*for (int i = 1; i <= range; i++) //x increasing
         {
             Vector3 nextTile = new Vector3(p.transform.position.x + i, p.transform.position.y, p.transform.position.z);
             t.SetTile(Vector3Int.FloorToInt(nextTile), inRangeTile);
@@ -21,20 +24,20 @@ public abstract class Ability : MonoBehaviour
         
         for (int i = 1; i <= range; i++) //y increasing
         {
-            Vector3 nextTile = new Vector3(p.transform.position.x, p.transform.position.y + 1, p.transform.position.z);
+            Vector3 nextTile = new Vector3(p.transform.position.x, p.transform.position.y + i, p.transform.position.z);
             t.SetTile(Vector3Int.FloorToInt(nextTile), inRangeTile);
         }
         
-        for (int i = 1; i >= -range; i++) //x decreasing
+        for (int i = 1; i >= -range; i--) //x decreasing
         {
             Vector3 nextTile = new Vector3(p.transform.position.x - i, p.transform.position.y, p.transform.position.z);
             t.SetTile(Vector3Int.FloorToInt(nextTile), inRangeTile);
         }
         
-        for (int i = 1; i >= -range; i++) //y decreasing
+        for (int i = 1; i >= -range; i--) //y decreasing
         {
-            Vector3 nextTile = new Vector3(p.transform.position.x, p.transform.position.y - 1, p.transform.position.z);
+            Vector3 nextTile = new Vector3(p.transform.position.x, p.transform.position.y - i, p.transform.position.z);
             t.SetTile(Vector3Int.FloorToInt(nextTile), inRangeTile);
-        }
+        }*/
     }
 }
