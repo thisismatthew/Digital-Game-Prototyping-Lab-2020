@@ -32,6 +32,7 @@ public class Node : MonoBehaviour
         }
 
         gm.currentCharacter.GetComponent<Movement>().goal = this.gameObject.transform;
+        gm.NextCharacter();
     }
 
     void OnMouseEnter()
