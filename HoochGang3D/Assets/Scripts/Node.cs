@@ -27,7 +27,11 @@ public class Node : MonoBehaviour
             return;
         }
 
+<<<<<<< HEAD
         gm.currentCharacter.GetComponent<Movement>().SetDest(this.gameObject.transform);
+=======
+        gm.currentCharacter.GetComponent<Movement>().goal = this.gameObject.transform;
+>>>>>>> main
         gm.NextCharacter();
     }
 
