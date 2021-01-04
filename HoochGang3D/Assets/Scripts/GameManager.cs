@@ -4,32 +4,28 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header ("Characters")]
     public GameObject[] characters;
     public GameObject currentCharacter;
-    private int i;
+
+    [Header("Nodes")]
+    public GameObject[] nodes;
 
     private void Start()
     {
         currentCharacter = characters[0];
-        i = 0;
+        nodes = GameObject.FindGameObjectsWithTag("Node");
     }
 
-    private void Update()
+    public void NextCharacter()
     {
-        if (Vector3.Distance(currentCharacter.transform.position, currentCharacter.GetComponent<Movement>().goal.position) < 3.0f)
+        if (System.Array.IndexOf(characters, currentCharacter) + 1 == characters.Length)
         {
-            if (Vector3.Distance(currentCharacter.transform.position, currentCharacter.GetComponent<Movement>().startPoint.position) > 3.0f)
-            {
-                i++;
-                currentCharacter.GetComponent<Movement>().startPoint = currentCharacter.GetComponent<Movement>().goal;
-                currentCharacter = characters[i];
+            currentCharacter = characters[0]; //reset to start
+            return;
+        }
 
-                if (i == characters.Length - 1)
-                {
-                    i = -1;
-                }
-            }
-            
-        }  
+        currentCharacter = characters[System.Array.IndexOf(characters, currentCharacter) + 1];
+        return;
     }
 }
