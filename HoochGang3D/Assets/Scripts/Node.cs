@@ -1,21 +1,17 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
+
 public class Node : MonoBehaviour
 {
-    public Color hoverColor;
-    public Material hoverMaterial;
     public Vector3 positionOffset;
-
     private Renderer rend;
-    private Color startColor;
     private Material startMaterial;
+    public Material hoverMaterial;
 
     [SerializeField] private GameManager gm;
     private void Start()
     {
         rend = GetComponent<Renderer>();
-        startColor = rend.material.color;
         startMaterial = rend.material;
     }
 
@@ -37,13 +33,11 @@ public class Node : MonoBehaviour
             return;
         }
         
-        //rend.material.color = Color.green;
         rend.material = hoverMaterial;
     }
 
     void OnMouseExit()
     {
-        rend.material.color = startColor;
         rend.material = startMaterial;
     }
 }
