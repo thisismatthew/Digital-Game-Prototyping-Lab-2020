@@ -21,6 +21,11 @@ public class Node : MonoBehaviour
         {
             return;
         }
+        if (IsNodeTaken() != null)
+        {
+            gm.currentCharacter = IsNodeTaken();
+            return;
+        }
 
         gm.currentCharacter.GetComponent<Movement>().SetDest(this.gameObject.transform);
         gm.NextCharacter();
@@ -39,5 +44,18 @@ public class Node : MonoBehaviour
     void OnMouseExit()
     {
         rend.material = startMaterial;
+    }
+
+    private GameObject IsNodeTaken()
+    {
+        foreach (GameObject c in gm.characters)
+        {
+            if (Vector3.Distance(c.transform.position, this.gameObject.transform.position) < 3.0f)
+            {
+                return c;
+            }
+        }
+
+        return null;
     }
 }

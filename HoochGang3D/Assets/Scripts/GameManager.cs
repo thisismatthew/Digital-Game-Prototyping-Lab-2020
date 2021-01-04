@@ -21,7 +21,11 @@ public class GameManager : MonoBehaviour
     {
         if (System.Array.IndexOf(characters, currentCharacter) + 1 == characters.Length)
         {
+<<<<<<< HEAD
             currentCharacter = characters[0];
+=======
+            currentCharacter = characters[0]; //reset to start
+>>>>>>> main
             return;
         }
 
