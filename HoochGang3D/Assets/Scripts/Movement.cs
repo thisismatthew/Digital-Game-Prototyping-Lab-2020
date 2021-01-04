@@ -5,16 +5,18 @@ using UnityEngine.AI;
 
 public class Movement : MonoBehaviour
 {
-    public NavMeshAgent agent;
-    public Vector3 prevPoint;
+    private NavMeshAgent agent;
+    [HideInInspector] public Transform goal;
+    public Transform startPoint;
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
-        prevPoint = agent.destination;
+        goal = startPoint;
     }
 
-    public void SetDest(Transform newGoal)
+    // Update is called once per frame
+    void Update()
     {
-        agent.destination = newGoal.position;
+        agent.destination = goal.position;
     }
 }
