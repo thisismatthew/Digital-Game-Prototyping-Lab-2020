@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header ("Characters")]
     public GameObject[] characters;
     public GameObject currentCharacter;
-    [HideInInspector] public int i;
+
+    [Header("Nodes")]
+    public GameObject[] nodes;
 
     private void Start()
     {
         currentCharacter = characters[0];
-        i = 0;
+        nodes = GameObject.FindGameObjectsWithTag("Node");
     }
 
     public void NextCharacter()
