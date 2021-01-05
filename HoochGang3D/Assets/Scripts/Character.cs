@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class Character : MonoBehaviour
 {
+    public float range = 15;
+
     private NavMeshAgent agent;
     private Renderer rend;
     private Color startColor;
@@ -32,5 +34,13 @@ public class Character : MonoBehaviour
     public void SetDest(Vector3 goal)
     {
         agent.destination = goal;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        //Gizmos.DrawWireSphere(transform.position, range);
+        Vector3 cubeSize = new Vector3(range,range,range);
+        Gizmos.DrawWireCube(transform.position, cubeSize);
     }
 }
