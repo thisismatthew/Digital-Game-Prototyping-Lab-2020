@@ -23,11 +23,11 @@ public class Node : MonoBehaviour
         }
         if (IsNodeTaken() != null)
         {
-            gm.currentCharacter = IsNodeTaken();
+            gm.SelectCharacter(IsNodeTaken());
             return;
         }
 
-        gm.currentCharacter.GetComponent<Movement>().SetDest(this.transform.position);
+        gm.currentCharacter.GetComponent<Character>().SetDest(this.transform.position);
         gm.NextCharacter();
     }
 

@@ -3020,13 +3020,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4663856980244569229, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
-      propertyPath: startPoint
-      value: 
-      objectReference: {fileID: 978094747}
     - target: {fileID: 4663856980244569230, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
       propertyPath: m_Name
-      value: Character (1)
+      value: Character
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
@@ -3461,13 +3457,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4663856980244569229, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
-      propertyPath: startPoint
-      value: 
-      objectReference: {fileID: 2051015632}
     - target: {fileID: 4663856980244569230, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
       propertyPath: m_Name
-      value: Character (2)
+      value: Character
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
@@ -3522,13 +3514,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4663856980244569229, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
-      propertyPath: startPoint
-      value: 
-      objectReference: {fileID: 1989655203}
     - target: {fileID: 4663856980244569230, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
       propertyPath: m_Name
-      value: Character (3)
+      value: Character
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
@@ -3807,10 +3795,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4663856980244569229, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
-      propertyPath: startPoint
-      value: 
-      objectReference: {fileID: 1317494590}
     - target: {fileID: 4663856980244569230, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
       propertyPath: m_Name
       value: Character

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        currentCharacter = characters[0];
+        SelectCharacter(characters[0]);
         nodes = GameObject.FindGameObjectsWithTag("Node");
     }
 
@@ -21,11 +21,24 @@ public class GameManager : MonoBehaviour
     {
         if (System.Array.IndexOf(characters, currentCharacter) + 1 == characters.Length)
         {
-            currentCharacter = characters[0]; //reset to start
+            SelectCharacter(characters[0]); //reset to start
             return;
         }
 
-        currentCharacter = characters[System.Array.IndexOf(characters, currentCharacter) + 1];
+        SelectCharacter(characters[System.Array.IndexOf(characters, currentCharacter) + 1]);
         return;
+    }
+
+    public void SelectCharacter(GameObject characterToSelect)
+    {
+        currentCharacter = characterToSelect;
+        currentCharacter.GetComponent<Character>().selected = true;
+        foreach(GameObject c in characters)
+        {
+            if(c != currentCharacter)
+            {
+                c.GetComponent<Character>().selected = false;
+            }
+        }
     }
 }
