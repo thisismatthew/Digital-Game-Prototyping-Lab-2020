@@ -27,7 +27,12 @@ public class Node : MonoBehaviour
         }
         if (IsNodeTaken() != null)
         {
+            gm.ResetNodes();
             gm.currentCharacter = IsNodeTaken();
+            return;
+        }
+        if (Vector3.Distance(transform.position, gm.currentCharacter.GetComponent<Movement>().currentNode.transform.position) > gm.currentCharacter.GetComponent<Movement>().range * 5)
+        {
             return;
         }
 
@@ -38,6 +43,10 @@ public class Node : MonoBehaviour
     void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        if (Vector3.Distance(transform.position, gm.currentCharacter.GetComponent<Movement>().currentNode.transform.position) > gm.currentCharacter.GetComponent<Movement>().range * 5)
         {
             return;
         }
@@ -67,5 +76,10 @@ public class Node : MonoBehaviour
         }
 
         return null;
+    }
+
+    public void SetRenderer(Material mat)
+    {
+        rend.material = mat;
     }
 }
