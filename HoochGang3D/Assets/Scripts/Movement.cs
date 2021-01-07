@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Movement : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     void Start()
     {

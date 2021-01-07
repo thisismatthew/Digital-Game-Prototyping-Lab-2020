@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - AI
   - Node
+  - Enemy
   layers:
   - Default
   - TransparentFX
