@@ -20,10 +20,19 @@ public class LineOfSight : MonoBehaviour
 
     private void Update()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray forward = new Ray(transform.position, transform.forward);
+        CheckHit(forward);
+        
+        Ray right = new Ray(transform.position, transform.right);
+        CheckHit(right);
+        
+        Ray left = new Ray(transform.position, -transform.right); //this is how you do left, apparently :p
+        CheckHit(left);
+    }
 
-        Debug.DrawRay(transform.position, transform.forward);
-
+    private void CheckHit(Ray ray)
+    {
+        Debug.DrawRay(ray.origin, ray.direction);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             if (hit.collider.gameObject.CompareTag(enemyTag))
