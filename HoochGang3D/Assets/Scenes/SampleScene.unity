@@ -451,6 +451,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &231528697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4663856980244569230, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
+  m_PrefabInstance: {fileID: 4663856980056130679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &231528704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231528697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 522bdf3209b4d854695c643fe4606c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &237102125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4027800723537021825, guid: 8cf6b8445aec6e542bca29f44c0b73be, type: 3}
@@ -1737,7 +1754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4663856980244569230, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Adventurer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
@@ -3630,7 +3647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4663856980244569230, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Goblin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}

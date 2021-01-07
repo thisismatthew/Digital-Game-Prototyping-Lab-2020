@@ -21,11 +21,25 @@ public class GameManager : MonoBehaviour
     {
         if (System.Array.IndexOf(characters, currentCharacter) + 1 == characters.Length)
         {
-            currentCharacter = characters[0]; //reset to start
-            return;
+            foreach (GameObject c in characters)
+            {
+                if (c != null)
+                {
+                    currentCharacter = c;
+                    return;
+                }
+            }
         }
-
-        currentCharacter = characters[System.Array.IndexOf(characters, currentCharacter) + 1];
-        return;
+        else
+        {
+            for (int i = System.Array.IndexOf(characters, currentCharacter) + 1; i < characters.Length; i++)
+            {
+                if (characters[i] != null)
+                {
+                    currentCharacter = characters[i];
+                    return;
+                }
+            }
+        } 
     }
 }

@@ -56,10 +56,14 @@ public class Node : MonoBehaviour
     {
         foreach (GameObject c in gm.characters)
         {
-            if (Vector3.Distance(c.transform.position, this.gameObject.transform.position) < 3.0f)
+            if (c != null)
             {
-                return c;
+                if (Vector3.Distance(c.transform.position, this.gameObject.transform.position) < 3.0f)
+                {
+                    return c;
+                }
             }
+            
         }
 
         return null;
