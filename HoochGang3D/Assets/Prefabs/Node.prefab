@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 320485814791846800}
   - component: {fileID: -1532815984631296301}
   m_Layer: 0
-  m_Name: Grass_Node
+  m_Name: Node
   m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,5 +192,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionOffset: {x: 0, y: 0, z: 0}
-  hoverSprite: {fileID: 21300000, guid: ca0f8a3bcadd17740a766397aaccebd3, type: 3}
   gm: {fileID: 0}
+  hoverSprite: {fileID: 21300000, guid: ca0f8a3bcadd17740a766397aaccebd3, type: 3}
