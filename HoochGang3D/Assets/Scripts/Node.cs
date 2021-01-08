@@ -4,15 +4,15 @@ using UnityEngine.EventSystems;
 public class Node : MonoBehaviour
 {
     public Vector3 positionOffset;
-    private Renderer rend;
-    private Material startMaterial;
-    public Material hoverMaterial;
+    private SpriteRenderer rend;
+    private Sprite startSprite;
+    public Sprite hoverSprite;
 
     [SerializeField] private GameManager gm;
     private void Start()
     {
-        rend = GetComponent<Renderer>();
-        startMaterial = rend.material;
+        rend = GetComponentInChildren<SpriteRenderer>();
+        startSprite = rend.sprite;
     }
 
     void OnMouseDown()
@@ -38,12 +38,12 @@ public class Node : MonoBehaviour
             return;
         }
         
-        rend.material = hoverMaterial;
+        rend.sprite = hoverSprite;
     }
 
     void OnMouseExit()
     {
-        rend.material = startMaterial;
+        rend.sprite = startSprite;
     }
 
     private GameObject IsNodeTaken()
