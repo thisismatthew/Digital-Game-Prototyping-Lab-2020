@@ -22,12 +22,15 @@ public class LineOfSight : MonoBehaviour
     {
         Ray forward = new Ray(transform.position, transform.forward);
         CheckHit(forward);
-        
-        Ray right = new Ray(transform.position, transform.right);
-        CheckHit(right);
-        
-        Ray left = new Ray(transform.position, -transform.right); //this is how you do left, apparently :p
-        CheckHit(left);
+
+        if (gameObject.CompareTag("Goblin"))
+        {
+            Ray right = new Ray(transform.position, transform.right);
+            CheckHit(right);
+
+            Ray left = new Ray(transform.position, -transform.right); //this is how you do left, apparently :p
+            CheckHit(left);
+        }     
     }
 
     private void CheckHit(Ray ray)
@@ -37,8 +40,8 @@ public class LineOfSight : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag(enemyTag))
             {
-                this.gameObject.GetComponent<Movement>().SetDest(hit.collider.gameObject.GetComponent<Movement>().agent.destination);
-                if (Vector3.Distance(transform.position, gameObject.GetComponent<Movement>().agent.destination) < 3f)
+                this.gameObject.GetComponent<GoblinMovement>().SetDest(hit.collider.gameObject.GetComponent<GoblinMovement>().agent.destination);
+                if (Vector3.Distance(transform.position, gameObject.GetComponent<GoblinMovement>().agent.destination) < 3f)
                 {
                     Destroy(hit.collider.gameObject);
                     return;

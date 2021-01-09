@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [Header ("Characters")]
+    [Header("Characters")]
     public GameObject[] characters;
     public GameObject currentCharacter;
 
     [Header("Nodes")]
     public GameObject[] nodes;
-
-    [Header("Materials")]
-    [SerializeField] private Material inRangeMaterial;
-    [SerializeField] private Material startMaterial;
 
     private void Start()
     {
@@ -23,22 +19,14 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        foreach (GameObject n in nodes)
+        if (currentCharacter == null)
         {
-            if (n != currentCharacter.GetComponent<Movement>().currentNode && currentCharacter.GetComponent<Movement>().currentNode != null)
-            {
-                if (Vector3.Distance(currentCharacter.GetComponent<Movement>().currentNode.transform.position, n.transform.position) <= currentCharacter.GetComponent<Movement>().range * 5)
-                {
-                    n.GetComponent<Node>().SetRenderer(inRangeMaterial);
-                }
-            }
+            NextCharacter();
         }
     }
 
     public void NextCharacter()
     {
-        ResetNodes();
-
         if (System.Array.IndexOf(characters, currentCharacter) + 1 == characters.Length)
         {
             foreach (GameObject c in characters)
@@ -60,14 +48,6 @@ public class GameManager : MonoBehaviour
                     return;
                 }
             }
-        }
-    }
-
-    public void ResetNodes()
-    {
-        foreach (GameObject n in nodes)
-        {
-            n.GetComponent<Node>().SetRenderer(startMaterial);
         }
     }
 }

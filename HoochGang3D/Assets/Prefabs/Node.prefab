@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8098014925734977375}
   - component: {fileID: 7006265927373237848}
   - component: {fileID: 320485814791846800}
-  - component: {fileID: -1532815984631296301}
+  - component: {fileID: 6890510663957626469}
   m_Layer: 0
   m_Name: Node
   m_TagString: Node
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dd073877d5af29b42a57d6254db6cbb3, type: 2}
+  - {fileID: 2100000, guid: 312706b3ede5ecc4382af075df42c6db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-1532815984631296301
+--- !u!114 &6890510663957626469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d7e4bb982eb3d4fa9bb450efda74b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.085395135, g: 0.9528302, b: 0.22715671, a: 0}
-  hoverMaterial: {fileID: 2100000, guid: df38dfdb6f5435941b4c89ba7a2e54ec, type: 2}
-  positionOffset: {x: 0, y: 0, z: 0}
+  startMaterial: {fileID: 2100000, guid: 312706b3ede5ecc4382af075df42c6db, type: 2}
+  highlightMaterial: {fileID: 2100000, guid: df38dfdb6f5435941b4c89ba7a2e54ec, type: 2}
   gm: {fileID: 0}

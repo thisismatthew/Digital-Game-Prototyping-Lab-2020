@@ -3,20 +3,30 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class Node : MonoBehaviour
 {
-    public Color hoverColor;
-    public Material hoverMaterial;
-    public Vector3 positionOffset;
-
     private Renderer rend;
-    private Color startColor;
-    private Material startMaterial;
+    public Material startMaterial;
+    public Material highlightMaterial;
 
-    [SerializeField] private GameManager gm;
+    private float dist;
+    private GameManager gm;
     private void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         rend = GetComponent<Renderer>();
-        startColor = rend.material.color;
-        startMaterial = rend.material;
+        rend.material = startMaterial;
+    }
+
+    private void Update()
+    {
+        dist = Vector3.Distance(gm.currentCharacter.GetComponent<Movement>().agent.destination, transform.position);
+
+        if (dist < gm.currentCharacter.GetComponent<Movement>().range * 6 && dist > 1f)
+        {
+            rend.material = highlightMaterial;
+            return;
+        }
+
+        rend.material = startMaterial;
     }
 
     void OnMouseDown()
@@ -27,38 +37,16 @@ public class Node : MonoBehaviour
         }
         if (IsNodeTaken() != null)
         {
-            gm.ResetNodes();
             gm.currentCharacter = IsNodeTaken();
             return;
         }
-        if (Vector3.Distance(transform.position, gm.currentCharacter.GetComponent<Movement>().currentNode.transform.position) > gm.currentCharacter.GetComponent<Movement>().range * 5)
+        if (Vector3.Distance(transform.position, gm.currentCharacter.GetComponent<Movement>().agent.destination) > gm.currentCharacter.GetComponent<Movement>().range * 6)
         {
             return;
         }
 
-        gm.currentCharacter.GetComponent<Movement>().SetDest(this.transform.position);
+        gm.currentCharacter.GetComponent<Movement>().SetDest(transform.position);
         gm.NextCharacter();
-    }
-
-    void OnMouseEnter()
-    {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-        if (Vector3.Distance(transform.position, gm.currentCharacter.GetComponent<Movement>().currentNode.transform.position) > gm.currentCharacter.GetComponent<Movement>().range * 5)
-        {
-            return;
-        }
-        
-        //rend.material.color = Color.green;
-        rend.material = hoverMaterial;
-    }
-
-    void OnMouseExit()
-    {
-        rend.material.color = startColor;
-        rend.material = startMaterial;
     }
 
     private GameObject IsNodeTaken()
@@ -67,7 +55,7 @@ public class Node : MonoBehaviour
         {
             if (c != null)
             {
-                if (Vector3.Distance(c.transform.position, this.gameObject.transform.position) < 3.0f)
+                if (Vector3.Distance(c.transform.position, this.gameObject.transform.position) < 3.0f && c.CompareTag(gm.currentCharacter.tag))
                 {
                     return c;
                 }
@@ -76,10 +64,5 @@ public class Node : MonoBehaviour
         }
 
         return null;
-    }
-
-    public void SetRenderer(Material mat)
-    {
-        rend.material = mat;
     }
 }
