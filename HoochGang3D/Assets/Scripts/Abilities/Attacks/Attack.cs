@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack : Ability
+public class Attack : Monobehaviour
 {
     protected int damage; //can be removed if just one-hitting
 }

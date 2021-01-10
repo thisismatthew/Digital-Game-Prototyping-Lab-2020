@@ -36,7 +36,7 @@ public class LineOfSight : MonoBehaviour
     private void CheckHit(Ray ray)
     {
         Debug.DrawRay(ray.origin, ray.direction);
-        if (Physics.Raycast(ray, out RaycastHit hit, GetComponent<Movement>().GetRange() * 5f))
+        if (Physics.Raycast(ray, out RaycastHit hit, GetComponent<Movement>().range * 5f))
         {
             if (hit.collider.gameObject.CompareTag(enemyTag))
             {
