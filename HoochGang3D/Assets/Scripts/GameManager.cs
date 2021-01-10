@@ -32,12 +32,12 @@ public class GameManager : MonoBehaviour
     public void SelectCharacter(GameObject characterToSelect)
     {
         currentCharacter = characterToSelect;
-        currentCharacter.GetComponent<Character>().selected = true;
+        currentCharacter.GetComponent<Movement>().selected = true;
         foreach(GameObject c in characters)
         {
             if(c != currentCharacter)
             {
-                c.GetComponent<Character>().selected = false;
+                c.GetComponent<Movement>().selected = false;
             }
         }
     }

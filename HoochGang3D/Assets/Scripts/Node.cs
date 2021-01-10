@@ -27,7 +27,7 @@ public class Node : MonoBehaviour
             return;
         }
 
-        gm.currentCharacter.GetComponent<Character>().SetDest(this.transform.position);
+        gm.currentCharacter.GetComponent<Movement>().SetDest(this.transform.position);
         gm.NextCharacter();
     }
 

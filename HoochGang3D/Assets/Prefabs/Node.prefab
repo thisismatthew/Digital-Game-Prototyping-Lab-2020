@@ -132,7 +132,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2573072755542696401}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 69bba09d9eeacbd4cbc7d9c4d2412712, type: 2}
+  - {fileID: 2100000, guid: 6f58c9921ae4f7f4a804c060ba0bd5d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -192,5 +192,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionOffset: {x: 0, y: 0, z: 0}
-  gm: {fileID: 0}
   hoverSprite: {fileID: 21300000, guid: ca0f8a3bcadd17740a766397aaccebd3, type: 3}
+  gm: {fileID: 0}
