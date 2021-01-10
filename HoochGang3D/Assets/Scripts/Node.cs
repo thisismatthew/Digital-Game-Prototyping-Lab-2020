@@ -20,7 +20,7 @@ public class Node : MonoBehaviour
     {
         dist = Vector3.Distance(gm.currentCharacter.GetComponent<Movement>().agent.destination, transform.position);
 
-        if (dist < gm.currentCharacter.GetComponent<Movement>().range * 6 && dist > 1f)
+        if (dist < gm.currentCharacter.GetComponent<Movement>().GetRange() * 6 && dist > 1f)
         {
             rend.material = highlightMaterial;
             return;
@@ -40,7 +40,7 @@ public class Node : MonoBehaviour
             gm.currentCharacter = IsNodeTaken();
             return;
         }
-        if (Vector3.Distance(transform.position, gm.currentCharacter.GetComponent<Movement>().agent.destination) > gm.currentCharacter.GetComponent<Movement>().range * 6)
+        if (Vector3.Distance(transform.position, gm.currentCharacter.GetComponent<Movement>().agent.destination) > gm.currentCharacter.GetComponent<Movement>().GetRange() * 6)
         {
             return;
         }

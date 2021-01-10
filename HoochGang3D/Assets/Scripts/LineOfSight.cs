@@ -36,16 +36,12 @@ public class LineOfSight : MonoBehaviour
     private void CheckHit(Ray ray)
     {
         Debug.DrawRay(ray.origin, ray.direction);
-        if (Physics.Raycast(ray, out RaycastHit hit))
+        if (Physics.Raycast(ray, out RaycastHit hit, GetComponent<Movement>().GetRange() * 5f))
         {
             if (hit.collider.gameObject.CompareTag(enemyTag))
             {
-                this.gameObject.GetComponent<GoblinMovement>().SetDest(hit.collider.gameObject.GetComponent<GoblinMovement>().agent.destination);
-                if (Vector3.Distance(transform.position, gameObject.GetComponent<GoblinMovement>().agent.destination) < 3f)
-                {
-                    Destroy(hit.collider.gameObject);
-                    return;
-                }
+                //tell gameobject to attack
+                return;
             }
         }
     }
