@@ -4847,11 +4847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45a3ef6296bba248a0a4f605fdcd31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panSpeed: 30
-  panBorderThickness: 10
-  scrollSpeed: 5
-  minZoom: 10
-  maxZoom: 30
 --- !u!1001 &196694602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26056,6 +26051,10 @@ PrefabInstance:
     - target: {fileID: 4027800723537021825, guid: 8cf6b8445aec6e542bca29f44c0b73be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006265927373237848, guid: 8cf6b8445aec6e542bca29f44c0b73be, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cf6b8445aec6e542bca29f44c0b73be, type: 3}
