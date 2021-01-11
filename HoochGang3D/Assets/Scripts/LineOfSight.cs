@@ -30,13 +30,13 @@ public class LineOfSight : MonoBehaviour
 
             Ray left = new Ray(transform.position, -transform.right); //this is how you do left, apparently :p
             CheckHit(left);
-        }     
+        }
     }
 
     private void CheckHit(Ray ray)
     {
         Debug.DrawRay(ray.origin, ray.direction);
-        if (Physics.Raycast(ray, out RaycastHit hit, GetComponent<Movement>().range * 5f))
+        if (Physics.Raycast(ray, out RaycastHit hit, GetComponent<Movement>().Range * 5f))
         {
             if (hit.collider.gameObject.CompareTag(enemyTag))
             {

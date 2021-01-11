@@ -8,8 +8,9 @@ public abstract class Movement : Ability
     public NavMeshAgent agent;
     protected GameManager gm;
 
-    protected virtual void Start()
+    protected override void Start()
     {
+        base.Start();
         agent = gameObject.GetComponent<NavMeshAgent>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }

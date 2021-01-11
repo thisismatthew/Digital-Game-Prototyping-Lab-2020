@@ -5,11 +5,24 @@ using UnityEngine;
 
 public class Abilities : MonoBehaviour
 {
-    public Dictionary<string, Ability> abilities;
+    public Ability[] abilities;
     private Ability currentAbility;
 
-    public void SetCurrentAbility(string key)
+    public void SetCurrentAbility(int index)
     {
-        currentAbility = abilities[key];
+        if (index > abilities.Length)
+        {
+            return;
+        }
+
+        currentAbility = abilities[index];
+    }
+
+    public Ability CurrentAbility
+    {
+        get
+        {
+            return currentAbility;
+        }
     }
 }

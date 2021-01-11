@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class GoblinMovement : Movement
 {
-    protected override void DisplayRange()
+    public override void DisplayRange()
     {
         foreach (GameObject n in gm.nodes)
         {
@@ -13,7 +13,7 @@ public class GoblinMovement : Movement
 
             if (dist < range * 6 && dist > 1f)
             {
-                n.GetComponent<Node>().HighlightNode();
+                n.GetComponent<Node>().Highlight();
                 continue;
             }
 
@@ -22,7 +22,7 @@ public class GoblinMovement : Movement
         
     }
 
-    public override void SetDest(Vector3 goal)
+    public override void Execute(Vector3 goal)
     {
         agent.destination = goal;
     }

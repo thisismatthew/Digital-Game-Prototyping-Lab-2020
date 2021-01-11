@@ -8,7 +8,6 @@ public class Node : MonoBehaviour
     public Material startMaterial;
     public Material highlightMaterial;
 
-    private float dist;
     private GameManager gm;
     private NavMeshSurface surface;
     private void Start()
@@ -19,24 +18,12 @@ public class Node : MonoBehaviour
         rend.material = startMaterial;
     }
 
-    private void Update()
+    private void OnMouseDown()
     {
-        if (surface.defaultArea == 1) //not walkable
+        if (gm.currentCharacter.GetComponent<Abilities>().CurrentAbility == null)
         {
             return;
         }
-
-        if (Vector3.Distance(transform.position, gm.currentCharacter.transform.position) < 6f)
-        {
-            rend.material = highlightMaterial;
-            return;
-        }
-
-        rend.material = startMaterial;
-    }
-
-    void OnMouseDown()
-    {
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
@@ -44,10 +31,15 @@ public class Node : MonoBehaviour
         if (IsNodeTaken() != null)
         {
             gm.currentCharacter = IsNodeTaken();
+            gm.ResetAllNodes();
+            return;
+        }
+        if (!IsNodeInRange())
+        {
             return;
         }
 
-        gm.currentCharacter.GetComponent<Movement>().SetDest(transform.position);
+        gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(transform.position);
         gm.NextCharacter();
     }
 
@@ -57,7 +49,8 @@ public class Node : MonoBehaviour
         {
             if (c != null)
             {
-                if (Vector3.Distance(c.transform.position, this.gameObject.transform.position) < 3.0f && c.CompareTag(gm.currentCharacter.tag))
+                float dist = Vector3.Distance(c.transform.position, this.gameObject.transform.position);
+                if (dist < 3.0f && c.CompareTag(gm.currentCharacter.tag))
                 {
                     return c;
                 }
@@ -67,4 +60,30 @@ public class Node : MonoBehaviour
 
         return null;
     }
+
+    public void Highlight()
+    {
+        if (surface.defaultArea == 1) //not walkable
+        {
+            return;
+        }
+
+        rend.material = highlightMaterial;
+    }
+
+    public void ResetNode()
+    {
+        rend.material = startMaterial;
+    }
+
+    private bool IsNodeInRange()
+    {
+        float dist = Vector3.Distance(transform.position, gm.currentCharacter.transform.position);
+        if (dist < gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Range * 6f && dist > 2.5f)
+        {
+            return true;
+        }
+        return false;
+    }
+    
 }

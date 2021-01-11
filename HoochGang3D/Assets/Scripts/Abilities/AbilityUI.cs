@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class AbilityUI : MonoBehaviour
 {
-    private GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+    private GameManager gm;
 
-
-    private void MoveAbility()
+    private void Start()
     {
-        gm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null; //move;
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
+    public void MoveAbility()
+    {
+        gm.currentCharacter.GetComponent<Abilities>().SetCurrentAbility(0);
+        gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
     }
 }

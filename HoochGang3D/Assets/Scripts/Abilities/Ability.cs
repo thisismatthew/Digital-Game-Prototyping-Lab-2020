@@ -4,14 +4,22 @@ using UnityEngine;
 
 public abstract class Ability : MonoBehaviour
 {
-    protected float range;
+    [SerializeField]protected float range;
 
-    protected virtual void DisplayRange() {}
-
-    protected virtual void Execute() {}
-
-    public float GetRange()
+    protected virtual void Start()
     {
-        return range;
+        if (range < 1)
+        {
+            range = 1;
+        }
+    }
+
+    public virtual void DisplayRange() {}
+
+    public virtual void Execute(Vector3 target) {}
+
+    public float Range
+    {
+        get { return range; }
     }
 }

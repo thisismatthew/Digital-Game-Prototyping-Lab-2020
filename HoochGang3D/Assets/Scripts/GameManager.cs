@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     public void NextCharacter()
     {
+        ResetAllNodes();
+
         if (System.Array.IndexOf(characters, currentCharacter) + 1 == characters.Length)
         {
             foreach (GameObject c in characters)
@@ -50,6 +52,14 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
+        currentCharacter.GetComponent<Abilities>().SetCurrentAbility(999);
+    }
+
+    public void ResetAllNodes()
+    {
+        foreach (GameObject n in nodes)
+        {
+            n.GetComponent<Node>().ResetNode();
+        }
     }
 }
