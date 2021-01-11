@@ -22,6 +22,15 @@ public class CameraController : MonoBehaviour
             doMovement = !doMovement;
         }*/
 
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            panSpeed = 65f;
+        }
+        else
+        {
+            panSpeed = 30f;
+        }
+
         if(!doMovement)
         {
             return;
