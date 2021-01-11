@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.AI;
 public class Node : MonoBehaviour
 {
     private Renderer rend;
@@ -9,15 +10,22 @@ public class Node : MonoBehaviour
 
     private float dist;
     private GameManager gm;
+    private NavMeshSurface surface;
     private void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         rend = GetComponent<Renderer>();
+        surface = GetComponent<NavMeshSurface>();
         rend.material = startMaterial;
     }
 
     private void Update()
     {
+        if (surface.defaultArea == 1) //not walkable i.e. don't bother marking as traversable
+        {
+            return;
+        }
+
         dist = Vector3.Distance(gm.currentCharacter.GetComponent<Movement>().agent.destination, transform.position);
 
         if (dist < gm.currentCharacter.GetComponent<Movement>().range * 6 && dist > 1f)
