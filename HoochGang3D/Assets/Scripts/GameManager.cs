@@ -49,5 +49,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+
+        currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
     }
 }

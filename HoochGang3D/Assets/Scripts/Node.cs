@@ -21,14 +21,12 @@ public class Node : MonoBehaviour
 
     private void Update()
     {
-        if (surface.defaultArea == 1) //not walkable i.e. don't bother marking as traversable
+        if (surface.defaultArea == 1) //not walkable
         {
             return;
         }
 
-        dist = Vector3.Distance(gm.currentCharacter.GetComponent<Movement>().agent.destination, transform.position);
-
-        if (dist < gm.currentCharacter.GetComponent<Movement>().range * 6 && dist > 1f)
+        if (Vector3.Distance(transform.position, gm.currentCharacter.transform.position) < 6f)
         {
             rend.material = highlightMaterial;
             return;
@@ -46,10 +44,6 @@ public class Node : MonoBehaviour
         if (IsNodeTaken() != null)
         {
             gm.currentCharacter = IsNodeTaken();
-            return;
-        }
-        if (Vector3.Distance(transform.position, gm.currentCharacter.GetComponent<Movement>().agent.destination) > gm.currentCharacter.GetComponent<Movement>().range * 6)
-        {
             return;
         }
 

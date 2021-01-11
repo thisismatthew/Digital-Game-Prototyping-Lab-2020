@@ -4847,6 +4847,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45a3ef6296bba248a0a4f605fdcd31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panSpeed: 30
+  panBorderThickness: 10
+  scrollSpeed: 5
+  minZoom: 10
+  maxZoom: 30
 --- !u!1001 &196694602
 PrefabInstance:
   m_ObjectHideFlags: 0

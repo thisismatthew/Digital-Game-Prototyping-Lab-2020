@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public abstract class Movement : MonoBehaviour
+public abstract class Movement : Ability
 {
     public NavMeshAgent agent;
-    public float range;
     protected GameManager gm;
 
     protected virtual void Start()

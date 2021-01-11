@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Monobehaviour : MonoBehaviour
+public abstract class Ability : MonoBehaviour
 {
     protected float range;
+
+    protected virtual void DisplayRange() {}
+
+    protected virtual void Execute() {}
 
     public float GetRange()
     {
