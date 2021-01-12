@@ -6,12 +6,9 @@ public class LineOfSight : MonoBehaviour
 {
     private string enemyTag;
     [SerializeField]private float range;
-    private Ray forward;
 
     private void Start()
     {
-        range *= 5;
-
         if (gameObject.CompareTag("Goblin"))
         {
             enemyTag = "Adventurer";
@@ -20,8 +17,6 @@ public class LineOfSight : MonoBehaviour
         {
             enemyTag = "Goblin";
         }
-
-        forward = new Ray(transform.position, transform.forward);
     }
 
     private void Update()
@@ -32,19 +27,22 @@ public class LineOfSight : MonoBehaviour
             return;
         }
 
-        CheckHit(forward);
+        CheckHit();
     }
 
-    private void CheckHit(Ray ray)
+    private void CheckHit()
     {
-        RaycastHit[] hits = Physics.RaycastAll(ray, range);
+        Collider[] hits = Physics.OverlapSphere(transform.position, range);
+        Vector3 charToColl;
+        float dot;
 
-        for (int i = 0; i < hits.Length; i++)
+        foreach (Collider c in hits)
         {
-            if (hits[i].collider.CompareTag("Detector"))
+            charToColl = (c.transform.position - transform.position).normalized;
+            dot = Vector3.Dot(charToColl, transform.forward);
+            if (dot >= Mathf.Cos(45) && c.CompareTag("Detector"))
             {
-                hits[i].collider.GetComponentInParent<Node>().Highlight();
-                hits[i].collider.GetComponentInParent<Node>().InLineOfSight(i);
+                c.gameObject.GetComponentInParent<Node>().Highlight();
             }
         }
     }
