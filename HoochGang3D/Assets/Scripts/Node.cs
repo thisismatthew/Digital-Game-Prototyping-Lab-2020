@@ -20,18 +20,18 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (IsNodeTaken() != null)
+        {
+            gm.currentCharacter = IsNodeTaken();
+            gm.ResetAllNodes();
+            return;
+        }
         if (gm.currentCharacter.GetComponent<Abilities>().CurrentAbility == null)
         {
             return;
         }
         if (EventSystem.current.IsPointerOverGameObject())
         {
-            return;
-        }
-        if (IsNodeTaken() != null)
-        {
-            gm.currentCharacter = IsNodeTaken();
-            gm.ResetAllNodes();
             return;
         }
         if (!IsNodeInRange())
