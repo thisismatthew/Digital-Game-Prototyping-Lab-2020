@@ -19,15 +19,24 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (currentCharacter == null)
+        if (currentCharacter == null || !currentCharacter.activeSelf)
         {
             NextCharacter();
+        }
+
+        if (currentCharacter.GetComponent<Abilities>().CurrentAbility != null)
+        {
+            foreach (GameObject n in nodes)
+            {
+                n.transform.GetChild(0).gameObject.SetActive(false);
+            }
         }
     }
 
     public void NextCharacter()
     {
         ResetAllNodes();
+        currentCharacter.GetComponent<Abilities>().SetCurrentAbility(999);
 
         if (System.Array.IndexOf(characters, currentCharacter) + 1 == characters.Length)
         {
@@ -51,8 +60,6 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-
-        currentCharacter.GetComponent<Abilities>().SetCurrentAbility(999);
     }
 
     public void ResetAllNodes()
@@ -60,6 +67,7 @@ public class GameManager : MonoBehaviour
         foreach (GameObject n in nodes)
         {
             n.GetComponent<Node>().ResetNode();
+            n.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 }

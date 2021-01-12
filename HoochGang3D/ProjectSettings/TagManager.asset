@@ -7,6 +7,7 @@ TagManager:
   - Node
   - Goblin
   - Adventurer
+  - Detector
   layers:
   - Default
   - TransparentFX

@@ -79,7 +79,7 @@ public class Node : MonoBehaviour
     private bool IsNodeInRange()
     {
         float dist = Vector3.Distance(transform.position, gm.currentCharacter.transform.position);
-        if (dist < gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Range * 6f && dist > 2.5f)
+        if (dist < gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Range * 6f && dist > 3f)
         {
             return true;
         }

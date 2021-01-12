@@ -5,6 +5,7 @@ using UnityEngine;
 public class LineOfSight : MonoBehaviour
 {
     private string enemyTag;
+    [SerializeField]private float range;
 
     private void Start()
     {
@@ -20,28 +21,33 @@ public class LineOfSight : MonoBehaviour
 
     private void Update()
     {
-        Ray forward = new Ray(transform.position, transform.forward);
-        CheckHit(forward);
-
-        if (gameObject.CompareTag("Goblin"))
+        if (GetComponent<Movement>().agent.velocity != Vector3.zero) //only show line of sight when not moving, prevents entire grid from being highlighted
         {
-            Ray right = new Ray(transform.position, transform.right);
-            CheckHit(right);
-
-            Ray left = new Ray(transform.position, -transform.right); //this is how you do left, apparently :p
-            CheckHit(left);
+            GameObject.Find("GameManager").GetComponent<GameManager>().ResetAllNodes();
+            return;
         }
+
+        Ray forward = new Ray(transform.position, transform.forward); //agent looks forward
+        CheckHit(forward);
     }
 
     private void CheckHit(Ray ray)
     {
-        Debug.DrawRay(ray.origin, ray.direction);
-        if (Physics.Raycast(ray, out RaycastHit hit, GetComponent<Movement>().Range * 5f))
+        RaycastHit[] hits = Physics.RaycastAll(ray, range * 5); //get every gameobject it hits
+
+        foreach (RaycastHit hit in hits)
         {
-            if (hit.collider.gameObject.CompareTag(enemyTag))
+            if (!hit.collider.CompareTag("Detector") && !hit.collider.CompareTag(enemyTag)) //ignore obstacles
             {
-                //tell gameobject to attack
-                return;
+                continue;
+            }
+
+            //add if statement for raycast hitting an enemy
+
+            if (hit.collider.CompareTag("Detector")) //if it hits a detector, highlight the node
+            {
+                hit.collider.GetComponentInParent<Node>().Highlight();
+                continue;
             }
         }
     }

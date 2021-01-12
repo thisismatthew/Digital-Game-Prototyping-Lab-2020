@@ -12,6 +12,7 @@ public class Abilities : MonoBehaviour
     {
         if (index > abilities.Length)
         {
+            currentAbility = null;
             return;
         }
 
