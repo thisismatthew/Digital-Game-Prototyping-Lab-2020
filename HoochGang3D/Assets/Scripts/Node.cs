@@ -85,5 +85,31 @@ public class Node : MonoBehaviour
         }
         return false;
     }
+
+    public void InLineOfSight(int i) //aka hacky bullshit
+    {
+        if (i > 0)
+        {
+            Ray left = new Ray(transform.GetChild(0).transform.position, -transform.right); //cast a ray left of the hit detector
+            RaycastHit[] hits = Physics.RaycastAll(left, i * 5);
+            foreach (RaycastHit hit in hits)
+            {
+                if (hit.collider.CompareTag("Detector"))
+                {
+                    hit.collider.GetComponentInParent<Node>().Highlight();
+                }
+            }
+
+            Ray right = new Ray(transform.GetChild(0).transform.position, transform.right); //cast a ray right of the detector
+            hits = Physics.RaycastAll(right, i * 5);
+            foreach (RaycastHit hit in hits)
+            {
+                if (hit.collider.CompareTag("Detector"))
+                {
+                    hit.collider.GetComponentInParent<Node>().Highlight();
+                }
+            }
+        }
+    }
     
 }

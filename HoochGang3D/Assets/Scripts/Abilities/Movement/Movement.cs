@@ -16,7 +16,7 @@ public abstract class Movement : Ability
     }
 
     protected virtual void Update()
-    {
+    {   
         if (gameObject != gm.currentCharacter)
         {
             return;
