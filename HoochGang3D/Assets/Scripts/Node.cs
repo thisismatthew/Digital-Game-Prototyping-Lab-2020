@@ -16,6 +16,12 @@ public class Node : MonoBehaviour
         rend = GetComponent<Renderer>();
         surface = GetComponent<NavMeshSurface>();
         rend.material = startMaterial;
+
+        if (transform.childCount > 1) //means it has an obstacle attached
+        {
+            surface.defaultArea = 1;
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 
     private void OnMouseDown()
