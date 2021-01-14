@@ -23,5 +23,11 @@ public class Attack : Ability
         //find a target
         //check if that target is within line of sight and range
         //instantiate projectile that moves towards the target
+        foreach(GameObject g in lineOfSight.GetTargetsInRange())
+        {
+            GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
+            Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
+            //projectileScript.Seek(target); cannot convert Vector3 to Transform...
+        }
     }
 }
