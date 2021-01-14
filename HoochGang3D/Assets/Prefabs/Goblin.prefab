@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915495a33f2bb0d4cbfb3ce275d4ef91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
   agent: {fileID: 0}
 --- !u!114 &2681923349971327035
 MonoBehaviour:
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d6072edda12df4a8f164f85cf50d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
 --- !u!114 &5172450524693700992
 MonoBehaviour:
   m_ObjectHideFlags: 0
