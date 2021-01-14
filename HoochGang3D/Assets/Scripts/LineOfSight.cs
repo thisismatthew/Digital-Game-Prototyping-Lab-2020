@@ -64,7 +64,7 @@ public class LineOfSight : MonoBehaviour
                 result.Add(c.gameObject);
             }
         }
-            
-        return result;
+
+        return result; 
     }
 }
