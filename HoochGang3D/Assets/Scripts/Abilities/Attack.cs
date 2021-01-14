@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Attack : Ability
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject projectile;
+    private LineOfSight lineOfSight;
+
+    protected override void Start()
+    {
+        //get the line of sight component
+        lineOfSight = gameObject.GetComponent<LineOfSight>();
+    }
+
+    public override void DisplayRange()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Execute(Vector3 target)
     {
-        
+        //find a target
+        //check if that target is within line of sight and range
+        //instantiate projectile that moves towards the target
     }
 }
