@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 public class CameraController : MonoBehaviour
 {
-    private bool doMovement = true;
+    //private bool doMovement = true;
     public float panSpeed = 30f;
-    public float panBorderThickness = 10f;
+    //public float panBorderThickness = 10f;
     public float scrollSpeed = 5f;
     public float minZoom = 10f;
     public float maxZoom = 30f;
@@ -22,10 +22,10 @@ public class CameraController : MonoBehaviour
             doMovement = !doMovement;
         }*/
 
-        if(!doMovement)
+        /*if(!doMovement)
         {
             return;
-        }
+        }*/
 
         if(Input.GetKey("w"))
         //if(Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
