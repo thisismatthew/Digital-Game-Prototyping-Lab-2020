@@ -7,13 +7,10 @@ public class GameManager : MonoBehaviour
 {
     [Header("Characters")]
     public GameObject[] characters;
-    public GameObject currentCharacter;
+    [HideInInspector] public GameObject currentCharacter;
 
     [Header("Nodes")]
     public GameObject[] nodes;
-
-    [Header("UI")]
-    public Button ambushBtn;
 
     private void Start()
     {
@@ -23,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (currentCharacter == null || !currentCharacter.activeSelf)
+        if (currentCharacter == null || !currentCharacter.gameObject.activeSelf)
         {
             NextCharacter();
         }
