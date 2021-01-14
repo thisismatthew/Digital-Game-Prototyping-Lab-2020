@@ -18,7 +18,7 @@ public class Attack : Ability
         
     }
 
-    public override void Execute(Vector3 target)
+    public override void Execute()
     {
         //find a target
         //check if that target is within line of sight and range
@@ -27,7 +27,7 @@ public class Attack : Ability
         {
             GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
             Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
-            //projectileScript.Seek(target); cannot convert Vector3 to Transform...
+            projectileScript.Seek(g.transform);
         }
     }
 }

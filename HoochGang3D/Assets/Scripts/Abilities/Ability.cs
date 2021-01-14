@@ -16,6 +16,7 @@ public abstract class Ability : MonoBehaviour
 
     public virtual void DisplayRange() {}
 
+    public virtual void Execute() {}
     public virtual void Execute(Vector3 target) {}
 
     public float Range
