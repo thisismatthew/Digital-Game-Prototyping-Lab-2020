@@ -30,13 +30,18 @@ public class LineOfSight : MonoBehaviour
         CheckHit();
     }
 
+    private Collider[] getCollisions()
+    {
+        Collider[] result = Physics.OverlapSphere(transform.position, range);
+        return result;
+    }
+
     private void CheckHit()
     {
-        Collider[] hits = Physics.OverlapSphere(transform.position, range);
         Vector3 charToColl;
         float dot;
 
-        foreach (Collider c in hits)
+        foreach (Collider c in getCollisions())
         {
             charToColl = (c.transform.position - transform.position).normalized;
             dot = Vector3.Dot(charToColl, transform.forward);
@@ -45,5 +50,21 @@ public class LineOfSight : MonoBehaviour
                 c.gameObject.GetComponentInParent<Node>().Highlight();
             }
         }
+    }
+
+    public List<GameObject> GetTargetsInRange()
+    {
+        List<GameObject> result = new List<GameObject>();
+
+        //add those with our enemytag to the result
+        foreach (Collider c in getCollisions())
+        {
+            if(c.tag == enemyTag)
+            {
+                result.Add(c.gameObject);
+            }
+        }
+            
+        return result;
     }
 }
