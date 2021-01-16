@@ -2,17 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack : Ability
+public class BottleRocket : Attack
 {
-    public GameObject projectile;
-    private LineOfSight lineOfSight;
-
-    protected override void Start()
-    {
-        //get the line of sight component
-        lineOfSight = gameObject.GetComponent<LineOfSight>();
-    }
-
     public override void DisplayRange()
     {
         
