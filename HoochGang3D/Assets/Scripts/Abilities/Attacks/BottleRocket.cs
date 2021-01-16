@@ -15,7 +15,7 @@ public class BottleRocket : Attack
         foreach(GameObject g in lineOfSight.GetTargetsInRange()) //find all targets within line of sight
         {
             //check if target is within range
-
+            
             //instantiate projectile
             GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
             Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
