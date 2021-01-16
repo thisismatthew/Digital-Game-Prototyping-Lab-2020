@@ -6,16 +6,17 @@ public class BottleRocket : Attack
 {
     public override void DisplayRange()
     {
-        
+        //TODO: Display ranged once the range has been determined
+        //Debug.Log("Displaying Range");
     }
 
     public override void Execute()
     {
-        //find a target
-        //check if that target is within line of sight and range
-        //instantiate projectile that moves towards the target
-        foreach(GameObject g in lineOfSight.GetTargetsInRange())
+        foreach(GameObject g in lineOfSight.GetTargetsInRange()) //find all targets within line of sight
         {
+            //check if target is within range
+
+            //instantiate projectile
             GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
             Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
             projectileScript.Seek(g.transform);
