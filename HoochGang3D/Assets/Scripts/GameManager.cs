@@ -14,8 +14,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        currentCharacter = characters[0];
-        EnableUIOnCharacter();
+        SelectCharacter(characters[0]);
         nodes = GameObject.FindGameObjectsWithTag("Node");
     }
 
@@ -46,8 +45,7 @@ public class GameManager : MonoBehaviour
             {
                 if (c != null)
                 {
-                    currentCharacter = c;
-                    EnableUIOnCharacter();
+                    SelectCharacter(c);
                     return;
                 }
             }
@@ -58,8 +56,7 @@ public class GameManager : MonoBehaviour
             {
                 if (characters[i] != null)
                 {
-                    currentCharacter = characters[i];
-                    EnableUIOnCharacter();
+                    SelectCharacter(characters[i]);
                     return;
                 }
             }
@@ -88,5 +85,11 @@ public class GameManager : MonoBehaviour
                 g.GetComponent<Abilities>().ShowUI();
             }
         }
+    }
+
+    public void SelectCharacter(GameObject c)
+    {
+        currentCharacter = c;
+        EnableUIOnCharacter();
     }
 }
