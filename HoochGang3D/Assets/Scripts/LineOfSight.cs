@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LineOfSight : MonoBehaviour
 {
-    private string enemyTag;
+    [HideInInspector]public string enemyTag;
     [SerializeField]private float range;
 
     private void Start()
@@ -32,7 +32,7 @@ public class LineOfSight : MonoBehaviour
 
     private Collider[] GetCollisions()
     {
-        Collider[] result = Physics.OverlapSphere(transform.position, range);
+        Collider[] result = Physics.OverlapSphere(transform.position, range*5);
         return result;
     }
 
