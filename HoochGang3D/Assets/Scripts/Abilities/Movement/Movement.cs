@@ -8,6 +8,8 @@ public abstract class Movement : Ability
     public NavMeshAgent agent;
     protected GameManager gm;
 
+    public Material moveMaterial;
+
     protected override void Start()
     {
         base.Start();

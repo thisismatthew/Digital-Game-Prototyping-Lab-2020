@@ -67,14 +67,14 @@ public class Node : MonoBehaviour
         return null;
     }
 
-    public void Highlight()
+    public void Highlight(Material m)
     {
         if (surface.defaultArea == 1) //not walkable
         {
             return;
         }
 
-        rend.material = highlightMaterial;
+        rend.material = m;
     }
 
     public void ResetNode()

@@ -135,8 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915495a33f2bb0d4cbfb3ce275d4ef91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
+  range: 2
   agent: {fileID: 0}
+  moveMaterial: {fileID: 2100000, guid: 43786be90bde26b4d803d83b4f824951, type: 2}
 --- !u!114 &2681923349971327035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d6072edda12df4a8f164f85cf50d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  enemyTag: 
+  range: 3
+  lineOfSightMaterial: {fileID: 2100000, guid: 3fae0a60b1112b04284c905ed57e8068, type: 2}
 --- !u!114 &5172450524693700992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,7 +168,6 @@ MonoBehaviour:
   abilities:
   - {fileID: 8295544922218053029}
   agentUI: {fileID: 2850893081871913520}
-  gm: {fileID: 0}
 --- !u!1001 &6949987490493858472
 PrefabInstance:
   m_ObjectHideFlags: 0

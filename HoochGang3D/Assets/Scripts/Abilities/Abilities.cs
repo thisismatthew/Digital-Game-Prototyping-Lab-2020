@@ -8,7 +8,7 @@ public class Abilities : MonoBehaviour
     public Ability[] abilities;
     private Ability currentAbility;
     public GameObject agentUI;
-    public GameManager gm;
+    private GameManager gm;
 
     private void Start()
     {
