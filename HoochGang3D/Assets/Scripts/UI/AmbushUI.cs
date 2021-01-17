@@ -7,6 +7,7 @@ public class AmbushUI : MonoBehaviour
 {
     public Text enemyCount;
     public Button ambushBtn;
+    public Ambush ambush;
     private GameManager gm;
     private List<List<GameObject>> linesOfSight;
     private List<GameObject> enemiesInSight;
@@ -74,5 +75,10 @@ public class AmbushUI : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void StartAmbush()
+    {
+        ambush.Execute();
     }
 }

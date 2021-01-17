@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Ability : MonoBehaviour
 {
     [SerializeField]protected float range;
+    protected GameManager gm;
 
     protected virtual void Start()
     {
@@ -12,12 +13,13 @@ public abstract class Ability : MonoBehaviour
         {
             range = 1;
         }
+
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     public virtual void DisplayRange() {}
-
     public virtual void Execute() {}
-    public virtual void Execute(Vector3 target) {}
+    public virtual void Execute(Vector3 target){ }
 
     public float Range
     {
