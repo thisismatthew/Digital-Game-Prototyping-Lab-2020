@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 0
   agent: {fileID: 0}
-  moveMaterial: {fileID: 0}
+  moveMaterial: {fileID: 2100000, guid: 43786be90bde26b4d803d83b4f824951, type: 2}
 --- !u!114 &2681923349971327035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: 
   range: 0
-  lineOfSightMaterial: {fileID: 0}
+  lineOfSightMaterial: {fileID: 2100000, guid: 3fae0a60b1112b04284c905ed57e8068, type: 2}
 --- !u!114 &5172450524693700992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6f43a0824d42844bcc7ad30a3f6437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentUI: {fileID: 0}
+  agentUI: {fileID: 5757598342696297139}
 --- !u!1001 &577623880820716075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,6 +242,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef16a05cffef09a40aad9e808e98feaf, type: 3}
+--- !u!1 &5757598342696297139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5180046582431846552, guid: ef16a05cffef09a40aad9e808e98feaf, type: 3}
+  m_PrefabInstance: {fileID: 577623880820716075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1119911665981988532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 544540151376112799, guid: ef16a05cffef09a40aad9e808e98feaf, type: 3}
