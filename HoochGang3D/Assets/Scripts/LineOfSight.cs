@@ -6,6 +6,7 @@ public class LineOfSight : MonoBehaviour
 {
     [HideInInspector]public string enemyTag;
     [SerializeField]private float range;
+    public Material lineOfSightMaterial;
 
     private void Start()
     {
@@ -47,7 +48,7 @@ public class LineOfSight : MonoBehaviour
             dot = Vector3.Dot(charToColl, transform.forward);
             if (dot >= Mathf.Cos(45) && c.CompareTag("Detector"))
             {
-                c.gameObject.GetComponentInParent<Node>().Highlight();
+                c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
             }
         }
     }

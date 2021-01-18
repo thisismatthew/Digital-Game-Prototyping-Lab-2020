@@ -7,6 +7,12 @@ public class Abilities : MonoBehaviour
 {
     public Ability[] abilities;
     private Ability currentAbility;
+    //private GameManager gm;
+
+    private void Start()
+    {
+        //gm = FindObjectOfType<GameManager>();
+    }
 
     public void SetCurrentAbility(int index)
     {
