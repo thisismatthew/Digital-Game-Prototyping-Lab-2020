@@ -22,8 +22,9 @@ public class GoblinMovement : Movement
         
     }
 
-    public override void Execute(Vector3 goal)
+    public override void Execute(GameObject goal)
     {
-        agent.destination = goal;
+        agent.destination = goal.transform.position;
+        gameObject.GetComponent<Goblin>().CurrentNode = goal;
     }
 }

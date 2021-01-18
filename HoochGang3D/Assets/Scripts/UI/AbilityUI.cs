@@ -12,8 +12,7 @@ public class AbilityUI : MonoBehaviour
     }
 
     public void MoveAbility()
-    {
-        
+    {   
         if (GameObject.Find("Move").GetComponent<Image>().color == Color.red)
         {
             gm.currentCharacter.GetComponent<Abilities>().SetCurrentAbility(999);
@@ -26,6 +25,21 @@ public class AbilityUI : MonoBehaviour
             gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
             GameObject.Find("Move").GetComponent<Image>().color = Color.red;
         }
-        
+    }
+
+    public void ShankAbility()
+    {
+        if (GameObject.Find("StandardShank").GetComponent<Image>().color == Color.red)
+        {
+            gm.currentCharacter.GetComponent<Abilities>().SetCurrentAbility(999);
+            gm.ResetAllNodes();
+            GameObject.Find("StandardShank").GetComponent<Image>().color = Color.white;
+        }
+        else
+        {
+            gm.currentCharacter.GetComponent<Abilities>().SetCurrentAbility(1);
+            gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
+            GameObject.Find("StandardShank").GetComponent<Image>().color = Color.red;
+        }
     }
 }

@@ -6,6 +6,7 @@ public abstract class Ability : MonoBehaviour
 {
     [SerializeField]protected float range;
     protected GameManager gm;
+    [HideInInspector]public bool isAttack;
 
     protected virtual void Start()
     {
@@ -19,7 +20,7 @@ public abstract class Ability : MonoBehaviour
 
     public virtual void DisplayRange() {}
     public virtual void Execute() {}
-    public virtual void Execute(Vector3 target){ }
+    public virtual void Execute(GameObject target){ }
 
     public float Range
     {

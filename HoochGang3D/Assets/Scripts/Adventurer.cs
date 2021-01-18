@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
-public class Goblin : MonoBehaviour
+public class Adventurer : MonoBehaviour
 {
-    public GameObject agentUI;
     private GameManager gm;
-    private GameObject currentNode;
+    public GameObject currentNode;
 
     private void Start()
     {
@@ -15,31 +13,13 @@ public class Goblin : MonoBehaviour
         GetNearestNode();
     }
 
-    private void Update()
-    {
-        if (gm.currentCharacter == this.gameObject)
-        {
-            agentUI.SetActive(true);
-            return;
-        }
-
-        agentUI.SetActive(false);
-    }
-
-    private void OnMouseDown()
+    /*private void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
-        if (!gm.currentCharacter.CompareTag(gameObject.tag))
-        {
-            return;
-        }
-
-        gm.currentCharacter = this.gameObject;
-    }
-
+    }*/
     private void GetNearestNode()
     {
         GameObject nearestNode = null;
@@ -60,7 +40,13 @@ public class Goblin : MonoBehaviour
 
     public GameObject CurrentNode
     {
-        set { currentNode = value; }
-        get{ return currentNode; }
+        set
+        {
+            currentNode = value;
+        }
+        get
+        {
+            return currentNode;
+        }
     }
 }

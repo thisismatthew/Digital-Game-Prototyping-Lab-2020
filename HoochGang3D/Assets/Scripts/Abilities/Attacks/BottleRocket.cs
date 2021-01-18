@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 public class BottleRocket : Attack
 {
+    public GameObject projectile;
+
+    protected override void Start()
+    {
+        base.Start();
+        isRanged = true;
+    }
+
     public override void DisplayRange()
     {
         //TODO: Display ranged once the range has been determined
