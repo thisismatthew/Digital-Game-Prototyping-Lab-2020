@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8295544922218053029}
   - component: {fileID: 2681923349971327035}
   - component: {fileID: 5172450524693700992}
+  - component: {fileID: 5370535924364610396}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Goblin
@@ -149,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d6072edda12df4a8f164f85cf50d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyTag: 
   range: 0
 --- !u!114 &5172450524693700992
 MonoBehaviour:
@@ -164,6 +166,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilities:
   - {fileID: 8295544922218053029}
+--- !u!114 &5370535924364610396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663856980244569230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6f43a0824d42844bcc7ad30a3f6437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   agentUI: {fileID: 5711858921002818383}
 --- !u!1001 &7620826068509821421
 PrefabInstance:

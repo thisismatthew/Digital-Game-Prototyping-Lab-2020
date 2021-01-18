@@ -7,7 +7,6 @@ public class Abilities : MonoBehaviour
 {
     public Ability[] abilities;
     private Ability currentAbility;
-    public GameObject agentUI;
 
     public void SetCurrentAbility(int index)
     {
@@ -26,15 +25,5 @@ public class Abilities : MonoBehaviour
         {
             return currentAbility;
         }
-    }
-
-    public void HideUI()
-    {
-        agentUI.SetActive(false);
-    }
-
-    public void ShowUI()
-    {
-        agentUI.SetActive(true);
     }
 }

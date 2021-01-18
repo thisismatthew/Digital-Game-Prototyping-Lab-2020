@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public abstract class Movement : Ability
 {
     public NavMeshAgent agent;
-    protected GameManager gm;
 
     protected override void Start()
     {
