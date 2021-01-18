@@ -28,7 +28,7 @@ public class Node : MonoBehaviour
     {
         if (IsNodeTaken() != null)
         {
-            gm.SelectCharacter(IsNodeTaken());
+            gm.currentCharacter = IsNodeTaken();
             gm.ResetAllNodes();
             return;
         }

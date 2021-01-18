@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        SelectCharacter(characters[0]);
+        currentCharacter = characters[0];
         nodes = GameObject.FindGameObjectsWithTag("Node");
     }
 
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
             {
                 if (c != null)
                 {
-                    SelectCharacter(c);
+                    currentCharacter = c;
                     return;
                 }
             }
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
             {
                 if (characters[i] != null)
                 {
-                    SelectCharacter(characters[i]);
+                    currentCharacter = characters[i];
                     return;
                 }
             }
@@ -70,26 +70,5 @@ public class GameManager : MonoBehaviour
             n.GetComponent<Node>().ResetNode();
             n.transform.GetChild(0).gameObject.SetActive(true);
         }
-    }
-
-    public void EnableUIOnCharacter()
-    {
-        foreach(GameObject g in characters)
-        {
-            if(g != currentCharacter)
-            {
-                g.GetComponent<Abilities>().HideUI();
-            }
-            else
-            {
-                g.GetComponent<Abilities>().ShowUI();
-            }
-        }
-    }
-
-    public void SelectCharacter(GameObject c)
-    {
-        currentCharacter = c;
-        EnableUIOnCharacter();
     }
 }

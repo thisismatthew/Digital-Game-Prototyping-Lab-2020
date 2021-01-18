@@ -7,12 +7,11 @@ public class Abilities : MonoBehaviour
 {
     public Ability[] abilities;
     private Ability currentAbility;
-    public GameObject agentUI;
-    private GameManager gm;
+    //private GameManager gm;
 
     private void Start()
     {
-        gm = FindObjectOfType<GameManager>();
+        //gm = FindObjectOfType<GameManager>();
     }
 
     public void SetCurrentAbility(int index)
@@ -32,23 +31,5 @@ public class Abilities : MonoBehaviour
         {
             return currentAbility;
         }
-    }
-
-    //The methods below really should go in their own script but for now they are here
-
-    public void HideUI()
-    {
-        //Debug.Log("Disabled UI");
-        agentUI.SetActive(false);
-    }
-
-    public void ShowUI()
-    {
-        //Debug.Log("Enabled UI");
-        agentUI.SetActive(true);
-    }
-    private void OnMouseDown()
-    {
-        gm.SelectCharacter(this.gameObject);
     }
 }
