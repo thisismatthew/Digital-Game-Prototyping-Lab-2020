@@ -2,51 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class Adventurer : MonoBehaviour
+public class Adventurer : Character
 {
-    private GameManager gm;
-    public GameObject currentNode;
-
-    private void Start()
+    protected override void Start()
     {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-        GetNearestNode();
+        base.Start();
     }
 
-    /*private void OnMouseDown()
+    private void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
-    }*/
-    private void GetNearestNode()
-    {
-        GameObject nearestNode = null;
-        float shortDist = 99999;
-
-        foreach (GameObject n in gm.nodes)
+        if (gm.currentCharacter.CompareTag(this.tag))
         {
-            float dist = Vector3.Distance(transform.position, n.transform.position);
-            if (dist < shortDist)
-            {
-                shortDist = dist;
-                nearestNode = n;
-            }
+            return; //don't interact during Adventurer turns
+        }
+        if (gm.currentCharacter.GetComponent<Abilities>().CurrentAbility == null)
+        {
+            return;
+        }
+        if (!gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.isAttack)
+        {
+            return; //don't interact if current ability isn't an attack
+        }
+        if (!CCInRange())
+        {
+            return;
         }
 
-        currentNode = nearestNode;
+        gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(this.gameObject);
     }
 
-    public GameObject CurrentNode
+    private bool CCInRange()
     {
-        set
+        float dist = Vector3.Distance(currentNode.transform.position, gm.currentCharacter.GetComponent<Character>().CurrentNode.transform.position);
+        if (dist <= gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Range*5)
         {
-            currentNode = value;
+            return true;
         }
-        get
-        {
-            return currentNode;
-        }
+
+        return false;
     }
 }

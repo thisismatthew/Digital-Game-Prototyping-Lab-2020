@@ -53,10 +53,9 @@ public class Node : MonoBehaviour
     {
         foreach (GameObject c in gm.characters)
         {
-            if (c != null)
+            if (c != null && c.CompareTag(gm.currentCharacter.tag)) //make sure the character is alive and an ally
             {
-                float dist = Vector3.Distance(c.transform.position, this.gameObject.transform.position);
-                if (dist < 3.0f && c.CompareTag(gm.currentCharacter.tag))
+                if (this.gameObject == c.GetComponent<Character>().CurrentNode) //if on this node
                 {
                     return c;
                 }

@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Goblin : MonoBehaviour
+public class Goblin : Character
 {
     public GameObject agentUI;
-    private GameManager gm;
-    private GameObject currentNode;
 
-    private void Start()
+    protected override void Start()
     {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-        GetNearestNode();
+        base.Start();
     }
 
     private void Update()
@@ -38,29 +35,6 @@ public class Goblin : MonoBehaviour
         }
 
         gm.currentCharacter = this.gameObject;
-    }
-
-    private void GetNearestNode()
-    {
-        GameObject nearestNode = null;
-        float shortDist = 99999;
-
-        foreach (GameObject n in gm.nodes)
-        {
-            float dist = Vector3.Distance(transform.position, n.transform.position);
-            if (dist < shortDist)
-            {
-                shortDist = dist;
-                nearestNode = n;
-            }
-        }
-
-        currentNode = nearestNode;
-    }
-
-    public GameObject CurrentNode
-    {
-        set { currentNode = value; }
-        get{ return currentNode; }
+        gm.ResetAllNodes();
     }
 }
