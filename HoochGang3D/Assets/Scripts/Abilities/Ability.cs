@@ -20,7 +20,7 @@ public abstract class Ability : MonoBehaviour
 
     public virtual void DisplayRange() {}
     public virtual void Execute() {}
-    public virtual void Execute(GameObject target){ }
+    public virtual void Execute(GameObject node){ }
 
     public float Range
     {

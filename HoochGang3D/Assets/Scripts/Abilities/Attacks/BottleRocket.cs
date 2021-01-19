@@ -17,16 +17,21 @@ public class BottleRocket : Attack
         //Debug.Log("Displaying Range");
     }
 
-    public override void Execute()
+    public override void Execute(GameObject node)
     {
-        foreach(GameObject g in lineOfSight.GetTargetsInRange()) //find all targets within line of sight
+        target = nodeToTarget(node); //sets the target to 
+        foreach(GameObject g in lineOfSight.GetTargetsInRange()) //loop through all targets we can see
         {
-            //check if target is within range
-            
-            //instantiate projectile
-            GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
-            Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
-            projectileScript.Seek(g.transform);
+            if(target == g) //check if target we clicked on is one we can see
+            {
+                //check if target is within range
+                /*if(target is within range)
+                {
+                    GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
+                    Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
+                    projectileScript.Seek(target.transform);
+                }*/
+            }
         }
     }
 }

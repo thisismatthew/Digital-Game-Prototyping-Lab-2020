@@ -27,4 +27,23 @@ public class Attack : Ability
             }   
         }
     }
+
+    public GameObject nodeToTarget(GameObject node)
+    {
+        GameObject result = null;
+        foreach (GameObject c in gm.characters)
+        {
+            if (c.CompareTag("Adventurer") && c.GetComponent<Adventurer>().CurrentNode == node)
+            {
+                result = c;
+            }
+        }
+
+        if(result = null)
+        {
+            Debug.Log("Cannot shoot at that.");
+        }
+
+        return result;
+    }
 }
