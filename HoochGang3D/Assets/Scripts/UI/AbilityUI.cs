@@ -42,4 +42,20 @@ public class AbilityUI : MonoBehaviour
             GameObject.Find("StandardShank").GetComponent<Image>().color = Color.red;
         }
     }
+
+    public void BottleRocketAbility()
+    {
+        if (GameObject.Find("Bottle Rocket").GetComponent<Image>().color == Color.red)
+        {
+            gm.currentCharacter.GetComponent<Abilities>().selectAbility();
+            gm.ResetAllNodes();
+            GameObject.Find("Bottle Rocket").GetComponent<Image>().color = Color.white;
+        }
+        else
+        {
+            gm.currentCharacter.GetComponent<Abilities>().selectAbility(gm.currentCharacter.GetComponent<BottleRocket>());
+            gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
+            GameObject.Find("Bottle Rocket").GetComponent<Image>().color = Color.red;
+        }
+    }
 }

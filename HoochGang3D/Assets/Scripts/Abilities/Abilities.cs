@@ -25,6 +25,19 @@ public class Abilities : MonoBehaviour
         currentAbility = abilities[index];
     }
 
+    public void selectAbility(Ability abilityToSet = null)
+    {
+        //check if ability exists in the abilities list
+        foreach(Ability a in abilities)
+        {
+            if(a == abilityToSet)
+            {
+                //set it
+                currentAbility = abilityToSet;
+            }
+        }
+    }
+
     public Ability CurrentAbility
     {
         get
