@@ -25,13 +25,16 @@ public class AmbushUI : MonoBehaviour
         //Get targets in the line of sight of each goblin
         foreach (GameObject c in gm.characters)
         {
-            if (c.CompareTag("Goblin"))
+            if (c != null)
             {
-                if (c.GetComponent<LineOfSight>().GetTargetsInRange().Count != 0)
+                if (c.CompareTag("Goblin"))
                 {
-                    linesOfSight.Add(c.GetComponent<LineOfSight>().GetTargetsInRange());
+                    if (c.GetComponent<LineOfSight>().GetTargetsInRange().Count != 0)
+                    {
+                        linesOfSight.Add(c.GetComponent<LineOfSight>().GetTargetsInRange());
+                    }
                 }
-            }
+            }  
         }
 
         //Discard any repeats
