@@ -199,6 +199,7 @@ MonoBehaviour:
   range: 0
   isAttack: 0
   attackMaterial: {fileID: 2100000, guid: f3c64502621dfdf47ad5c7d940dfff7e, type: 2}
+  isRanged: 0
 --- !u!1001 &1972044430603257205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -216,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 544540151376112799, guid: ef16a05cffef09a40aad9e808e98feaf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 544540151376112799, guid: ef16a05cffef09a40aad9e808e98feaf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -253,6 +254,10 @@ PrefabInstance:
     - target: {fileID: 5180046582431846552, guid: ef16a05cffef09a40aad9e808e98feaf, type: 3}
       propertyPath: m_Name
       value: AgentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180046582431846552, guid: ef16a05cffef09a40aad9e808e98feaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef16a05cffef09a40aad9e808e98feaf, type: 3}
