@@ -20,8 +20,8 @@ public class BottleRocket : Attack
 
     public override void Execute(GameObject node)
     {
-        Debug.Log("Started attack");
-        target = nodeToTarget(node); //sets the target to 
+        Debug.Log("Bottle Rocket: firing at: " + node.name);
+        target = nodeToTarget(node); //sets the target to the gameobject on the node
         foreach(GameObject g in lineOfSight.GetTargetsInRange()) //loop through all targets we can see
         {
             Debug.Log("Looping through game objects");

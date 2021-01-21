@@ -47,13 +47,13 @@ public class AbilityUI : MonoBehaviour
     {
         if (GameObject.Find("Bottle Rocket").GetComponent<Image>().color == Color.red)
         {
-            gm.currentCharacter.GetComponent<Abilities>().selectAbility();
+            gm.currentCharacter.GetComponent<Abilities>().SetCurrentAbility(999);
             gm.ResetAllNodes();
             GameObject.Find("Bottle Rocket").GetComponent<Image>().color = Color.white;
         }
         else
         {
-            gm.currentCharacter.GetComponent<Abilities>().selectAbility(gm.currentCharacter.GetComponent<BottleRocket>());
+            gm.currentCharacter.GetComponent<Abilities>().SetCurrentAbility(2);
             gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
             GameObject.Find("Bottle Rocket").GetComponent<Image>().color = Color.red;
         }
