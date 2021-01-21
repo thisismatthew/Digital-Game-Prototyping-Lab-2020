@@ -4,9 +4,22 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class Adventurer : Character
 {
+    public GameObject agentUI;
+
     protected override void Start()
     {
         base.Start();
+    }
+
+    private void Update()
+    {
+        if (gm.currentCharacter == this.gameObject)
+        {
+            agentUI.SetActive(true);
+            return;
+        }
+
+        agentUI.SetActive(false);
     }
 
     private void OnMouseDown()
