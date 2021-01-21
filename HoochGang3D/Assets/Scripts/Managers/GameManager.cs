@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     public void NextCharacter()
     {
         ResetAllNodes();
-        currentCharacter.GetComponent<Abilities>().SetCurrentAbility(999);
+        currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
 
         if (System.Array.IndexOf(characters, currentCharacter) + 1 == characters.Length)
         {

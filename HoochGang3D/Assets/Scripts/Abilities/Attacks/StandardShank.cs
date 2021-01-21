@@ -39,10 +39,13 @@ public class StandardShank : Attack
         {
             foreach (GameObject c in gm.characters)
             {
-                if (c.CompareTag("Adventurer") && c.GetComponent<Adventurer>().CurrentNode == target)
+                if (c != null)
                 {
-                    Destroy(c);
-                    break;
+                    if (c.CompareTag("Adventurer") && c.GetComponent<Adventurer>().CurrentNode == target)
+                    {
+                        Destroy(c);
+                        break;
+                    }
                 }
             }
         }
