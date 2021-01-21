@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//
 public class GameManager : MonoBehaviour
 {
     [Header("Characters")]
@@ -11,12 +10,14 @@ public class GameManager : MonoBehaviour
     public GameObject currentCharacter;
 
     [Header("Nodes")]
-    public GameObject[] nodes;
+
+    public GameObject[][] worldGraph;
 
     private void Start()
     {
         currentCharacter = characters[0];
-        nodes = GameObject.FindGameObjectsWithTag("Node");
+
+        worldGraph = InitialiseGraph();
     }
 
     private void Update()
@@ -70,6 +71,16 @@ public class GameManager : MonoBehaviour
         {
             n.GetComponent<Node>().ResetNode();
             n.transform.GetChild(0).gameObject.SetActive(true);
+        }
+    }
+
+    public GameObject[][] InitialiseGraph()
+    {
+        GameObject nodes[] = GameObject.FindGameObjectsWithTag("Node");
+        int count = 0;
+        foreach (GameObject node in nodes)
+        {
+            
         }
     }
 }
