@@ -5,17 +5,29 @@ using UnityEngine;
 public class BottleRocket : Attack
 {
     public GameObject projectile;
+    private List<GameObject> nodesInRange;
 
     protected override void Start()
     {
         base.Start();
         isRanged = true;
+        nodesInRange = new List<GameObject>();
     }
 
     public override void DisplayRange()
     {
-        //TODO: Display ranged once the range has been determined
-        Debug.Log("Displaying Range");
+        foreach (GameObject n in gm.nodes)
+        {
+            if (Vector3.Distance(transform.position, n.transform.position) <= range*6)
+            {
+                n.GetComponent<Node>().Highlight(attackMaterial);
+                nodesInRange.Add(n);
+            }
+            else
+            {
+                n.GetComponent<Node>().ResetNode();
+            }
+        }
     }
 
     public override void Execute(GameObject _gameObject)
@@ -42,7 +54,7 @@ public class BottleRocket : Attack
             {
                 //Debug.Log("Can see a target");
                 //check if target is within range
-                if(Vector3.Distance(transform.position, target.transform.position) < range)
+                if(Vector3.Distance(transform.position, target.transform.position) < range*6)
                 {
                     //Debug.Log("Throwing hooch!");
                     GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
