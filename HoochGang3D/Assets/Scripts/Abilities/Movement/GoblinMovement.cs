@@ -24,6 +24,8 @@ public class GoblinMovement : Movement
 
     public override void Execute(GameObject goal)
     {
+        //here there would be a pathfinding call that returns a list of the points that the agent needs to go to
+        //next it would call a "Movement" or linear interpolation towards each of the points until the list has been completed. 
         agent.destination = goal.transform.position;
         gameObject.GetComponent<Goblin>().CurrentNode = goal;
     }

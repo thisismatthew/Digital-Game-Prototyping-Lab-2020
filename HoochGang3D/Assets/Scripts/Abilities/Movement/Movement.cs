@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public abstract class Movement : Ability
 {
+    //does the agent actually move from here?
     public NavMeshAgent agent;
 
     public Material moveMaterial;

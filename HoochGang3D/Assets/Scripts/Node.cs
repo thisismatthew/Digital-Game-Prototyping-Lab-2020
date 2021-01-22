@@ -7,6 +7,7 @@ public class Node : MonoBehaviour
     private Renderer rend;
     public Material startMaterial;
     public Material highlightMaterial;
+    
 
     private GameManager gm;
     private NavMeshSurface surface;
