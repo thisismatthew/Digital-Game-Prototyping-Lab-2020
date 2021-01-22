@@ -39,7 +39,7 @@ public class Attack : Ability
             }
         }
 
-        if(result = null)
+        if(result == null)
         {
             Debug.Log("Cannot shoot at that.");
         }
