@@ -18,20 +18,33 @@ public class BottleRocket : Attack
         Debug.Log("Displaying Range");
     }
 
-    public override void Execute(GameObject node)
+    public override void Execute(GameObject _gameObject)
     {
-        Debug.Log("Bottle Rocket: firing at: " + node.name);
-        target = nodeToTarget(node); //sets the target to the gameobject on the node
+        //find out if the game object is a node, or if the gameobject is a character
+        if(_gameObject.GetComponent<Adventurer>() == null)
+        {
+            //Debug.Log("We have a node called: " + _gameObject.name + ". Converting to a character to shoot at");
+            target = nodeToTarget(_gameObject);
+        }
+        else
+        {
+            //Debug.Log("We have a character called: " + _gameObject.name);
+            target = _gameObject;
+        }
+
+        //Debug.Log(target);
+        //Debug.Log("Bottle Rocket: firing at: " + target.name);
+        //target = nodeToTarget(node);
         foreach(GameObject g in lineOfSight.GetTargetsInRange()) //loop through all targets we can see
         {
-            Debug.Log("Looping through game objects");
+            //Debug.Log("Looping through game objects");
             if(target == g) //check if target we clicked on is one we can see
             {
-                Debug.Log("Can see a target");
+                //Debug.Log("Can see a target");
                 //check if target is within range
                 if(Vector3.Distance(transform.position, target.transform.position) < range)
                 {
-                    Debug.Log("Throwing hooch!");
+                    //Debug.Log("Throwing hooch!");
                     GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
                     Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
                     projectileScript.Seek(target.transform);
