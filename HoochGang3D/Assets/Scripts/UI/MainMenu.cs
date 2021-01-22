@@ -7,12 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame(string sceneName)
     {
-        SceneManager.LoadScene(sceneName); //presumably we'll move on from Prototype_Environment_2
-    }
-
-    public void ShowCredits()
-    {
-        //load some kind of panel showing our names and roles
+        SceneManager.LoadScene(sceneName); //presumably we'll move on from Prototype_Environment_X
     }
 
     public void QuitGame()

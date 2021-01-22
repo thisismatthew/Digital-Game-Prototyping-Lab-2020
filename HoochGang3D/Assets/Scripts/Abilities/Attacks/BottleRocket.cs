@@ -29,7 +29,7 @@ public class BottleRocket : Attack
             {
                 Debug.Log("Can see a target");
                 //check if target is within range
-                if(Vector3.Distance(transform.position, target.transform.position) < range)
+                if(Vector3.Distance(transform.position, target.transform.position) < range*5)
                 {
                     Debug.Log("Throwing hooch!");
                     GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
