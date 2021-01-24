@@ -3,20 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//
+[System.Serializable]
 public class GameManager : MonoBehaviour
 {
     [Header("Characters")]
     public GameObject[] characters;
     public GameObject currentCharacter;
 
+
+    public Graph graph;
+
     [Header("Nodes")]
     public GameObject[] nodes;
 
+    
     private void Start()
     {
         currentCharacter = characters[0];
         nodes = GameObject.FindGameObjectsWithTag("Node");
+        graph = new Graph(nodes);
     }
 
     private void Update()
@@ -72,4 +77,6 @@ public class GameManager : MonoBehaviour
             n.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
+
+    
 }
