@@ -6,77 +6,13 @@ using UnityEngine.UI;
 [System.Serializable]
 public class GameManager : MonoBehaviour
 {
-    [Header("Characters")]
-    public GameObject[] characters;
-    public GameObject currentCharacter;
-
-
-    public Graph graph;
-
-    [Header("Nodes")]
-    public GameObject[] nodes;
-
-    
     private void Start()
     {
-        currentCharacter = characters[0];
-        nodes = GameObject.FindGameObjectsWithTag("Node");
-        graph = new Graph(nodes);
+        
     }
 
     private void Update()
     {
-        if (currentCharacter == null || !currentCharacter.gameObject.activeSelf)
-        {
-            NextCharacter();
-        }
-
-        if (currentCharacter.GetComponent<Abilities>().CurrentAbility != null)
-        {
-            foreach (GameObject n in nodes)
-            {
-                n.transform.GetChild(0).gameObject.SetActive(false);
-            }
-        }
+        
     }
-
-    public void NextCharacter()
-    {
-        ResetAllNodes();
-        currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
-
-        if (System.Array.IndexOf(characters, currentCharacter) + 1 == characters.Length)
-        {
-            foreach (GameObject c in characters)
-            {
-                if (c != null)
-                {
-                    currentCharacter = c;
-                    return;
-                }
-            }
-        }
-        else
-        {
-            for (int i = System.Array.IndexOf(characters, currentCharacter) + 1; i < characters.Length; i++)
-            {
-                if (characters[i] != null)
-                {
-                    currentCharacter = characters[i];
-                    return;
-                }
-            }
-        }
-    }
-
-    public void ResetAllNodes()
-    {
-        foreach (GameObject n in nodes)
-        {
-            n.GetComponent<Node>().ResetNode();
-            n.transform.GetChild(0).gameObject.SetActive(true);
-        }
-    }
-
-    
 }

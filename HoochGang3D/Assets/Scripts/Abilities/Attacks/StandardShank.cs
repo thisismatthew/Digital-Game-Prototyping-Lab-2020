@@ -15,7 +15,7 @@ public class StandardShank : Attack
     }
     public override void DisplayRange()
     {
-        foreach (GameObject n in gm.nodes)
+        foreach (GameObject n in nm.nodes)
         {
             if (Vector3.Distance(transform.position, n.transform.position) <= range*6)
             {
@@ -37,7 +37,7 @@ public class StandardShank : Attack
         }
         else
         {
-            foreach (GameObject c in gm.characters)
+            foreach (GameObject c in tm.characters)
             {
                 if (c != null)
                 {

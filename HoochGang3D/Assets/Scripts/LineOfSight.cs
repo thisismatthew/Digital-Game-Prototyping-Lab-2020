@@ -24,7 +24,7 @@ public class LineOfSight : MonoBehaviour
     {
         if (GetComponent<Movement>().agent.velocity != Vector3.zero) //only show line of sight when not moving
         {
-            GameObject.Find("GameManager").GetComponent<GameManager>().ResetAllNodes();
+            GameObject.Find("GameManager").GetComponent<NodeManager>().ResetAllNodes();
             return;
         }
 

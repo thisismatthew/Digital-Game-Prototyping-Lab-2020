@@ -5,7 +5,8 @@ using UnityEngine;
 public abstract class Ability : MonoBehaviour
 {
     [SerializeField]protected float range;
-    protected GameManager gm;
+    protected TurnManager tm;
+    protected NodeManager nm;
     [HideInInspector]public bool isAttack;
 
     protected virtual void Start()
@@ -15,7 +16,8 @@ public abstract class Ability : MonoBehaviour
             range = 1;
         }
 
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        tm = GameObject.Find("GameManager").GetComponent<TurnManager>();
+        nm = GameObject.Find("GameManager").GetComponent<NodeManager>();
     }
 
     public virtual void DisplayRange() {}

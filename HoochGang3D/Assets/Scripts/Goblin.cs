@@ -14,7 +14,7 @@ public class Goblin : Character
 
     private void Update()
     {
-        if (gm.currentCharacter == this.gameObject)
+        if (tm.currentCharacter == this.gameObject)
         {
             agentUI.SetActive(true);
             return;
@@ -29,12 +29,12 @@ public class Goblin : Character
         {
             return;
         }
-        if (!gm.currentCharacter.CompareTag(gameObject.tag))
+        if (!tm.currentCharacter.CompareTag(gameObject.tag))
         {
             return;
         }
 
-        gm.currentCharacter = this.gameObject;
-        gm.ResetAllNodes();
+        tm.currentCharacter = this.gameObject;
+        nm.ResetAllNodes();
     }
 }
