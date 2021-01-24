@@ -8004,6 +8004,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10716a1529382554fab9e97dbf7bd649, type: 3}
+--- !u!1 &293967984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5079828426335617674, guid: 10716a1529382554fab9e97dbf7bd649, type: 3}
+  m_PrefabInstance: {fileID: 293967983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &293967985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293967984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a71f96c37fa144f9d7ffe9ff2da308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &293983293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10470,7 +10487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 245, y: 0}
+  m_AnchoredPosition: {x: 261, y: -127}
   m_SizeDelta: {x: -529.3131, y: -262.02606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &398608105
@@ -10528,12 +10545,12 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 1
+  m_ChildAlignment: 2
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -12140,7 +12157,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &459768773
 MonoBehaviour:
@@ -25625,7 +25642,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997452693
 MonoBehaviour:
@@ -32054,7 +32071,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235580718
 MonoBehaviour:
@@ -40466,7 +40483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.023040771, y: 0.012069702}
+  m_AnchoredPosition: {x: 0.023071289, y: 0.012084961}
   m_SizeDelta: {x: 0.046142578, y: 0.024139404}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1607884802
@@ -41000,6 +41017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd248559e5390a1469bcd8793fe373b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brewery: {fileID: 0}
 --- !u!4 &1629255951
 Transform:
   m_ObjectHideFlags: 0
@@ -41042,6 +41060,8 @@ MonoBehaviour:
   characters:
   - {fileID: 718398305}
   - {fileID: 636988888}
+  goblins: []
+  adventurers: []
   currentCharacter: {fileID: 0}
 --- !u!1001 &1630116747
 PrefabInstance:
