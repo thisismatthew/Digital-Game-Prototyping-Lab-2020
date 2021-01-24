@@ -36,14 +36,14 @@ public class GameManager : MonoBehaviour
 
     private void Victory()
     {
-        //player wins
+        Debug.Log("YOU WIN!");
         gameIsOver = true;
         Time.timeScale = 0; //stop the game
     }
     
     private void Defeat()
     {
-        //player loses
+        Debug.Log("YOU LOSE!");
         gameIsOver = true;
         Time.timeScale = 0;
     }

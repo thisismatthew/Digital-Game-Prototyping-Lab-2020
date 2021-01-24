@@ -8,7 +8,6 @@ public class Node : MonoBehaviour
     public Material startMaterial;
     public Material highlightMaterial;
     
-
     private TurnManager tm;
     private NodeManager nm;
     private NavMeshSurface surface;
