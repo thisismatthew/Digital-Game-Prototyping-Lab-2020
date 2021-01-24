@@ -31,6 +31,11 @@ public abstract class Character : MonoBehaviour
             }
         }
 
+        if(nearestNode == null)
+        {
+            Debug.Log(name + " does not have a current node");
+        }
+
         currentNode = nearestNode;
     }
 
