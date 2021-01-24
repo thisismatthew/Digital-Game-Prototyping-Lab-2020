@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: 
   range: 0
-  lineOfSightMaterial: {fileID: 0}
+  lineOfSightMaterial: {fileID: 2100000, guid: 3fae0a60b1112b04284c905ed57e8068, type: 2}
 --- !u!114 &5172450524693700992
 MonoBehaviour:
   m_ObjectHideFlags: 0
