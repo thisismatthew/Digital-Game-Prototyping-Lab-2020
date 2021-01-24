@@ -16,7 +16,7 @@ public class BottleRocket : Attack
 
     public override void DisplayRange()
     {
-        foreach (GameObject n in gm.nodes)
+        foreach (GameObject n in nm.nodes)
         {
             if (Vector3.Distance(transform.position, n.transform.position) <= range*6)
             {
