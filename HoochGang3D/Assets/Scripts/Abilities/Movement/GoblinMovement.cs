@@ -7,7 +7,7 @@ public class GoblinMovement : Movement
 {
     public override void DisplayRange()
     {
-        foreach (GameObject n in gm.nodes)
+        foreach (GameObject n in nm.nodes)
         {
             float dist = Vector3.Distance(n.transform.position, transform.position);
 

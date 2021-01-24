@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Ambush : MonoBehaviour
 {
-    private GameManager gm;
+    private TurnManager tm;
 
     void Start()
     {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        tm = GameObject.Find("GameManager").GetComponent<TurnManager>();
     }
 
     public void Execute()
     {
-        foreach (GameObject c in gm.characters)
+        foreach (GameObject c in tm.characters)
         {
             if (c.CompareTag("Goblin") && c.GetComponent<LineOfSight>().GetTargetsInRange().Count > 0)
             {
@@ -33,7 +33,7 @@ public class Ambush : MonoBehaviour
             if (dist < shortDist && dist <= c.GetComponent<Movement>().Range * 6) //get closest enemy that is also in range
             {
                 shortDist = dist;
-                foreach (GameObject g in gm.characters)
+                foreach (GameObject g in tm.characters)
                 {
                     if (g.CompareTag("Goblin") && g.GetComponent<Attack>().Target == target)
                     {

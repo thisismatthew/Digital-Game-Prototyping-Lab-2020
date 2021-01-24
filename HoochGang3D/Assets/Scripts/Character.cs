@@ -5,12 +5,14 @@ using UnityEngine;
 public abstract class Character : MonoBehaviour
 {
     protected GameObject currentNode;
-    protected GameManager gm;
+    protected TurnManager tm;
+    protected NodeManager nm;
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        tm = GameObject.Find("GameManager").GetComponent<TurnManager>();
+        nm = GameObject.Find("GameManager").GetComponent<NodeManager>();
         GetNearestNode();
     }
 
@@ -19,7 +21,7 @@ public abstract class Character : MonoBehaviour
         GameObject nearestNode = null;
         float shortDist = 99999;
 
-        foreach (GameObject n in gm.nodes)
+        foreach (GameObject n in nm.nodes)
         {
             float dist = Vector3.Distance(transform.position, n.transform.position);
             if (dist < shortDist)

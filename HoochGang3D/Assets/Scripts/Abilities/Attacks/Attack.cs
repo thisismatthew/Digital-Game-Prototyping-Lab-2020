@@ -31,7 +31,7 @@ public class Attack : Ability
     public GameObject nodeToTarget(GameObject node)
     {
         GameObject result = null;
-        foreach (GameObject c in gm.characters)
+        foreach (GameObject c in tm.characters)
         {
             if (c.CompareTag("Adventurer") && c.GetComponent<Adventurer>().CurrentNode == node)
             {

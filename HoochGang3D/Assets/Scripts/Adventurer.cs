@@ -13,7 +13,7 @@ public class Adventurer : Character
 
     private void Update()
     {
-        if (gm.currentCharacter == this.gameObject)
+        if (tm.currentCharacter == this.gameObject)
         {
             agentUI.SetActive(true);
             return;
@@ -28,15 +28,15 @@ public class Adventurer : Character
         {
             return;
         }
-        if (gm.currentCharacter.CompareTag(this.tag))
+        if (tm.currentCharacter.CompareTag(this.tag))
         {
             return; //don't interact during Adventurer turns
         }
-        if (gm.currentCharacter.GetComponent<Abilities>().CurrentAbility == null)
+        if (tm.currentCharacter.GetComponent<Abilities>().CurrentAbility == null)
         {
             return;
         }
-        if (!gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.isAttack)
+        if (!tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.isAttack)
         {
             return; //don't interact if current ability isn't an attack
         }
@@ -45,13 +45,13 @@ public class Adventurer : Character
             return;
         }
 
-        gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(this.gameObject);
+        tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(this.gameObject);
     }
 
     private bool CCInRange()
     {
-        float dist = Vector3.Distance(currentNode.transform.position, gm.currentCharacter.GetComponent<Character>().CurrentNode.transform.position);
-        if (dist <= gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Range*5)
+        float dist = Vector3.Distance(currentNode.transform.position, tm.currentCharacter.GetComponent<Character>().CurrentNode.transform.position);
+        if (dist <= tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Range*5)
         {
             return true;
         }

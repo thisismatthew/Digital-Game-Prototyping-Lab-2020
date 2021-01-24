@@ -6,17 +6,17 @@ public class UIManager : MonoBehaviour
 {
     public AbilityUI abilityUI;
     public AmbushUI ambushUI;
-    private GameManager gm;
+    private TurnManager tm;
 
     private void Start()
     {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        tm = GameObject.Find("GameManager").GetComponent<TurnManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gm.currentCharacter.CompareTag("Goblin"))
+        if (tm.currentCharacter.CompareTag("Goblin"))
         {
             abilityUI.gameObject.SetActive(true);
             ambushUI.gameObject.SetActive(false);

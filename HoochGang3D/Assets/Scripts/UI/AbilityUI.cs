@@ -5,24 +5,27 @@ using UnityEngine.UI;
 
 public class AbilityUI : MonoBehaviour
 {
-    private GameManager gm;
+    private TurnManager tm;
+    private NodeManager nm;
+
     private void Start()
     {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        tm = GameObject.Find("GameManager").GetComponent<TurnManager>();
+        nm = GameObject.Find("GameManager").GetComponent<NodeManager>();
     }
 
     public void MoveAbility()
     {   
         if (GameObject.Find("Move").GetComponent<Image>().color == Color.red)
         {
-            gm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
-            gm.ResetAllNodes();
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
+            nm.ResetAllNodes();
             GameObject.Find("Move").GetComponent<Image>().color = Color.white;
         }
         else
         {
-            gm.currentCharacter.GetComponent<Abilities>().CurrentAbility = gm.currentCharacter.GetComponent<Movement>();
-            gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = tm.currentCharacter.GetComponent<Movement>();
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
             GameObject.Find("Move").GetComponent<Image>().color = Color.red;
         }
     }
@@ -31,16 +34,14 @@ public class AbilityUI : MonoBehaviour
     {
         if (GameObject.Find("StandardShank").GetComponent<Image>().color == Color.red)
         {
-            //gm.currentCharacter.GetComponent<Abilities>().selectAbility();
-            gm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
-            gm.ResetAllNodes();
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
+            nm.ResetAllNodes();
             GameObject.Find("StandardShank").GetComponent<Image>().color = Color.white;
         }
         else
         {
-            //gm.currentCharacter.GetComponent<Abilities>().selectAbility(gm.currentCharacter.GetComponent<StandardShank>());
-            gm.currentCharacter.GetComponent<Abilities>().CurrentAbility = gm.currentCharacter.GetComponent<StandardShank>();
-            gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = tm.currentCharacter.GetComponent<StandardShank>();
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
             GameObject.Find("StandardShank").GetComponent<Image>().color = Color.red;
         }
     }
@@ -50,15 +51,15 @@ public class AbilityUI : MonoBehaviour
         if (GameObject.Find("Bottle Rocket").GetComponent<Image>().color == Color.red)
         {
             //gm.currentCharacter.GetComponent<Abilities>().selectAbility();
-            gm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
-            gm.ResetAllNodes();
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
+            nm.ResetAllNodes();
             GameObject.Find("Bottle Rocket").GetComponent<Image>().color = Color.white;
         }
         else
         {
             //gm.currentCharacter.GetComponent<Abilities>().selectAbility(gm.currentCharacter.GetComponent<BottleRocket>());
-            gm.currentCharacter.GetComponent<Abilities>().CurrentAbility = gm.currentCharacter.GetComponent<BottleRocket>();
-            gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = tm.currentCharacter.GetComponent<BottleRocket>();
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
             GameObject.Find("Bottle Rocket").GetComponent<Image>().color = Color.red;
         }
     }
