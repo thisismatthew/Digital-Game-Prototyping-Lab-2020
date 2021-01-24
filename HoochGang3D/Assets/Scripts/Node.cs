@@ -91,4 +91,13 @@ public class Node : MonoBehaviour
         return false;
     }
 
+    /*private void OnMouseOver()
+    {
+        rend.material = highlightMaterial;
+    }
+
+    private void OnMouseExit()
+    {
+        rend.material = startMaterial;
+    }*/
 }

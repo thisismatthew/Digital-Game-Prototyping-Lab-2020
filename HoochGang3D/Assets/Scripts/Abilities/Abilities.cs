@@ -41,6 +41,10 @@ public class Abilities : MonoBehaviour
         currentAbility = null;
     }*/
 
+    /*private void Update()
+    {
+        currentAbility.DisplayRange();
+    }*/
 
     public Ability CurrentAbility
     {
