@@ -13,6 +13,11 @@ public class Well : MonoBehaviour
 
     private void Update()
     {
+        if (!tm.CharactersAlive("a"))
+        {
+            return;
+        }
+
         foreach (GameObject a in tm.adventurers)
         {
             float dist = Vector3.Distance(transform.position, a.transform.position);
