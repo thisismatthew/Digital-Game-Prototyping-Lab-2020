@@ -107,8 +107,8 @@ public class Node : MonoBehaviour
         rend.material = startMaterial;
     }*/
 
-    public bool IsHighLighted()
+    public bool IsHighLighted
     {
-        return isHighlighted;
+        get { return isHighlighted; }
     }
 }
