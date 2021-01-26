@@ -11,6 +11,8 @@ public class Node : MonoBehaviour
     private TurnManager tm;
     private NodeManager nm;
     private NavMeshSurface surface;
+    private bool isHighlighted;
+
     private void Start()
     {
         tm = GameObject.Find("GameManager").GetComponent<TurnManager>();
@@ -85,11 +87,13 @@ public class Node : MonoBehaviour
         }
 
         rend.material = m;
+        isHighlighted = true;
     }
 
     public void ResetNode()
     {
         rend.material = startMaterial;
+        isHighlighted = false;
     }
 
     private bool IsNodeInRange()
@@ -111,4 +115,9 @@ public class Node : MonoBehaviour
     {
         rend.material = startMaterial;
     }*/
+
+    public bool IsHighLighted
+    {
+        get { return isHighlighted; }
+    }
 }
