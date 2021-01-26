@@ -44,8 +44,8 @@ public class LineOfSight : MonoBehaviour
 
         foreach (Collider c in GetCollisions())
         {
-            charToColl = (c.transform.position - transform.position).normalized;
-            dot = Vector3.Dot(charToColl, transform.forward);
+            charToColl = (c.transform.position - transform.position).normalized; //get the distance between the collider and the character
+            dot = Vector3.Dot(charToColl, transform.forward); //convert it to a float
             if (dot >= Mathf.Cos(45) && c.CompareTag("Detector"))
             {
                 c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
@@ -58,9 +58,22 @@ public class LineOfSight : MonoBehaviour
         List<GameObject> result = new List<GameObject>();
 
         //add those with our enemytag to the result
-        foreach (Collider c in GetCollisions())
+        /*foreach (Collider c in GetCollisions())
         {
             if(c.CompareTag(enemyTag))
+            {
+                result.Add(c.gameObject);
+            }
+        }*/
+
+        Vector3 charToColl;
+        float dot;
+
+        foreach (Collider c in GetCollisions())
+        {
+            charToColl = (c.transform.position - transform.position).normalized; //get the distance between the collider and the character
+            dot = Vector3.Dot(charToColl, transform.forward); //convert it to a float
+            if (dot >= Mathf.Cos(45) && c.CompareTag(enemyTag))
             {
                 result.Add(c.gameObject);
             }

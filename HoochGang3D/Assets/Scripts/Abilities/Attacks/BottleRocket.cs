@@ -20,7 +20,11 @@ public class BottleRocket : Attack
         {
             if (Vector3.Distance(transform.position, n.transform.position) <= range*6)
             {
-                n.GetComponent<Node>().Highlight(attackMaterial);
+                Node node = n.GetComponent<Node>();
+                if(node.IsHighLighted())
+                {
+                    node.Highlight(attackMaterial);
+                }
                 nodesInRange.Add(n);
             }
             else
