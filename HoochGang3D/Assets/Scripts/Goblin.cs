@@ -16,7 +16,7 @@ public class Goblin : Character
     protected override void Start()
     {
         base.Start();
-        goblinMaterial = _meshRenderer.material;
+        //goblinMaterial = _meshRenderer.material;
         startingTag = gameObject.tag;
     }
 
