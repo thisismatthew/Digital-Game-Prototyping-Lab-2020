@@ -28,26 +28,35 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown()
     {
+        //check if target node is occupied
         if (IsNodeTaken() != null)
         {
+            //if occupied by an ally, thats now selected as the current target
             tm.currentCharacter = IsNodeTaken();
             nm.ResetAllNodes();
             return;
         }
+        //if the current character has no ability to execute, return. 
         if (tm.currentCharacter.GetComponent<Abilities>().CurrentAbility == null)
         {
             return;
         }
+        //gotta be pointing at a gameobject
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
+        //object is in range of the ability. 
         if (!IsNodeInRange())
         {
             return;
         }
 
+        //execute the ability of the current character passing this node's gameobject
         tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(gameObject);
+        //goblins turns are ended after one action (atm). 
+        tm.currentCharacter.GetComponent<Goblin>().TurnTaken = true;
+        //cycle the character in the turn manager. 
         tm.NextCharacter();
     }
 

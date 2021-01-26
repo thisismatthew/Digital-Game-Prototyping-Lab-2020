@@ -31,6 +31,7 @@ public class StandardShank : Attack
 
     public override void Execute(GameObject target)
     {
+
         if (target.CompareTag(lineOfSight.enemyTag)) //target == enemy
         {
             Destroy(target);
