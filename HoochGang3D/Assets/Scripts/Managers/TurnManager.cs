@@ -103,7 +103,7 @@ public class TurnManager : MonoBehaviour
             //loop through to the next adventurer that has to take a turn. 
             foreach (GameObject adventurer in adventurers)
             {
-                if (!adventurer.GetComponent<Goblin>().TurnTaken)
+                if (!adventurer.GetComponent<Adventurer>().TurnTaken)
                 {
                     currentCharacter = adventurer;
                     ai.TakeTurn();
