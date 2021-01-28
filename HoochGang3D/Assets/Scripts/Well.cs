@@ -13,9 +13,7 @@ public class Well : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(tm.adventurers.Count);
-
-        if (tm.adventurers.Count <= 0)
+        if (tm.gameObject.GetComponent<GameManager>().gameIsOver)
         {
             return;
         }
@@ -25,8 +23,18 @@ public class Well : MonoBehaviour
 
     private void CheckAdj()
     {
+        if (tm.adventurers.Count <= 0)
+        {
+            return;
+        }
+
         foreach (GameObject a in tm.adventurers)
         {
+            if (a == null)
+            {
+                return;
+            }
+
             float dist = Vector3.Distance(transform.position, a.transform.position);
 
             if (dist <= 7.5f) //immediately adjacent to the well

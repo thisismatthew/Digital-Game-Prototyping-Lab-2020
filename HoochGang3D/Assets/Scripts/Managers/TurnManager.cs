@@ -11,7 +11,7 @@ public class TurnManager : MonoBehaviour
     //cutting back on tag comparisons
     [HideInInspector]public List<GameObject> goblins;
     [HideInInspector]public List<GameObject> adventurers;
-    public AdventurerAI ai;
+    //public AdventurerAI ai;
     private bool playersTurn = true; 
     public GameObject currentCharacter;
     public Text turnIndicator;
@@ -19,7 +19,7 @@ public class TurnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ai = new AdventurerAI();
+        //ai = new AdventurerAI();
         goblins = new List<GameObject>();
         adventurers = new List<GameObject>();
 
@@ -41,6 +41,30 @@ public class TurnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if game is over, don't execute
+        if (GetComponent<GameManager>().gameIsOver)
+        {
+            return;
+        }
+
+        //if there is a null character in the master list, remove it.
+        foreach (GameObject c in characters)
+        {
+            if (c == null)
+            {
+                if (goblins.Contains(c))
+                {
+                    goblins.Remove(c);
+                }
+                
+                if (adventurers.Contains(c))
+                {
+                    adventurers.Remove(c);
+                }
+                characters.Remove(c);
+            }
+        }
+
         if (currentCharacter == null || !currentCharacter.gameObject.activeSelf || currentCharacter.CompareTag("Adventurer")) //last condition is just to skip enemy turn until Enemy AI is implemented
         {
             NextCharacter();
@@ -69,24 +93,7 @@ public class TurnManager : MonoBehaviour
         //reseting the nodes just returns them to thier original material color
         GetComponent<NodeManager>().ResetAllNodes();
         //current ability is set to null on the character that just executed an ability. 
-        currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
-
-        //if there is a null character in the master list, remove it. 
-        foreach (GameObject c in characters)
-        {
-            if (c == null)
-            {
-                if (c.CompareTag("Goblin"))
-                {
-                    goblins.Remove(c);
-                }
-                else
-                {
-                    adventurers.Remove(c);
-                }
-                characters.Remove(c);
-            }
-        }
+        currentCharacter.GetComponent<Abilities>().CurrentAbility = null; 
 
         //check if its the players turn
         if (playersTurn)
@@ -111,7 +118,7 @@ public class TurnManager : MonoBehaviour
                 playersTurn = false;
 
                 //also call the first move from the AI
-                /*currentCharacter.GetComponent<AdventurerAi>().*/ai.TakeTurn();
+                currentCharacter.GetComponent<AdventurerAI>().TakeTurn();
             }
             
         }
@@ -125,7 +132,7 @@ public class TurnManager : MonoBehaviour
                 if (!adventurer.GetComponent<Adventurer>().TurnTaken)
                 {
                     currentCharacter = adventurer;
-                    ai.TakeTurn();
+                    currentCharacter.GetComponent<AdventurerAI>().TakeTurn();
                     break;
                 }
             }

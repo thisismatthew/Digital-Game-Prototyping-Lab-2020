@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public GameObject brewery;
-    private bool gameIsOver;
+    [HideInInspector] public bool gameIsOver;
 
     private void Start()
     {
