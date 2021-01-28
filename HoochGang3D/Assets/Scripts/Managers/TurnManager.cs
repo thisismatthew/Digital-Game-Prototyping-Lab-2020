@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class TurnManager : MonoBehaviour
     public AdventurerAI ai;
     private bool playersTurn = true; 
     public GameObject currentCharacter;
+    public Text turnIndicator;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +52,15 @@ public class TurnManager : MonoBehaviour
             {
                 n.transform.GetChild(0).gameObject.SetActive(false);
             }
+        }
+
+        if(playersTurn && turnIndicator.text != "Your Turn") //only change the text if it's not what we want it to be and if it's the player's turn
+        {
+            turnIndicator.text = "Your Turn";
+        }
+        else if(turnIndicator.text != "Enemies' Turn" && !playersTurn) //Don't set the text to enemies turn every frame unless it's different
+        {
+            turnIndicator.text = "Enemies' Turn";
         }
     }
 
