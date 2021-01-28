@@ -50,6 +50,21 @@ public class LineOfSight : MonoBehaviour
             {
                 c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
             }
+            dot = Vector3.Dot(charToColl, -transform.forward);
+            if (dot >= Mathf.Cos(45) && c.CompareTag("Detector"))
+            {
+                c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
+            }
+            dot = Vector3.Dot(charToColl, transform.right);
+            if (dot >= Mathf.Cos(45) && c.CompareTag("Detector"))
+            {
+                c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
+            }
+            dot = Vector3.Dot(charToColl, -transform.right);
+            if (dot >= Mathf.Cos(45) && c.CompareTag("Detector"))
+            {
+                c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
+            }
         }
     }
 
