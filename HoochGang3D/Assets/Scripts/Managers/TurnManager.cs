@@ -11,7 +11,6 @@ public class TurnManager : MonoBehaviour
     //cutting back on tag comparisons
     [HideInInspector]public List<GameObject> goblins;
     [HideInInspector]public List<GameObject> adventurers;
-    //public AdventurerAI ai;
     private bool playersTurn = true; 
     public GameObject currentCharacter;
     public Text turnIndicator;
@@ -19,7 +18,6 @@ public class TurnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //ai = new AdventurerAI();
         goblins = new List<GameObject>();
         adventurers = new List<GameObject>();
 
@@ -61,7 +59,6 @@ public class TurnManager : MonoBehaviour
                 {
                     adventurers.Remove(c);
                 }
-                characters.Remove(c);
             }
         }
 
