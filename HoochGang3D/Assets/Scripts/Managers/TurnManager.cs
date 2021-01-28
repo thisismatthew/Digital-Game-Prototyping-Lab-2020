@@ -65,6 +65,14 @@ public class TurnManager : MonoBehaviour
         {
             if (c == null)
             {
+                if (c.CompareTag("Goblin"))
+                {
+                    goblins.Remove(c);
+                }
+                else
+                {
+                    adventurers.Remove(c);
+                }
                 characters.Remove(c);
             }
         }
@@ -92,7 +100,7 @@ public class TurnManager : MonoBehaviour
                 playersTurn = false;
 
                 //also call the first move from the AI
-                ai.TakeTurn();
+                /*currentCharacter.GetComponent<AdventurerAi>().*/ai.TakeTurn();
             }
             
         }
@@ -128,22 +136,16 @@ public class TurnManager : MonoBehaviour
     {
         if (tag == "g")
         {
-            foreach (GameObject g in goblins)
+            if (goblins.Count > 0)
             {
-                if (g != null) //if a goblin is alive
-                {
-                    return true;
-                }
+                return true;
             }
         }
         else
         {
-            foreach (GameObject a in adventurers)
+            if (adventurers.Count > 0)
             {
-                if (a != null) //if an adventurer is alive
-                {
-                    return true;
-                }
+                return true;
             }
         }
 
