@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public GameObject brewery;
-    private bool gameIsOver;
+    [HideInInspector] public bool gameIsOver;
 
     private void Start()
     {
@@ -23,28 +23,32 @@ public class GameManager : MonoBehaviour
 
         if (!GetComponent<TurnManager>().CharactersAlive("a")) //if all adventurers dead
         {
-            Victory();
+            EndGame("Victory");
             return;
         }
 
         if (!GetComponent<TurnManager>().CharactersAlive("g") || brewery == null) //if all goblins dead or brewery destroyed
         {
-            Defeat();
+            EndGame("Defeat");
             return;
         }
     }
 
-    private void Victory()
+    private void EndGame(string result)
     {
-        Debug.Log("YOU WIN!");
         gameIsOver = true;
-        Time.timeScale = 0; //stop the game
-    }
-    
-    private void Defeat()
-    {
-        Debug.Log("YOU LOSE!");
-        gameIsOver = true;
+
+        if (result == "Victory")
+        {
+            //show victory UI
+            Debug.Log("You Win!");
+        }
+        else
+        {
+            //show defeat UI
+            Debug.Log("You Lose!");
+        }
+
         Time.timeScale = 0;
     }
 }
