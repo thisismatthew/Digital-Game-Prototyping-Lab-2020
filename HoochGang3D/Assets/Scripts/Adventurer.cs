@@ -24,6 +24,11 @@ public class Adventurer : Character
 
     private void OnMouseDown()
     {
+        //check if game is over
+        if (tm.gameObject.GetComponent<GameManager>().gameIsOver)
+        {
+            return;
+        }
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
