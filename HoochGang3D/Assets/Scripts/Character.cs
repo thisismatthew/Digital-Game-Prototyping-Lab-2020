@@ -4,9 +4,10 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    protected GameObject currentNode;
-    protected TurnManager tm;
-    protected NodeManager nm;
+    //changed the protected to public for AI to access. 
+    public GameObject currentNode;
+    public TurnManager tm;
+    public NodeManager nm;
     //for the moment characters just take a single "action" before it cycles to the next character. 
     private bool turnTaken = false;
 

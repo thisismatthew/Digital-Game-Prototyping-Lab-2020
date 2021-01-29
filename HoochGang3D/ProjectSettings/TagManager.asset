@@ -8,6 +8,7 @@ TagManager:
   - Goblin
   - Adventurer
   - Detector
+  - Well
   layers:
   - Default
   - TransparentFX

@@ -5,9 +5,12 @@ using UnityEngine.EventSystems;
 public class Adventurer : Character
 {
     public GameObject agentUI;
+    public AdventurerAI ai;
+
 
     protected override void Start()
     {
+        ai = new AdventurerAI();
         base.Start();
     }
 
@@ -57,5 +60,12 @@ public class Adventurer : Character
         }
 
         return false;
+    }
+
+    // this is called by the turn manager and uses the ai script to take actions
+    public void TakeTurn()
+    {
+        ai.Action(this);
+        tm.NextCharacter();
     }
 }

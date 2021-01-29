@@ -10,14 +10,12 @@ public class TurnManager : MonoBehaviour
     //cutting back on tag comparisons
     [HideInInspector]public List<GameObject> goblins;
     [HideInInspector]public List<GameObject> adventurers;
-    public AdventurerAI ai;
     private bool playersTurn = true; 
     public GameObject currentCharacter;
 
     // Start is called before the first frame update
     void Start()
     {
-        ai = new AdventurerAI();
         goblins = new List<GameObject>();
         adventurers = new List<GameObject>();
 
@@ -92,7 +90,7 @@ public class TurnManager : MonoBehaviour
                 playersTurn = false;
 
                 //also call the first move from the AI
-                ai.TakeTurn();
+                currentCharacter.GetComponent<Adventurer>().TakeTurn();
             }
             
         }
@@ -106,7 +104,7 @@ public class TurnManager : MonoBehaviour
                 if (!adventurer.GetComponent<Adventurer>().TurnTaken)
                 {
                     currentCharacter = adventurer;
-                    ai.TakeTurn();
+                    currentCharacter.GetComponent<Adventurer>().TakeTurn();
                     break;
                 }
             }
