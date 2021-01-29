@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject brewery;
     [HideInInspector] public bool gameIsOver;
 
+    public GameObject endUI;
+
     private void Start()
     {
         gameIsOver = false;
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
     private void EndGame(string result)
     {
         gameIsOver = true;
+        endUI.SetActive(true); //to start with, have a single screen to show the game has ended
 
         if (result == "Victory")
         {
