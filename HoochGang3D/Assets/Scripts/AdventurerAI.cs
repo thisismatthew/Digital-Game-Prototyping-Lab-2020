@@ -6,7 +6,6 @@ using UnityEngine.AI;
 [System.Serializable]
 public class AdventurerAI : MonoBehaviour
 {
-<<<<<<< HEAD
     private float range = 1;
     private GameObject target;
     private List<GameObject> nodesWithinRange = new List<GameObject>();

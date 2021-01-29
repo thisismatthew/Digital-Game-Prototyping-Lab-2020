@@ -115,11 +115,7 @@ public class TurnManager : MonoBehaviour
                 playersTurn = false;
 
                 //also call the first move from the AI
-<<<<<<< HEAD
                 currentCharacter.GetComponent<Adventurer>().TakeTurn();
-=======
-                currentCharacter.GetComponent<AdventurerAI>().TakeTurn();
->>>>>>> 617ae7318d94d8084497cc6830adf1f49b5fc32f
             }
             
         }
@@ -133,11 +129,8 @@ public class TurnManager : MonoBehaviour
                 if (!adventurer.GetComponent<Adventurer>().TurnTaken)
                 {
                     currentCharacter = adventurer;
-<<<<<<< HEAD
                     currentCharacter.GetComponent<Adventurer>().TakeTurn();
-=======
-                    currentCharacter.GetComponent<AdventurerAI>().TakeTurn();
->>>>>>> 617ae7318d94d8084497cc6830adf1f49b5fc32f
+
                     break;
                 }
             }
