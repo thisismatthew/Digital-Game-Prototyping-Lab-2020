@@ -7638,7 +7638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4663856980244569224, guid: d9a1e4e9f1645b74381fb549d5364b72, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 56.199997
+      value: 54.699997
       objectReference: {fileID: 0}
     - target: {fileID: 4663856980244569224, guid: d9a1e4e9f1645b74381fb549d5364b72, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20398,6 +20398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5f5cf0245e7124a9f36f33ffc5038a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: []
 --- !u!114 &747869273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24461,7 +24462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4663856980244569224, guid: d9a1e4e9f1645b74381fb549d5364b72, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 56.2
+      value: 54.95
       objectReference: {fileID: 0}
     - target: {fileID: 4663856980244569224, guid: d9a1e4e9f1645b74381fb549d5364b72, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25461,7 +25462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4663856980244569224, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.6
+      value: -40.85
       objectReference: {fileID: 0}
     - target: {fileID: 4663856980244569224, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25469,7 +25470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4663856980244569224, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4663856980244569224, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
       propertyPath: m_LocalRotation.w
@@ -41323,6 +41324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brewery: {fileID: 293967984}
+  gameIsOver: 0
+  endUI: {fileID: 0}
 --- !u!4 &1629255951
 Transform:
   m_ObjectHideFlags: 0
@@ -41369,8 +41372,8 @@ MonoBehaviour:
   - {fileID: 1335122712}
   goblins: []
   adventurers: []
-  ai: {fileID: 0}
   currentCharacter: {fileID: 0}
+  turnIndicator: {fileID: 0}
 --- !u!1001 &1630116747
 PrefabInstance:
   m_ObjectHideFlags: 0
