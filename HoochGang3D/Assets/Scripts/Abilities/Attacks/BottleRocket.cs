@@ -21,10 +21,11 @@ public class BottleRocket : Attack
             if (Vector3.Distance(transform.position, n.transform.position) <= range*6)
             {
                 Node node = n.GetComponent<Node>();
-                if(node.IsHighLighted)
+                /*if(node.IsHighLighted)
                 {
                     node.Highlight(attackMaterial);
-                }
+                }*/
+                node.Highlight(attackMaterial);
                 nodesInRange.Add(n);
             }
             else
@@ -51,11 +52,11 @@ public class BottleRocket : Attack
         //Debug.Log(target);
         //Debug.Log("Bottle Rocket: firing at: " + target.name);
         //target = nodeToTarget(node);
-        foreach(GameObject g in lineOfSight.GetTargetsInRange()) //loop through all targets we can see
-        {
+        //foreach(GameObject g in lineOfSight.GetTargetsInRange()) //loop through all targets we can see
+        //{
             //Debug.Log("Looping through game objects");
-            if(target == g) //check if target we clicked on is one we can see
-            {
+            //if(target == g) //check if target we clicked on is one we can see
+            //{
                 //Debug.Log("Can see a target");
                 //check if target is within range
                 if(Vector3.Distance(transform.position, target.transform.position) < range*6)
@@ -65,7 +66,7 @@ public class BottleRocket : Attack
                     Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
                     projectileScript.Seek(target.transform);
                 }
-            }
-        }
+            //}
+        //}
     }
 }
