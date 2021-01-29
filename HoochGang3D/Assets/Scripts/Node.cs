@@ -30,6 +30,11 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown()
     {
+        //check if game is over
+        if (tm.gameObject.GetComponent<GameManager>().gameIsOver)
+        {
+            return;
+        }
         //check if target node is occupied
         if (IsNodeTaken() != null)
         {
