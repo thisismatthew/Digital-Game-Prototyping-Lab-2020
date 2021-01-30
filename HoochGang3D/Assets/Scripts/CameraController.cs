@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 public class CameraController : MonoBehaviour
 {
     //private bool doMovement = true;
@@ -7,12 +8,7 @@ public class CameraController : MonoBehaviour
     public float scrollSpeed = 5f;
     public float minZoom = 10f;
     public float maxZoom = 30f;
-    private Camera thisCamera;
-
-    void Start()
-    {
-        thisCamera = GetComponent<Camera>();
-    }
+    public Camera thisCamera;
 
     // Update is called once per frame
     void Update()
@@ -68,4 +64,38 @@ public class CameraController : MonoBehaviour
         thisCamera.orthographicSize -= scroll * 1000 * scrollSpeed * Time.deltaTime;
         thisCamera.orthographicSize = Mathf.Clamp(thisCamera.orthographicSize, minZoom, maxZoom);
     }
+
+    public void CentreCameraOnTransform(Transform t)
+    {
+        transform.position = t.position; //set the camera transform the position of the character whose turn it is
+        //the above code is really jarring, and it lets the user know there is a unit that can move, but it is not clear what's happening when it changes.
+        //In future, I think it would be better to use a cooroutine, see below
+        //start a coroutine that translates the camera position to the transform we want to centre on
+        //StopCoroutine(Move(t));
+        //StartCoroutine(Move(t));
+        //Vector3 newVector = t.position - transform.position;
+        //Debug.Log(newVector.normalized);
+        //transform.Translate(newVector.normalized * panSpeed * Time.deltaTime, Space.World);
+        //StartCoroutine(Move(newVector.normalized));
+    }
+
+    /*IEnumerator Move(Transform placeToGoTo)
+    {
+        while(transform.position != placeToGoTo.position)
+        {
+            transform.Translate((placeToGoTo.position - transform.position) * panSpeed * Time.deltaTime, Space.World);
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        if(transform.position == placeToGoTo.position)
+        {
+            Debug.Log("Done");
+        }
+        //transform.Translate(direction * panSpeed * Time.deltaTime, Space.World);
+        //Debug.Log("Running coroutine");
+        //yield return new WaitForSeconds(0.5f);
+        //Debug.Log("Running coroutine2");
+        //StopCoroutine(Move(placeToGoTo));
+        yield return null;
+    }*/
 }

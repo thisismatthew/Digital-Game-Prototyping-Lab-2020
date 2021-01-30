@@ -14,6 +14,7 @@ public class TurnManager : MonoBehaviour
     private bool playersTurn = true; 
     public GameObject currentCharacter;
     public Text turnIndicator;
+    public CameraController camera;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,8 @@ public class TurnManager : MonoBehaviour
         }
 
         currentCharacter = characters[0];
+
+        camera.CentreCameraOnTransform(currentCharacter.transform);
     }
 
     // Update is called once per frame
@@ -145,7 +148,7 @@ public class TurnManager : MonoBehaviour
             }
         }
 
-        
+        camera.CentreCameraOnTransform(currentCharacter.transform);
     }
 
     public bool CharactersAlive(string tag)

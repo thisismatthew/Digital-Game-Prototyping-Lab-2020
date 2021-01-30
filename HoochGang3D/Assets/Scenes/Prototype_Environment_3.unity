@@ -5471,7 +5471,6 @@ GameObject:
   - component: {fileID: 195845894}
   - component: {fileID: 195845893}
   - component: {fileID: 195845892}
-  - component: {fileID: 195845895}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5538,28 +5537,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195845891}
   m_LocalRotation: {x: 0.27781588, y: 0.36497167, z: -0.1150751, w: 0.8811196}
-  m_LocalPosition: {x: 20.4, y: 58.6, z: -5.5}
+  m_LocalPosition: {x: -58.728836, y: 56.769997, z: -58.51513}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1928950311}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 35, y: 45, z: 0}
---- !u!114 &195845895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195845891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e45a3ef6296bba248a0a4f605fdcd31e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panSpeed: 30
-  scrollSpeed: 5
-  minZoom: 10
-  maxZoom: 30
 --- !u!1001 &196615609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12056,7 +12039,7 @@ Transform:
   - {fileID: 636988895}
   - {fileID: 1335122713}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &457332475
 GameObject:
@@ -18195,7 +18178,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &675172419
 PrefabInstance:
@@ -19029,7 +19012,7 @@ RectTransform:
   - {fileID: 1607884801}
   - {fileID: 198598203}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -31824,7 +31807,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1209299952
 PrefabInstance:
@@ -41528,9 +41511,9 @@ MonoBehaviour:
   - {fileID: 1335122712}
   goblins: []
   adventurers: []
-  playersTurn: 1
   currentCharacter: {fileID: 0}
   turnIndicator: {fileID: 663386827}
+  camera: {fileID: 1928950312}
 --- !u!1001 &1630116747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45015,7 +44998,7 @@ Transform:
   - {fileID: 1908346302}
   - {fileID: 1216868177}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1733499241
 PrefabInstance:
@@ -49471,6 +49454,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4027800723537021825, guid: 8cf6b8445aec6e542bca29f44c0b73be, type: 3}
   m_PrefabInstance: {fileID: 1923771447}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1928950310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928950311}
+  - component: {fileID: 1928950312}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1928950311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928950310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 78.54, y: 1.8299999, z: 52.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 195845894}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1928950312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928950310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45a3ef6296bba248a0a4f605fdcd31e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panSpeed: 30
+  scrollSpeed: 5
+  minZoom: 10
+  maxZoom: 30
+  thisCamera: {fileID: 195845893}
 --- !u!1001 &1932502167
 PrefabInstance:
   m_ObjectHideFlags: 0
