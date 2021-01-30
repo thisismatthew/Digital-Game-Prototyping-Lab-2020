@@ -16110,7 +16110,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 584544295}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1757267281}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Prototype+Environment_3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &584544295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41822,7 +41834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brewery: {fileID: 293967984}
   gameIsOver: 0
-  endUI: {fileID: 0}
+  endUI: {fileID: 1757267277}
 --- !u!4 &1629255951
 Transform:
   m_ObjectHideFlags: 0
@@ -46206,13 +46218,14 @@ GameObject:
   - component: {fileID: 1757267278}
   - component: {fileID: 1757267280}
   - component: {fileID: 1757267279}
+  - component: {fileID: 1757267281}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1757267278
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46273,6 +46286,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757267277}
   m_CullTransparentMesh: 0
+--- !u!114 &1757267281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757267277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4a0cb270da42f49ad996f43954e1ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1770366531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51518,7 +51543,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1979592629}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1757267281}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1979592629
 MonoBehaviour:
   m_ObjectHideFlags: 0

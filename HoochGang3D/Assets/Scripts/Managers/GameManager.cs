@@ -47,11 +47,13 @@ public class GameManager : MonoBehaviour
         if (result == "Victory")
         {
             //show victory UI
+            endUI.GetComponentInChildren<Text>().text = "VICTORY";
             Debug.Log("You Win!");
         }
         else
         {
             //show defeat UI
+            endUI.GetComponentInChildren<Text>().text = "DEFEAT";
             Debug.Log("You Lose!");
         }
 
