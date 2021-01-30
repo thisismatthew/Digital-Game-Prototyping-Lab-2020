@@ -31,15 +31,15 @@ public class Attack : Ability
     public GameObject nodeToTarget(GameObject node)
     {
         GameObject result = null;
-        foreach (GameObject c in gm.characters)
+        foreach (GameObject c in tm.adventurers)
         {
-            if (c.CompareTag("Adventurer") && c.GetComponent<Adventurer>().CurrentNode == node)
+            if (c.GetComponent<Character>().CurrentNode == node)
             {
                 result = c;
             }
         }
 
-        if(result = null)
+        if(result == null)
         {
             Debug.Log("Cannot shoot at that.");
         }

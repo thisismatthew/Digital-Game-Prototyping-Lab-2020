@@ -4,13 +4,18 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    protected GameObject currentNode;
-    protected GameManager gm;
+    //changed the protected to public for AI to access. 
+    public GameObject currentNode;
+    public TurnManager tm;
+    public NodeManager nm;
+    //for the moment characters just take a single "action" before it cycles to the next character. 
+    private bool turnTaken = false;
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        tm = GameObject.Find("GameManager").GetComponent<TurnManager>();
+        nm = GameObject.Find("GameManager").GetComponent<NodeManager>();
         GetNearestNode();
     }
 
@@ -19,7 +24,7 @@ public abstract class Character : MonoBehaviour
         GameObject nearestNode = null;
         float shortDist = 99999;
 
-        foreach (GameObject n in gm.nodes)
+        foreach (GameObject n in nm.nodes)
         {
             float dist = Vector3.Distance(transform.position, n.transform.position);
             if (dist < shortDist)
@@ -27,6 +32,11 @@ public abstract class Character : MonoBehaviour
                 shortDist = dist;
                 nearestNode = n;
             }
+        }
+
+        if(nearestNode == null)
+        {
+            Debug.Log(name + " does not have a current node");
         }
 
         currentNode = nearestNode;
@@ -43,4 +53,6 @@ public abstract class Character : MonoBehaviour
             return currentNode;
         }
     }
+
+    public bool TurnTaken { get => turnTaken; set => turnTaken = value; }
 }

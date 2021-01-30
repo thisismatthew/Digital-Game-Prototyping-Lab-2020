@@ -15,7 +15,7 @@ public class StandardShank : Attack
     }
     public override void DisplayRange()
     {
-        foreach (GameObject n in gm.nodes)
+        foreach (GameObject n in nm.nodes)
         {
             if (Vector3.Distance(transform.position, n.transform.position) <= range*6)
             {
@@ -31,18 +31,22 @@ public class StandardShank : Attack
 
     public override void Execute(GameObject target)
     {
+
         if (target.CompareTag(lineOfSight.enemyTag)) //target == enemy
         {
             Destroy(target);
         }
         else
         {
-            foreach (GameObject c in gm.characters)
+            foreach (GameObject c in tm.adventurers)
             {
-                if (c.CompareTag("Adventurer") && c.GetComponent<Adventurer>().CurrentNode == target)
+                if (c != null)
                 {
-                    Destroy(c);
-                    break;
+                    if (c.GetComponent<Character>().CurrentNode == target)
+                    {
+                        Destroy(c);
+                        break;
+                    }
                 }
             }
         }

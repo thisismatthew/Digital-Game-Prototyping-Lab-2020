@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 316709658019654689}
   - component: {fileID: 5271625135666680141}
   - component: {fileID: -6854984159349808982}
+  - component: {fileID: -8586498051980722853}
   m_Layer: 0
   m_Name: Adventurer
   m_TagString: Adventurer
@@ -165,6 +166,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb5ad433c50bec42aa62c08eb8e1fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agentUI: {fileID: 3048177701875274910}
+--- !u!114 &-8586498051980722853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663856980244569230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953f5ebb156c7f640ae1dc32df578a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tm: {fileID: 0}
 --- !u!1001 &7903383673479185414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -222,6 +237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef16a05cffef09a40aad9e808e98feaf, type: 3}
+--- !u!1 &3048177701875274910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5180046582431846552, guid: ef16a05cffef09a40aad9e808e98feaf, type: 3}
+  m_PrefabInstance: {fileID: 7903383673479185414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7647373792220326041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 544540151376112799, guid: ef16a05cffef09a40aad9e808e98feaf, type: 3}

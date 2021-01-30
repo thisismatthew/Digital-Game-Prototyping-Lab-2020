@@ -8,13 +8,13 @@ public class AmbushUI : MonoBehaviour
     public Text enemyCount;
     public Button ambushBtn;
     public Ambush ambush;
-    private GameManager gm;
+    private TurnManager tm;
     private List<List<GameObject>> linesOfSight;
     private List<GameObject> enemiesInSight;
 
     private void Start()
     {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        tm = GameObject.Find("GameManager").GetComponent<TurnManager>();
         ambushBtn.interactable = false;
         linesOfSight = new List<List<GameObject>>();
         enemiesInSight = new List<GameObject>();
@@ -23,15 +23,18 @@ public class AmbushUI : MonoBehaviour
     private void Update()
     {
         //Get targets in the line of sight of each goblin
-        foreach (GameObject c in gm.characters)
+        foreach (GameObject c in tm.characters)
         {
-            if (c.CompareTag("Goblin"))
+            if (c != null)
             {
-                if (c.GetComponent<LineOfSight>().GetTargetsInRange().Count != 0)
+                if (c.CompareTag("Goblin"))
                 {
-                    linesOfSight.Add(c.GetComponent<LineOfSight>().GetTargetsInRange());
+                    if (c.GetComponent<LineOfSight>().GetTargetsInRange().Count != 0)
+                    {
+                        linesOfSight.Add(c.GetComponent<LineOfSight>().GetTargetsInRange());
+                    }
                 }
-            }
+            }  
         }
 
         //Discard any repeats

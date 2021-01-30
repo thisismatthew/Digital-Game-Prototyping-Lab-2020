@@ -3,84 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class GameManager : MonoBehaviour
 {
-    [Header("Characters")]
-    public GameObject[] characters;
-    public GameObject currentCharacter;
+    public GameObject brewery;
+    [HideInInspector] public bool gameIsOver;
 
     [Header("Nodes")]
 
     public GameObject[][] worldGraph;
+    public GameObject endUI;
 
     private void Start()
     {
-        currentCharacter = characters[0];
-
-        worldGraph = InitialiseGraph();
+        gameIsOver = false;
     }
 
     private void Update()
     {
-        if (currentCharacter == null || !currentCharacter.gameObject.activeSelf)
+        if (gameIsOver) //if game has ended, do not continue;
         {
-            NextCharacter();
+            return;
         }
 
-        if (currentCharacter.GetComponent<Abilities>().CurrentAbility != null)
+        if (!GetComponent<TurnManager>().CharactersAlive("a")) //if all adventurers dead
         {
-            foreach (GameObject n in nodes)
-            {
-                n.transform.GetChild(0).gameObject.SetActive(false);
-            }
+            EndGame("Victory");
+            return;
+        }
+
+        if (!GetComponent<TurnManager>().CharactersAlive("g") || brewery == null) //if all goblins dead or brewery destroyed
+        {
+            EndGame("Defeat");
+            return;
         }
     }
 
-    public void NextCharacter()
+    private void EndGame(string result)
     {
-        ResetAllNodes();
-        currentCharacter.GetComponent<Abilities>().SetCurrentAbility(999);
+        gameIsOver = true;
+        endUI.SetActive(true); //to start with, have a single screen to show the game has ended
 
-        if (System.Array.IndexOf(characters, currentCharacter) + 1 == characters.Length)
+        if (result == "Victory")
         {
-            foreach (GameObject c in characters)
-            {
-                if (c != null)
-                {
-                    currentCharacter = c;
-                    return;
-                }
-            }
+            //show victory UI
+            Debug.Log("You Win!");
         }
         else
         {
-            for (int i = System.Array.IndexOf(characters, currentCharacter) + 1; i < characters.Length; i++)
-            {
-                if (characters[i] != null)
-                {
-                    currentCharacter = characters[i];
-                    return;
-                }
-            }
+            //show defeat UI
+            Debug.Log("You Lose!");
         }
-    }
 
-    public void ResetAllNodes()
-    {
-        foreach (GameObject n in nodes)
-        {
-            n.GetComponent<Node>().ResetNode();
-            n.transform.GetChild(0).gameObject.SetActive(true);
-        }
-    }
-
-    public GameObject[][] InitialiseGraph()
-    {
-        GameObject nodes[] = GameObject.FindGameObjectsWithTag("Node");
-        int count = 0;
-        foreach (GameObject node in nodes)
-        {
-            
-        }
+        Time.timeScale = 0;
     }
 }
+

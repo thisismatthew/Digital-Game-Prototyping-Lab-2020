@@ -14,7 +14,7 @@ public class Abilities : MonoBehaviour
         //gm = FindObjectOfType<GameManager>();
     }
 
-    public void SetCurrentAbility(int index)
+    /*public void SetCurrentAbility(int index)
     {
         if (index > abilities.Length)
         {
@@ -23,10 +23,45 @@ public class Abilities : MonoBehaviour
         }
 
         currentAbility = abilities[index];
-    }
+    }*/
+
+    /*public void selectAbility(Ability abilityToSet)
+    {
+        //check if ability exists in the abilities list
+        foreach(Ability a in abilities)
+        {
+            if(a == abilityToSet)
+            {
+                //set it
+                currentAbility = a;
+                return;
+            }
+        }
+
+        currentAbility = null;
+    }*/
+
+    /*private void Update()
+    {
+        currentAbility.DisplayRange();
+    }*/
 
     public Ability CurrentAbility
     {
+        set
+        {
+            foreach (Ability a in abilities)
+            {
+                if (a == value)
+                {
+                    //set it
+                    currentAbility = a;
+                    return;
+                }
+            }
+
+            currentAbility = value;
+        }
         get
         {
             return currentAbility;
