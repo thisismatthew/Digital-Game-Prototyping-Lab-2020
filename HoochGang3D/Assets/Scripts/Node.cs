@@ -45,7 +45,11 @@ public class Node : MonoBehaviour
             return;
         }
 
+<<<<<<< HEAD
         gm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(gameObject);
+=======
+        gm.currentCharacter.GetComponent<Movement>().SetDest(this.gameObject.transform);
+>>>>>>> eb89e1aa3ff54dd0bf6c00ce81413aa51f054569
         gm.NextCharacter();
     }
 
