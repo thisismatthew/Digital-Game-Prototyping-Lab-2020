@@ -58,7 +58,6 @@ public class Node : MonoBehaviour
         {
             return;
         }
-
         //execute the ability of the current character passing this node's gameobject
         tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(gameObject);
         //goblins turns are ended after one action (atm). 

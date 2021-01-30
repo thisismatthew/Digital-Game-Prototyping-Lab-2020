@@ -43,5 +43,4 @@ public class Graph
         Debug.Log("Target not found in grid moving to cell [0,0]");
         return new Tuple<int, int>(0, 0);
     }
-
 }

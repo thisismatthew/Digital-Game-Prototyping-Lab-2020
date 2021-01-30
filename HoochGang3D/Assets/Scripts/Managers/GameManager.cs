@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public GameObject brewery;
     [HideInInspector] public bool gameIsOver;
 
+    [Header("Nodes")]
+
+    public GameObject[][] worldGraph;
     public GameObject endUI;
 
     private void Start()
@@ -55,3 +58,4 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 }
+
