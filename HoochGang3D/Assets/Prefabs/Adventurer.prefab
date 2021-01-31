@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5271625135666680141}
   - component: {fileID: -6854984159349808982}
   - component: {fileID: -8586498051980722853}
+  - component: {fileID: 4702249626733565877}
   m_Layer: 0
   m_Name: Adventurer
   m_TagString: Adventurer
@@ -183,6 +184,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953f5ebb156c7f640ae1dc32df578a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  los: {fileID: 4702249626733565877}
+--- !u!114 &4702249626733565877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663856980244569230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d6072edda12df4a8f164f85cf50d5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTag: 
+  range: 2
+  lineOfSightMaterial: {fileID: 2100000, guid: a0e3f2a98b62b7a419331c5e2b0d092d, type: 2}
 --- !u!1001 &7903383673479185414
 PrefabInstance:
   m_ObjectHideFlags: 0

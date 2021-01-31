@@ -9,6 +9,7 @@ public class AdventurerAI : MonoBehaviour
     private float range = 1;
     private GameObject target;
     private List<GameObject> nodesWithinRange = new List<GameObject>();
+    public LineOfSight los;
 
     public void Action(Adventurer adventurer)
     {
@@ -52,5 +53,21 @@ public class AdventurerAI : MonoBehaviour
 
         adventurer.GetComponent<NavMeshAgent>().destination = closestNode.transform.position;
         adventurer.currentNode = closestNode;
+    }
+
+    private void Attack()
+    {
+        if(los.GetTargetsInRange().Count == 0)
+        {
+            return;
+        }
+        else if(los.GetTargetsInRange().Count == 1)
+        {
+            //fire a projectile at it
+        }
+        else if(los.GetTargetsInRange().Count > 1)
+        {
+            //randomly choose a target to shoot at
+        }
     }
 }
