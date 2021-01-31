@@ -14,7 +14,7 @@ public class TurnManager : MonoBehaviour
     private bool playersTurn = true; 
     public GameObject currentCharacter;
     public Text turnIndicator;
-    public CameraController camera;
+    public CameraController cameraController;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,7 @@ public class TurnManager : MonoBehaviour
 
         currentCharacter = characters[0];
 
-        camera.CentreCameraOnTransform(currentCharacter.transform);
+        cameraController.CentreCameraOnTransform(currentCharacter.transform);
     }
 
     // Update is called once per frame
@@ -137,7 +137,7 @@ public class TurnManager : MonoBehaviour
                     break;
                 }
             }
-            if (currentCharacter.GetComponent<Adventurer>().TurnTaken)
+            if (currentCharacter.GetComponent<Character>().TurnTaken)
             {
                 //reset the adventurers and set it to the player's turns. 
                 Debug.Log("adventurers turns are over");
@@ -148,7 +148,7 @@ public class TurnManager : MonoBehaviour
             }
         }
 
-        camera.CentreCameraOnTransform(currentCharacter.transform);
+        cameraController.CentreCameraOnTransform(currentCharacter.transform);
     }
 
     public bool CharactersAlive(string tag)

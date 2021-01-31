@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class LineOfSight : MonoBehaviour
 {
@@ -10,19 +11,12 @@ public class LineOfSight : MonoBehaviour
 
     private void Start()
     {
-        if (gameObject.CompareTag("Goblin"))
-        {
-            enemyTag = "Adventurer";
-        }
-        else
-        {
-            enemyTag = "Goblin";
-        }
+        enemyTag = "Goblin";
     }
 
     private void Update()
     {
-        if (GetComponent<Movement>().agent.velocity != Vector3.zero || GameObject.Find("GameManager").GetComponent<GameManager>().gameIsOver) //only show line of sight when not moving
+        if (GetComponent<NavMeshAgent>().velocity != Vector3.zero || GameObject.Find("GameManager").GetComponent<GameManager>().gameIsOver) //only show line of sight when not moving
         {
             GameObject.Find("GameManager").GetComponent<NodeManager>().ResetAllNodes();
             return;
@@ -50,7 +44,7 @@ public class LineOfSight : MonoBehaviour
             {
                 c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
             }
-            dot = Vector3.Dot(charToColl, -transform.forward);
+            /*dot = Vector3.Dot(charToColl, -transform.forward);
             if (dot >= Mathf.Cos(45) && c.CompareTag("Detector"))
             {
                 c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
@@ -64,7 +58,7 @@ public class LineOfSight : MonoBehaviour
             if (dot >= Mathf.Cos(45) && c.CompareTag("Detector"))
             {
                 c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
-            }
+            }*/
         }
     }
 
@@ -83,7 +77,7 @@ public class LineOfSight : MonoBehaviour
             {
                 result.Add(c.gameObject);
             }
-            dot = Vector3.Dot(charToColl, -transform.forward);
+            /*dot = Vector3.Dot(charToColl, -transform.forward);
             if (dot >= Mathf.Cos(45) && c.CompareTag(enemyTag))
             {
                 result.Add(c.gameObject);
@@ -97,7 +91,7 @@ public class LineOfSight : MonoBehaviour
             if (dot >= Mathf.Cos(45) && c.CompareTag(enemyTag))
             {
                 result.Add(c.gameObject);
-            }
+            }*/
         }
 
         return result; 
