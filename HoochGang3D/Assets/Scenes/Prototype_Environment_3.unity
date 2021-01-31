@@ -49967,6 +49967,7 @@ MonoBehaviour:
   minZoom: 10
   maxZoom: 30
   thisCamera: {fileID: 195845893}
+  centreSpeed: 9
 --- !u!1001 &1932502167
 PrefabInstance:
   m_ObjectHideFlags: 0
