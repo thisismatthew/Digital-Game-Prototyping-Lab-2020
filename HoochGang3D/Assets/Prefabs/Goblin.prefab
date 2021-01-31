@@ -113,8 +113,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 100
+  m_Acceleration: 100
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -137,6 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6f43a0824d42844bcc7ad30a3f6437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentNode: {fileID: 0}
+  tm: {fileID: 0}
+  nm: {fileID: 0}
   agentUI: {fileID: 6682536033419433453}
   _meshRenderer: {fileID: 4663856980244569226}
   stealthGoblinMaterial: {fileID: 2100000, guid: d2d5b796c3dfa344da5a2af85af90c2a, type: 2}

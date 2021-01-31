@@ -112,8 +112,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 100
+  m_Acceleration: 100
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -166,7 +166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb5ad433c50bec42aa62c08eb8e1fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentNode: {fileID: 0}
+  tm: {fileID: 0}
+  nm: {fileID: 0}
   agentUI: {fileID: 3048177701875274910}
+  ai: {fileID: 0}
 --- !u!114 &-8586498051980722853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953f5ebb156c7f640ae1dc32df578a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tm: {fileID: 0}
 --- !u!1001 &7903383673479185414
 PrefabInstance:
   m_ObjectHideFlags: 0
