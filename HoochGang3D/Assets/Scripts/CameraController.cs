@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour
     private Transform placeToCentreOn;
     private bool centred = true;
     public int centreSpeed = 9;
+    public bool debug = false;
 
     // Update is called once per frame
     void Update()
@@ -89,7 +90,10 @@ public class CameraController : MonoBehaviour
 
     public void CentreCameraOnTransform(Transform t)
     {
-        centred = false;
+        if(!debug)
+        {
+            centred = false;
+        }
         placeToCentreOn = t;
         //transform.position = t.position; //set the camera transform the position of the character whose turn it is
         //the above code is really jarring, and it lets the user know there is a unit that can move, but it is not clear what's happening when it changes.
