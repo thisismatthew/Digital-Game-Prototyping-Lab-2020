@@ -10,7 +10,7 @@ public class Adventurer : Character
 
     protected override void Start()
     {
-        ai = new AdventurerAI();
+        ai = gameObject.GetComponent<AdventurerAI>();
         base.Start();
     }
 
