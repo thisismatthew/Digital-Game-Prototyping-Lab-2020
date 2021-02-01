@@ -13,9 +13,9 @@ public class Ambush : MonoBehaviour
 
     public void Execute()
     {
-        foreach (GameObject c in tm.characters)
+        foreach (GameObject c in tm.goblins)
         {
-            if (c.CompareTag("Goblin") && c.GetComponent<LineOfSight>().GetTargetsInRange().Count > 0)
+            if (c.GetComponent<LineOfSight>().GetTargetsInRange().Count > 0)
             {
                 c.GetComponent<Attack>().Target = GetNearestTarget(c);
             }
@@ -33,9 +33,9 @@ public class Ambush : MonoBehaviour
             if (dist < shortDist && dist <= c.GetComponent<Movement>().Range * 6) //get closest enemy that is also in range
             {
                 shortDist = dist;
-                foreach (GameObject g in tm.characters)
+                foreach (GameObject g in tm.goblins)
                 {
-                    if (g.CompareTag("Goblin") && g.GetComponent<Attack>().Target == target)
+                    if (g.GetComponent<Attack>().Target == target)
                     {
                         break;
                     }
