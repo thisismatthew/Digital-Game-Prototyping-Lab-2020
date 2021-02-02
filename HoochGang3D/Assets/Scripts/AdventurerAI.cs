@@ -10,6 +10,7 @@ public class AdventurerAI : MonoBehaviour
     private GameObject target;
     private List<GameObject> nodesWithinRange = new List<GameObject>();
     public LineOfSight los;
+    public GameObject projectile;
 
     public void Action(Adventurer adventurer)
     {
@@ -59,15 +60,29 @@ public class AdventurerAI : MonoBehaviour
     {
         if(los.GetTargetsInRange().Count == 0)
         {
+            Debug.Log("No targets in range;");
             return;
         }
         else if(los.GetTargetsInRange().Count == 1)
         {
-            //fire a projectile at it
+            GameObject target = los.GetTargetsInRange()[0];
+            FireProjectile(target);
         }
         else if(los.GetTargetsInRange().Count > 1)
         {
             //randomly choose a target to shoot at
+            GameObject target = los.GetTargetsInRange()[Random.Range(0,los.GetTargetsInRange().Count-1)];
+            FireProjectile(target);
+        }
+    }
+
+    private void FireProjectile(GameObject target)
+    {
+        if(Vector3.Distance(transform.position, target.transform.position) < range*6)
+        {
+            GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
+            Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
+            projectileScript.Seek(target.transform);
         }
     }
 }
