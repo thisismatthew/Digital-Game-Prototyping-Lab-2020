@@ -63,7 +63,8 @@ public class Node : MonoBehaviour
         //goblins turns are ended after one action (atm). 
         tm.currentCharacter.GetComponent<Goblin>().TurnTaken = true;
         //cycle the character in the turn manager. 
-        tm.NextCharacter();
+        StartCoroutine(tm.NextCharacter());
+
     }
 
     private GameObject IsNodeTaken()

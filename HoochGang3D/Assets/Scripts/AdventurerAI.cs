@@ -31,9 +31,31 @@ public class AdventurerAI : MonoBehaviour
             float dist = Vector3.Distance(n.transform.position, adventurer.transform.position);
             if (dist < range * 6 && dist > 1f)
             {
-                nodesWithinRange.Add(n);
+                if (n.transform.childCount < 2) // checks there is no obstacle child
+                {
+                    nodesWithinRange.Add(n);
+                }
             }
         }
+
+        //dont move to the same tile as another adventurer
+        foreach (GameObject c in adventurer.tm.adventurers)
+        {
+            if (nodesWithinRange.Contains(c.GetComponent<Character>().CurrentNode))
+            {
+                nodesWithinRange.Remove(c.GetComponent<Character>().CurrentNode);
+            }
+        }
+
+        //dont move to the same tile as a goblin
+        foreach (GameObject c in adventurer.tm.goblins)
+        {
+            if (nodesWithinRange.Contains(c.GetComponent<Character>().CurrentNode))
+            {
+                nodesWithinRange.Remove(c.GetComponent<Character>().CurrentNode);
+            }
+        }
+
 
         GameObject closestNode = nodesWithinRange[0];
         float currentDist = 1000000;
