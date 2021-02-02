@@ -71,6 +71,6 @@ public class Adventurer : Character
     public void TakeTurn()
     {
         ai.Action(this);
-        tm.NextCharacter();
+        StartCoroutine(tm.NextCharacter());
     }
 }

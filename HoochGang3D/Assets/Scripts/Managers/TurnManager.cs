@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.AI;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour
@@ -15,6 +16,7 @@ public class TurnManager : MonoBehaviour
     public GameObject currentCharacter;
     public Text turnIndicator;
     public CameraController cameraController;
+    public float secondsBetweenTurns = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +60,7 @@ public class TurnManager : MonoBehaviour
 
         if (currentCharacter == null || !currentCharacter.gameObject.activeSelf) //last condition is just to skip enemy turn until Enemy AI is implemented
         {
-            NextCharacter();
+            StartCoroutine(NextCharacter());
         }
 
         if (currentCharacter.GetComponent<Abilities>().CurrentAbility != null)
@@ -79,8 +81,11 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-    public void NextCharacter()
+    public IEnumerator NextCharacter()
     {
+        //wait one second on begining this coroutine
+        yield return new WaitForSeconds(secondsBetweenTurns);
+
         //reseting the nodes just returns them to thier original material color
         GetComponent<NodeManager>().ResetAllNodes();
         //current ability is set to null on the character that just executed an ability. 
