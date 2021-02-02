@@ -5,7 +5,6 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public AbilityUI abilityUI;
-    public AmbushUI ambushUI;
     private TurnManager tm;
 
     private void Start()
@@ -19,12 +18,10 @@ public class UIManager : MonoBehaviour
         if (tm.currentCharacter.CompareTag("Goblin"))
         {
             abilityUI.gameObject.SetActive(true);
-            ambushUI.gameObject.SetActive(false);
         }
         else
         {
             abilityUI.gameObject.SetActive(false);
-            ambushUI.gameObject.SetActive(true);
         }
     }
 }

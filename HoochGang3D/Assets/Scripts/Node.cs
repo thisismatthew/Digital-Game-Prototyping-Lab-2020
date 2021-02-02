@@ -68,7 +68,7 @@ public class Node : MonoBehaviour
 
     private GameObject IsNodeTaken()
     {
-        foreach (GameObject c in tm.characters)
+        foreach (GameObject c in tm.goblins)
         {
             if (c != null && c.CompareTag(tm.currentCharacter.tag)) //make sure the character is alive and an ally
             {

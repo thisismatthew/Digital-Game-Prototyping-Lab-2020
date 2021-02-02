@@ -7,10 +7,10 @@ public class TurnManager : MonoBehaviour
 {
     [Header("Characters")]
     //changed characters from an array to a list for easy adding and deleting
-    public List<GameObject> characters; //handles turn order
+    //public List<GameObject> characters; //handles turn order
     //cutting back on tag comparisons
-    [HideInInspector]public List<GameObject> goblins;
-    [HideInInspector]public List<GameObject> adventurers;
+    public List<GameObject> goblins;
+    public List<GameObject> adventurers;
     private bool playersTurn = true; 
     public GameObject currentCharacter;
     public Text turnIndicator;
@@ -22,19 +22,10 @@ public class TurnManager : MonoBehaviour
         goblins = new List<GameObject>();
         adventurers = new List<GameObject>();
 
-        foreach (GameObject c in characters)
-        {
-            if (c.CompareTag("Goblin"))
-            {
-                goblins.Add(c);
-            }
-            else
-            {
-                adventurers.Add(c);
-            }
-        }
+        goblins.AddRange(GameObject.FindGameObjectsWithTag("Goblin")); //get all gameObjects with Goblin tag
+        adventurers.AddRange(GameObject.FindGameObjectsWithTag("Adventurer")); //repeat with adventurer tag
 
-        currentCharacter = characters[0];
+        currentCharacter = goblins[0]; //player goes first to set up
 
         cameraController.CentreCameraOnTransform(currentCharacter.transform);
     }
@@ -49,23 +40,23 @@ public class TurnManager : MonoBehaviour
         }
 
         //if there is a null character in the master list, remove it.
-        foreach (GameObject c in characters)
+        foreach (GameObject g in goblins)
         {
-            if (c == null)
+            if (g == null)
             {
-                if (goblins.Contains(c))
-                {
-                    goblins.Remove(c);
-                }
-                
-                if (adventurers.Contains(c))
-                {
-                    adventurers.Remove(c);
-                }
+                goblins.Remove(g);
+            }
+        }
+        
+        foreach (GameObject a in adventurers)
+        {
+            if (a == null)
+            {
+                adventurers.Remove(a);
             }
         }
 
-        if (currentCharacter == null || !currentCharacter.gameObject.activeSelf || currentCharacter.CompareTag("Adventurer")) //last condition is just to skip enemy turn until Enemy AI is implemented
+        if (currentCharacter == null || !currentCharacter.gameObject.activeSelf) //last condition is just to skip enemy turn until Enemy AI is implemented
         {
             NextCharacter();
         }

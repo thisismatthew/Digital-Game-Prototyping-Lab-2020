@@ -22,12 +22,7 @@ public class AdventurerAI : MonoBehaviour
     {
         //the default action for the adventurer if theres no goblins in LoS is to move toward the well. 
         //set the target as the well, there is probably a better way to do this;
-        foreach(GameObject node in adventurer.nm.nodes)
-        {
-            if (node.GetComponentsInChildren<Well>() != null) {
-                target = node;
-            }
-        }
+        target = GameObject.FindGameObjectWithTag("Well");
 
         //find all nodes within range
         //TODO check to make sure that the nodes arent occupied by walls or other characters. 
@@ -44,7 +39,7 @@ public class AdventurerAI : MonoBehaviour
         float currentDist = 1000000;
         foreach (GameObject n in nodesWithinRange)
         {
-            float newDist = Vector3.Distance(n.transform.position, target.transform.position);
+            float newDist = Vector3.Distance(n.transform.position, target.GetComponentInParent<Transform>().position);
             if (newDist < currentDist)
             {
                 currentDist = newDist;
