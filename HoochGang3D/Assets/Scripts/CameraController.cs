@@ -72,7 +72,7 @@ public class CameraController : MonoBehaviour
             thisCamera.orthographicSize = Mathf.Clamp(thisCamera.orthographicSize, minZoom, maxZoom);    
         }
 
-        if(Vector3.Distance(transform.position, placeToCentreOn.position) <= 1) //if the distances are within 0.5 units of eachother
+        if(placeToCentreOn != null && Vector3.Distance(transform.position, placeToCentreOn.position) <= 1) //if the distances are within 0.5 units of eachother and it isn't null
         {
             centred = true;
         }    
