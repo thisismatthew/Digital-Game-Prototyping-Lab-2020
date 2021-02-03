@@ -64,7 +64,6 @@ public class Node : MonoBehaviour
         tm.currentCharacter.GetComponent<Goblin>().TurnTaken = true;
         //cycle the character in the turn manager. 
         StartCoroutine(tm.NextCharacter());
-
     }
 
     private GameObject IsNodeTaken()
