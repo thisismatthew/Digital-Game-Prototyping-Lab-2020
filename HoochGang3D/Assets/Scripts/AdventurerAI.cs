@@ -11,11 +11,18 @@ public class AdventurerAI : MonoBehaviour
     private List<GameObject> nodesWithinRange = new List<GameObject>();
     public LineOfSight los;
     public GameObject projectile;
+    private List<GameObject> targetsWithinRange;
+
+    public void Update()
+    {
+        targetsWithinRange = los.GetTargetsInRange();
+    }
 
     public void Action(Adventurer adventurer)
     {
         Debug.Log("adventurer turn");
         GoToWell(adventurer);
+        Attack();
     }
 
     private void GoToWell(Adventurer adventurer)
@@ -56,7 +63,6 @@ public class AdventurerAI : MonoBehaviour
             }
         }
 
-
         GameObject closestNode = nodesWithinRange[0];
         float currentDist = 1000000;
         foreach (GameObject n in nodesWithinRange)
@@ -75,20 +81,20 @@ public class AdventurerAI : MonoBehaviour
 
     private void Attack()
     {
-        if(los.GetTargetsInRange().Count == 0)
+        if(targetsWithinRange.Count == 0)
         {
             Debug.Log("No targets in range;");
             return;
         }
-        else if(los.GetTargetsInRange().Count == 1)
+        else if(targetsWithinRange.Count == 1)
         {
-            GameObject target = los.GetTargetsInRange()[0];
+            GameObject target = targetsWithinRange[0];
             FireProjectile(target);
         }
-        else if(los.GetTargetsInRange().Count > 1)
+        else if(targetsWithinRange.Count > 1)
         {
             //randomly choose a target to shoot at
-            GameObject target = los.GetTargetsInRange()[Random.Range(0,los.GetTargetsInRange().Count-1)];
+            GameObject target = targetsWithinRange[Random.Range(0,targetsWithinRange.Count-1)];
             FireProjectile(target);
         }
     }
