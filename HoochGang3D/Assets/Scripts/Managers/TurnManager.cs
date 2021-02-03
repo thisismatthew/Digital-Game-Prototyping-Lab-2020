@@ -94,7 +94,6 @@ public class TurnManager : MonoBehaviour
         //check if its the players turn
         if (playersTurn)
         {
-            currentCharacter.GetComponent<Goblin>().TurnTaken = true;
             //loop through to the next goblin that has to take a turn. 
             foreach(GameObject goblin in goblins)
             {
@@ -108,8 +107,10 @@ public class TurnManager : MonoBehaviour
             {
                 //reset the goblins and set it to the AI's turns. 
                 Debug.Log("goblins turns are over");
-                foreach (GameObject goblin in goblins)
-                    goblin.GetComponent<Goblin>().TurnTaken = false;
+                foreach (GameObject goblin in goblins) {
+                    Debug.Log(goblin.name);
+                    goblin.GetComponent<Goblin>().TurnTaken = false; 
+                }
                 currentCharacter = adventurers[0];
                 playersTurn = false;
 
@@ -121,7 +122,7 @@ public class TurnManager : MonoBehaviour
 
         if (!playersTurn)
         {
-            currentCharacter.GetComponent<Adventurer>().TurnTaken = true;
+            currentCharacter.GetComponent<Adventurer>().TurnTaken = true; //LOOK HERE!
             //loop through to the next adventurer that has to take a turn. 
             foreach (GameObject adventurer in adventurers)
             {
