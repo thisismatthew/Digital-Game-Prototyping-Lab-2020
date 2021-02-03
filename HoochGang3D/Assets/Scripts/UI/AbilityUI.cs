@@ -125,4 +125,22 @@ public class AbilityUI : MonoBehaviour
             GameObject.Find("Bottle Rocket").GetComponent<Image>().color = Color.red;
         }*/
     }
+
+    public void Pass()
+    {
+        if(getCurrentAbilities().CurrentAbility is Pass)
+        {
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
+            nm.ResetAllNodes();
+            resetButton(GameObject.Find("Pass"));
+        }
+        else
+        {
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = tm.currentCharacter.GetComponent<Pass>();
+            //tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
+            //HighlightButton(GameObject.Find("Pass"));
+            tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(this.gameObject);
+            //tm.currentCharacter.GetComponent<Goblin>().TurnTaken = true;
+        }
+    }
 }
