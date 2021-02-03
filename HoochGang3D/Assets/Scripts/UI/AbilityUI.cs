@@ -140,7 +140,7 @@ public class AbilityUI : MonoBehaviour
             //tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.DisplayRange();
             //HighlightButton(GameObject.Find("Pass"));
             tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(this.gameObject);
-            //tm.currentCharacter.GetComponent<Goblin>().TurnTaken = true;
+            tm.currentCharacter.GetComponent<Goblin>().TurnTaken = true;
         }
     }
 }
