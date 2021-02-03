@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 5172450524693700992}
   - component: {fileID: 8295544922218053029}
   - component: {fileID: 4871660231020759489}
+  - component: {fileID: 6730279889575596416}
+  - component: {fileID: 5543868327670982627}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Goblin
@@ -157,6 +159,8 @@ MonoBehaviour:
   abilities:
   - {fileID: 8295544922218053029}
   - {fileID: 4871660231020759489}
+  - {fileID: 6730279889575596416}
+  - {fileID: 5543868327670982627}
 --- !u!114 &8295544922218053029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +193,37 @@ MonoBehaviour:
   isAttack: 0
   attackMaterial: {fileID: 2100000, guid: f3c64502621dfdf47ad5c7d940dfff7e, type: 2}
   isRanged: 0
+--- !u!114 &6730279889575596416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663856980244569230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98454ef364a161148898a2c9808dd755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 3
+  isAttack: 0
+  attackMaterial: {fileID: 2100000, guid: f3c64502621dfdf47ad5c7d940dfff7e, type: 2}
+  isRanged: 0
+  projectile: {fileID: 5328101574346610163, guid: be6b37b048f74104d9796d4b56e841b9, type: 3}
+--- !u!114 &5543868327670982627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663856980244569230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606d7e7c7b65e514faa0bac80cf2f27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
+  isAttack: 0
 --- !u!1001 &1972044430603257205
 PrefabInstance:
   m_ObjectHideFlags: 0
