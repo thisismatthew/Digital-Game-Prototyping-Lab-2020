@@ -9,6 +9,14 @@ public class LineOfSight : MonoBehaviour
     [SerializeField]private float range;
     public Material lineOfSightMaterial;
 
+    public float Range
+    {
+        get
+        { 
+            return range; 
+        }
+    }
+
     private void Start()
     {
         enemyTag = "Goblin";
