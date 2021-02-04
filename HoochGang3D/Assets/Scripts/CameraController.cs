@@ -80,7 +80,7 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!centred)
+        if(!centred && placeToCentreOn != null)
         {
             //move towards the character we want to centre on, the two lines below have a similar behaviour
             transform.Translate((placeToCentreOn.position - transform.position) * panSpeed / centreSpeed  * Time.deltaTime, Space.World);
