@@ -42,7 +42,7 @@ public class TurnManager : MonoBehaviour
         }
 
         //if there is a null character in the master list, remove it.
-        foreach (GameObject g in goblins) 
+        foreach (GameObject g in goblins)
         {
             //this kind of for loop can sometimes generate errors when the collection is modified externally, 
             //if it annoys you, switch to a normal for loop instead of a for each loop
