@@ -42,8 +42,10 @@ public class TurnManager : MonoBehaviour
         }
 
         //if there is a null character in the master list, remove it.
-        foreach (GameObject g in goblins)
+        foreach (GameObject g in goblins) 
         {
+            //this kind of for loop can sometimes generate errors when the collection is modified externally, 
+            //if it annoys you, switch to a normal for loop instead of a for each loop
             if (g == null)
             {
                 goblins.Remove(g);
@@ -63,7 +65,7 @@ public class TurnManager : MonoBehaviour
             StartCoroutine(NextCharacter());
         }
 
-        if (currentCharacter.GetComponent<Abilities>().CurrentAbility != null)
+        if (currentCharacter != null && currentCharacter.GetComponent<Abilities>().CurrentAbility != null)
         {
             foreach (GameObject n in GetComponent<NodeManager>().nodes)
             {
@@ -89,7 +91,10 @@ public class TurnManager : MonoBehaviour
         //reseting the nodes just returns them to thier original material color
         GetComponent<NodeManager>().ResetAllNodes();
         //current ability is set to null on the character that just executed an ability. 
-        currentCharacter.GetComponent<Abilities>().CurrentAbility = null; 
+        if(currentCharacter != null)
+        {
+            currentCharacter.GetComponent<Abilities>().CurrentAbility = null; 
+        }
 
         //check if its the players turn
         if (playersTurn)
