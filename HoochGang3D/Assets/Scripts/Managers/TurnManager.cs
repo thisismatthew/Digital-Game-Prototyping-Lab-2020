@@ -128,7 +128,7 @@ public class TurnManager : MonoBehaviour
 
         if (!playersTurn)
         {
-            currentCharacter.GetComponent<Adventurer>().TurnTaken = true; //LOOK HERE!
+            currentCharacter.GetComponent<Adventurer>().TurnTaken = true;
             //loop through to the next adventurer that has to take a turn. 
             foreach (GameObject adventurer in adventurers)
             {
