@@ -15,6 +15,7 @@ public class TurnManager : MonoBehaviour
     private bool playersTurn = true; 
     public GameObject currentCharacter;
     public Text turnIndicator;
+    public Text actionsIndicator;
     public CameraController cameraController;
     public float secondsBetweenTurns = 1;
 
@@ -81,6 +82,8 @@ public class TurnManager : MonoBehaviour
         {
             turnIndicator.text = "Enemies' Turn";
         }
+
+        actionsIndicator.text = currentCharacter.GetComponent<Character>().ActionsLeft.ToString();
     }
 
     public IEnumerator NextCharacter()
