@@ -18,6 +18,7 @@ public class Goblin : Character
         base.Start();
         //goblinMaterial = _meshRenderer.material;
         startingTag = gameObject.tag;
+        actionsLeft = 2;
     }
 
     private void Update()

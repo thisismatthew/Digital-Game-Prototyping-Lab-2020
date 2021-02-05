@@ -26,5 +26,6 @@ public class GoblinMovement : Movement
     {
         agent.destination = goal.transform.position;
         gameObject.GetComponent<Goblin>().CurrentNode = goal;
+        GetComponent<Goblin>().ActionsLeft -= 1;
     }
 }

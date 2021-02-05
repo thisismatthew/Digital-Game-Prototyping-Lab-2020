@@ -8,7 +8,8 @@ public abstract class Character : MonoBehaviour
     public GameObject currentNode;
     public TurnManager tm;
     public NodeManager nm;
-    //for the moment characters just take a single "action" before it cycles to the next character. 
+    //for the moment characters just take a single "action" before it cycles to the next character.
+    public int actionsLeft;
     private bool turnTaken = false;
 
     // Start is called before the first frame update
@@ -55,4 +56,5 @@ public abstract class Character : MonoBehaviour
     }
 
     public bool TurnTaken { get => turnTaken; set => turnTaken = value; }
+    public int ActionsLeft { get => actionsLeft; set => actionsLeft = value; }
 }
