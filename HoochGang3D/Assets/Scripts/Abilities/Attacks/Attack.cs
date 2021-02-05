@@ -28,7 +28,7 @@ public class Attack : Ability
         }
     }
 
-    public GameObject nodeToTarget(GameObject node)
+    public GameObject NodeToTarget(GameObject node)
     {
         GameObject result = null;
         foreach (GameObject c in tm.adventurers)

@@ -41,7 +41,7 @@ public class BottleRocket : Attack
         if(_gameObject.GetComponent<Adventurer>() == null)
         {
             //Debug.Log("We have a node called: " + _gameObject.name + ". Converting to a character to shoot at");
-            target = nodeToTarget(_gameObject);
+            target = NodeToTarget(_gameObject);
         }
         else
         {
@@ -65,6 +65,7 @@ public class BottleRocket : Attack
                     GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
                     Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
                     projectileScript.Seek(target.transform);
+                    GetComponent<Goblin>().ActionsLeft -= 1;
                 }
             //}
         //}

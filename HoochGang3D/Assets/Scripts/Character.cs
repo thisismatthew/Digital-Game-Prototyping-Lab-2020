@@ -9,7 +9,7 @@ public abstract class Character : MonoBehaviour
     public TurnManager tm;
     public NodeManager nm;
     //for the moment characters just take a single "action" before it cycles to the next character.
-    public int actionsLeft;
+    protected int actionsLeft;
     private bool turnTaken = false;
 
     // Start is called before the first frame update

@@ -15,7 +15,7 @@ public class AbilityUI : MonoBehaviour
         nm = GameObject.Find("GameManager").GetComponent<NodeManager>();
     }
 
-    private Abilities getCurrentAbilities()
+    private Abilities GetCurrentAbilities()
     {
         return tm.currentCharacter.GetComponent<Abilities>();
     }
@@ -24,30 +24,30 @@ public class AbilityUI : MonoBehaviour
     {
         foreach(Button b in buttons) //reset the visuals of all the other buttons
         {
-            resetButton(b.gameObject);
+            ResetButton(b.gameObject);
         }
 
         pressedButton.GetComponent<Image>().color = Color.red; //provide a visual indicator that shows the button has been pressed
     }
 
-    private void resetButton(GameObject b)
+    private void ResetButton(GameObject b)
     {
         b.GetComponent<Image>().color = Color.white; //return the button to what it was when we started
     }
 
     public void MoveAbility()
     {
-        if(getCurrentAbilities().CurrentAbility is GoblinMovement)
+        if(GetCurrentAbilities().CurrentAbility is GoblinMovement)
         {
-            getCurrentAbilities().CurrentAbility = null;
+            GetCurrentAbilities().CurrentAbility = null;
             nm.ResetAllNodes();
             //GameObject.Find("Move").GetComponent<Image>().color = Color.white;
-            resetButton(GameObject.Find("Move"));
+            ResetButton(GameObject.Find("Move"));
         }
         else
         {
-            getCurrentAbilities().CurrentAbility = tm.currentCharacter.GetComponent<Movement>();
-            getCurrentAbilities().CurrentAbility.DisplayRange();
+            GetCurrentAbilities().CurrentAbility = tm.currentCharacter.GetComponent<Movement>();
+            GetCurrentAbilities().CurrentAbility.DisplayRange();
             //GameObject.Find("Move").GetComponent<Image>().color = Color.red;
             HighlightButton(GameObject.Find("Move"));
         }
@@ -68,11 +68,11 @@ public class AbilityUI : MonoBehaviour
 
     public void ShankAbility()
     {
-        if(getCurrentAbilities().CurrentAbility is StandardShank)
+        if(GetCurrentAbilities().CurrentAbility is StandardShank)
         {
             tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
             nm.ResetAllNodes();
-            resetButton(GameObject.Find("StandardShank"));
+            ResetButton(GameObject.Find("StandardShank"));
         }
         else
         {
@@ -97,12 +97,12 @@ public class AbilityUI : MonoBehaviour
 
     public void BottleRocketAbility()
     {
-        if(getCurrentAbilities().CurrentAbility is BottleRocket)
+        if(GetCurrentAbilities().CurrentAbility is BottleRocket)
         {
             tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
             nm.ResetAllNodes();
             //GameObject.Find("Bottle Rocket").GetComponent<Image>().color = Color.white;
-            resetButton(GameObject.Find("Bottle Rocket"));
+            ResetButton(GameObject.Find("Bottle Rocket"));
         }
         else
         {
@@ -128,11 +128,11 @@ public class AbilityUI : MonoBehaviour
 
     public void Pass()
     {
-        if(getCurrentAbilities().CurrentAbility is Pass)
+        if(GetCurrentAbilities().CurrentAbility is Pass)
         {
             tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
             nm.ResetAllNodes();
-            resetButton(GameObject.Find("Pass"));
+            ResetButton(GameObject.Find("Pass"));
         }
         else
         {

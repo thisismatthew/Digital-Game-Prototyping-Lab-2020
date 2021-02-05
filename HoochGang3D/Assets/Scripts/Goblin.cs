@@ -11,7 +11,7 @@ public class Goblin : Character
     public Material stealthGoblinMaterial;
     private string startingTag;
 
-    private bool hidden; //if true, the unit is stealthed
+    //private bool hidden; //if true, the unit is stealthed
 
     protected override void Start()
     {
