@@ -22,8 +22,28 @@ public class AdventurerAI : MonoBehaviour
     public void Action(Adventurer adventurer)
     {
         Debug.Log("adventurer turn");
-        GoToWell(adventurer);
-        CheckForTarget(); //check to see if there is a target to attack
+        if(targetsWithinRange.Count > 0)
+        {
+            float decision = Random.Range(0,2);
+            if(decision == 0)
+            {   
+                //the first goal oriented behaviour, go to the well and destroy any goblins on the way
+                GoToWell(adventurer);
+                CheckForTarget(); //check to see if there is a target to attack
+            }
+            else if(decision == 1)
+            {
+                //The second goal will seek out a goblin it can see and attack it
+                ChaseGoblin(adventurer);
+                CheckForTarget(); //check to see if there is a target to attack
+            }
+        }
+        else
+        {
+            //the first goal oriented behaviour, go to the well and destroy any goblins on the way
+            GoToWell(adventurer);
+            CheckForTarget(); //check to see if there is a target to attack
+        }
     }
 
     private void GoToWell(Adventurer adventurer)
@@ -65,7 +85,7 @@ public class AdventurerAI : MonoBehaviour
         }
 
         GameObject closestNode = nodesWithinRange[0];
-        float currentDist = 1000000;
+        float currentDist = Mathf.Infinity;
         foreach (GameObject n in nodesWithinRange)
         {
             float newDist = Vector3.Distance(n.transform.position, target.GetComponentInParent<Transform>().position);
@@ -78,6 +98,77 @@ public class AdventurerAI : MonoBehaviour
 
         adventurer.GetComponent<NavMeshAgent>().destination = closestNode.transform.position;
         adventurer.currentNode = closestNode;
+    }
+
+    private void ChaseGoblin(Adventurer a)
+    {
+        //Debug.Log("Chasing goblin... soon");
+        //first check if we can see a goblin
+        if(targetsWithinRange.Count == 0)
+        {
+            //No targets to chase.
+            Debug.Log("Somehow we lost some targets before we could chase them.");
+        }
+        else if(targetsWithinRange.Count == 1) //if we can see a goblin, move toward it
+        {
+            MoveTo(a, targetsWithinRange[0].transform);
+        }
+        else if(targetsWithinRange.Count > 1) //if there is more than one goblin, select one to move to at random
+        {
+            MoveTo(a, targetsWithinRange[Random.Range(0, targetsWithinRange.Count)].transform);
+        }
+    }
+
+    private void MoveTo(Adventurer a, Transform t)
+    {
+        //modified version of GoToWell that takes in a transform instead of finding the well
+
+        //find all nodes within range
+        //TODO check to make sure that the nodes arent occupied by walls or other characters. 
+        foreach (GameObject n in a.nm.nodes)
+        {
+            float dist = Vector3.Distance(n.transform.position, a.transform.position);
+            if (dist < movementRange * 6 && dist > 1f)
+            {
+                if (n.transform.childCount < 2) // checks there is no obstacle child
+                {
+                    nodesWithinRange.Add(n);
+                }
+            }
+        }
+
+        //dont move to the same tile as another adventurer
+        foreach (GameObject c in a.tm.adventurers)
+        {
+            if (nodesWithinRange.Contains(c.GetComponent<Character>().CurrentNode))
+            {
+                nodesWithinRange.Remove(c.GetComponent<Character>().CurrentNode);
+            }
+        }
+
+        //dont move to the same tile as a goblin
+        foreach (GameObject c in a.tm.goblins)
+        {
+            if (nodesWithinRange.Contains(c.GetComponent<Character>().CurrentNode))
+            {
+                nodesWithinRange.Remove(c.GetComponent<Character>().CurrentNode);
+            }
+        }
+
+        GameObject closestNode = nodesWithinRange[0];
+        float currentDist = Mathf.Infinity;
+        foreach (GameObject n in nodesWithinRange)
+        {
+            float newDist = Vector3.Distance(n.transform.position, t.position);
+            if (newDist < currentDist)
+            {
+                currentDist = newDist;
+                closestNode = n;
+            }
+        }
+
+        a.GetComponent<NavMeshAgent>().destination = closestNode.transform.position;
+        a.currentNode = closestNode;
     }
 
     private void CheckForTarget()
@@ -158,7 +249,7 @@ public class AdventurerAI : MonoBehaviour
     private void FireProjectile(Transform target)
     {
         //works similarly to bottle rocket, but uses the range on line of sight
-        if(Vector3.Distance(transform.position, target.position) < los.Range*6)
+        if(Vector3.Distance(transform.position, target.position) < los.Range*6) //sight range and shooting range are the same, if the ai can see you, it will shoot you
         {
             GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
             Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
