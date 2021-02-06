@@ -14,6 +14,11 @@ public class CameraController : MonoBehaviour
     public int centreSpeed = 9;
     public bool debug = false;
 
+    private void Start()
+    {
+        thisCamera = this.gameObject.GetComponent<Camera>();
+    }
+
     // Update is called once per frame
     void Update()
     {
