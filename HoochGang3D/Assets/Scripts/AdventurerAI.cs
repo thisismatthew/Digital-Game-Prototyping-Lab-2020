@@ -100,6 +100,7 @@ public class AdventurerAI : MonoBehaviour
 
         adventurer.GetComponent<NavMeshAgent>().destination = closestNode.transform.position;
         adventurer.currentNode = closestNode;
+        StartCoroutine(tm.NextCharacter()); //move to next character
     }
 
     private void ChaseGoblin(Adventurer a)

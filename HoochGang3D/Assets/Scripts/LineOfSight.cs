@@ -73,7 +73,6 @@ public class LineOfSight : MonoBehaviour
                 RaycastHit[] hits = Physics.RaycastAll(ray);
                 foreach (RaycastHit h in hits)
                 {
-                    Debug.Log(h.collider.name);
                     //banking on raycast hitting obstacle before character
                     if (h.collider.name.Contains("Obstacle"))
                     {
