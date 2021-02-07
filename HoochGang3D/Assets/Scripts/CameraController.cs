@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        thisCamera = this.gameObject.GetComponent<Camera>();
+        thisCamera = this.gameObject.GetComponentInChildren<Camera>();
     }
 
     // Update is called once per frame
