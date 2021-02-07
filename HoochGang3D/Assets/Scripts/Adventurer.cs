@@ -76,7 +76,6 @@ public class Adventurer : Character
     // this is called by the turn manager and uses the ai script to take actions
     public void TakeTurn()
     {
-        ai.Action(this);
-        StartCoroutine(tm.NextCharacter());
+        ai.Action(this); //NextCharacter moved into AdventurerAI script
     }
 }

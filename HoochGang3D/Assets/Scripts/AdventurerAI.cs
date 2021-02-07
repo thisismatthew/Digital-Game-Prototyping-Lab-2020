@@ -12,10 +12,12 @@ public class AdventurerAI : MonoBehaviour
     public LineOfSight los;
     public GameObject projectile;
     private List<GameObject> targetsWithinRange;
+    private TurnManager tm;
 
     public void Update()
     {
         targetsWithinRange = los.GetTargetsInRange();
+        tm = GameObject.Find("GameManager").GetComponent<TurnManager>();
         //Debug.Log(targetsWithinRange.Count);
     }
 
@@ -169,6 +171,7 @@ public class AdventurerAI : MonoBehaviour
 
         a.GetComponent<NavMeshAgent>().destination = closestNode.transform.position;
         a.currentNode = closestNode;
+        StartCoroutine(tm.NextCharacter()); //move to next character
     }
 
     private void CheckForTarget()
@@ -244,6 +247,7 @@ public class AdventurerAI : MonoBehaviour
         //works similarly to shank
         Debug.Log("Melee attack");
         Destroy(target);
+        StartCoroutine(tm.NextCharacter()); //move to next character
     }
 
     private void FireProjectile(Transform target)
@@ -254,6 +258,7 @@ public class AdventurerAI : MonoBehaviour
             GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
             Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
             projectileScript.Seek(target);
+            StartCoroutine(tm.NextCharacter()); //move to next character
         }
     }
 }
