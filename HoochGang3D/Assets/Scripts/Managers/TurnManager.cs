@@ -116,7 +116,6 @@ public class TurnManager : MonoBehaviour
                 //reset the goblins and set it to the AI's turns. 
                 Debug.Log("goblins turns are over");
                 foreach (GameObject goblin in goblins) {
-                    Debug.Log(goblin.name);
                     goblin.GetComponent<Goblin>().TurnTaken = false;
                     goblin.GetComponent<Goblin>().ActionsLeft = 2;
                 }
