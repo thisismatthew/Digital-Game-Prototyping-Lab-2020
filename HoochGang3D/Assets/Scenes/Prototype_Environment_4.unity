@@ -5135,6 +5135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityUI: {fileID: 747869272}
   actionsUI: {fileID: 0}
+  playerUI: []
 --- !u!4 &187374436
 Transform:
   m_ObjectHideFlags: 0
@@ -19219,8 +19220,8 @@ RectTransform:
   m_Children:
   - {fileID: 747869271}
   - {fileID: 198598203}
-  - {fileID: 1757267278}
   - {fileID: 4383275819117012671}
+  - {fileID: 1757267278}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45856,7 +45857,7 @@ RectTransform:
   - {fileID: 1979592627}
   - {fileID: 584544293}
   m_Father: {fileID: 701691256}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -55413,7 +55414,7 @@ RectTransform:
   - {fileID: 4383275819994511077}
   - {fileID: 4383275819046265824}
   m_Father: {fileID: 701691256}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
