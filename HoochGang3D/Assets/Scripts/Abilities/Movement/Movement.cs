@@ -24,4 +24,10 @@ public abstract class Movement : Ability
     }
 
     public virtual void SetDest(Vector3 goal) { }
+
+    protected void SnapToIsometricAxis()
+    {
+        //transform.Rotate(0, Snapping.Snap(transform.rotation.y, 90), 0);
+        transform.eulerAngles = new Vector3(0, Snapping.Snap(transform.rotation.y, 90), 0);
+    }
 }
