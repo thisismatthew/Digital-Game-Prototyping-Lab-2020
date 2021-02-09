@@ -13,12 +13,17 @@ public class AdventurerAI : MonoBehaviour
     public GameObject projectile;
     private List<GameObject> targetsWithinRange;
     private TurnManager tm;
+    public NavMeshAgent agent;
 
     public void Update()
     {
         targetsWithinRange = los.GetTargetsInRange();
         tm = GameObject.Find("GameManager").GetComponent<TurnManager>();
         //Debug.Log(targetsWithinRange.Count);
+        /*if(agent.velocity == Vector3.zero)
+        {
+            //transform.eulerAngles = new Vector3(0, Snapping.Snap(transform.rotation.y, 90), 0);
+        }*/
     }
 
     public void Action(Adventurer adventurer)
