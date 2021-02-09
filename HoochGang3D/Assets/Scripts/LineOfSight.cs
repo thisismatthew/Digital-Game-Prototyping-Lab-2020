@@ -68,7 +68,14 @@ public class LineOfSight : MonoBehaviour
             dot = Vector3.Dot(charToColl, transform.forward); //convert it to a float
             if (dot >= Mathf.Cos(45) && c.CompareTag(enemyTag))
             {
-                result.Add(c.gameObject);
+                Ray ray = new Ray(transform.position, (c.transform.position - transform.position));
+                if (Physics.Raycast(ray, out RaycastHit hit))
+                {
+                    if (hit.collider.gameObject == c.gameObject)
+                    {
+                        result.Add(c.gameObject);
+                    }
+                }
             }
         }
 
