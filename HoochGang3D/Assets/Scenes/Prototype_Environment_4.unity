@@ -5135,7 +5135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityUI: {fileID: 747869272}
   actionsUI: {fileID: 0}
-  playerUI: []
+  playerUI:
+  - {fileID: 747869270}
+  - {fileID: 4383275819117012670}
 --- !u!4 &187374436
 Transform:
   m_ObjectHideFlags: 0

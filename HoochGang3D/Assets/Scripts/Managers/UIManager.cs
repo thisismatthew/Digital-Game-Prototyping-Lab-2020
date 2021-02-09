@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     public AbilityUI abilityUI;
     public GameObject actionsUI;
     private TurnManager tm;
+    public GameObject[] playerUI;
 
     private void Start()
     {
@@ -18,13 +19,21 @@ public class UIManager : MonoBehaviour
     {
         if (tm.currentCharacter.CompareTag("Goblin"))
         {
-            abilityUI.gameObject.SetActive(true);
-            actionsUI.gameObject.SetActive(true);
+            foreach(GameObject g in playerUI)
+            {
+                g.SetActive(true);
+            }
+            //abilityUI.gameObject.SetActive(true);
+            //actionsUI.gameObject.SetActive(true);
         }
         else
         {
-            abilityUI.gameObject.SetActive(false);
-            actionsUI.gameObject.SetActive(false);
+            foreach(GameObject g in playerUI)
+            {
+                g.SetActive(false);
+            }
+            //abilityUI.gameObject.SetActive(false);
+            //actionsUI.gameObject.SetActive(false);
         }
     }
 }
