@@ -14,6 +14,7 @@ public class AdventurerAI : MonoBehaviour
     private List<GameObject> targetsWithinRange;
     private TurnManager tm;
     public NavMeshAgent agent;
+    public float chasePercent = .50f; //1 is 50% chance, 2 is 75% chance etc.
 
     public void Update()
     {
@@ -31,14 +32,14 @@ public class AdventurerAI : MonoBehaviour
         Debug.Log("adventurer turn");
         if(targetsWithinRange.Count > 0)
         {
-            float decision = Random.Range(0,2);
+            float decision = Random.Range(0,Mathf.Round(chasePercent*4));
             if(decision == 0)
             {   
                 //the first goal oriented behaviour, go to the well and destroy any goblins on the way
                 GoToWell(adventurer);
                 CheckForTarget(); //check to see if there is a target to attack
             }
-            else if(decision == 1)
+            else if(decision > 0)
             {
                 //The second goal will seek out a goblin it can see and attack it
                 ChaseGoblin(adventurer);
