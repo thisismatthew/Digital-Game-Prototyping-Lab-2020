@@ -68,23 +68,12 @@ public class LineOfSight : MonoBehaviour
             dot = Vector3.Dot(charToColl, transform.forward); //convert it to a float
             if (dot >= Mathf.Cos(45) && c.CompareTag(enemyTag))
             {
-                //check that enemy is not hiding behind something
-                Ray ray = new Ray(transform.position, c.transform.position);
-                RaycastHit[] hits = Physics.RaycastAll(ray);
-                foreach (RaycastHit h in hits)
+                Ray ray = new Ray(transform.position, (c.transform.position - transform.position));
+                if (Physics.Raycast(ray, out RaycastHit hit))
                 {
-                    Debug.Log(h.collider.name);
-                    //banking on raycast hitting obstacle before character
-                    if (h.collider.name.Contains("Obstacle"))
+                    if (hit.collider.gameObject == c.gameObject)
                     {
-                        break; //character is behind obstacle, can't "see" it
-                    }
-                    else if (h.collider.CompareTag(enemyTag))
-                    {
-                        if (h.collider == c)
-                        {
-                            result.Add(c.gameObject); //character is not hiding
-                        }
+                        result.Add(c.gameObject);
                     }
                 }
             }

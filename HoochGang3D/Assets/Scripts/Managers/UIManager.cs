@@ -17,6 +17,11 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (tm.GetComponent<GameManager>().gameIsOver)
+        {
+            return;
+        }
+
         if (tm.currentCharacter.CompareTag("Goblin"))
         {
             foreach(GameObject g in playerUI)

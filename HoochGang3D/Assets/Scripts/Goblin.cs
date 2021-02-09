@@ -23,6 +23,7 @@ public class Goblin : Character
 
     private void Update()
     {
+
         if (tm.currentCharacter == this.gameObject)
         {
             agentUI.SetActive(true);
