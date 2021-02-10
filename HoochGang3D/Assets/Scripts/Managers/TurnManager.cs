@@ -71,7 +71,8 @@ public class TurnManager : MonoBehaviour
         {
             foreach (GameObject n in GetComponent<NodeManager>().nodes)
             {
-                n.transform.GetChild(0).gameObject.SetActive(false);
+                //n.transform.GetChild(0).gameObject.SetActive(false);
+                n.transform.Find("Detector").gameObject.SetActive(false);
             }
         }
 
