@@ -48,26 +48,23 @@ public class BottleRocket : Attack
             //Debug.Log("We have a character called: " + _gameObject.name);
             target = _gameObject;
         }
-
-        //Debug.Log(target);
-        //Debug.Log("Bottle Rocket: firing at: " + target.name);
-        //target = nodeToTarget(node);
-        //foreach(GameObject g in lineOfSight.GetTargetsInRange()) //loop through all targets we can see
-        //{
-            //Debug.Log("Looping through game objects");
-            //if(target == g) //check if target we clicked on is one we can see
-            //{
-                //Debug.Log("Can see a target");
-                //check if target is within range
-                if(Vector3.Distance(transform.position, target.transform.position) < range*6)
+        if(Vector3.Distance(transform.position, target.transform.position) < range*6)
+        {
+            Ray ray = new Ray(transform.position, (target.transform.position - transform.position));
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
+                if (hit.collider.gameObject == target.gameObject)
                 {
                     //Debug.Log("Throwing hooch!");
                     GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
                     Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
                     projectileScript.Seek(target.transform);
                     GetComponent<Goblin>().ActionsLeft -= 1;
+                    return;
                 }
-            //}
-        //}
+            }            
+        }
+
+        Debug.Log("What am I shooting at? (Enemy behind obstacle)");
     }
 }

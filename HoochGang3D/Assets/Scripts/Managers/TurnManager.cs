@@ -22,6 +22,7 @@ public class TurnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cameraController = GameObject.Find("Main Camera").GetComponent<CameraController>();
         goblins = new List<GameObject>();
         adventurers = new List<GameObject>();
 

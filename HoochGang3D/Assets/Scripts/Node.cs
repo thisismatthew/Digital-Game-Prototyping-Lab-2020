@@ -24,7 +24,7 @@ public class Node : MonoBehaviour
         if (transform.childCount > 1) //means it has an obstacle attached
         {
             surface.defaultArea = 1;
-            transform.GetChild(0).gameObject.SetActive(false);
+            transform.Find("Detector").gameObject.SetActive(false);
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NodeManager : MonoBehaviour
 {
@@ -17,8 +18,11 @@ public class NodeManager : MonoBehaviour
     {
         foreach (GameObject n in nodes)
         {
-            n.GetComponent<Node>().ResetNode();
-            n.transform.GetChild(0).gameObject.SetActive(true);
+            if (n.GetComponent<NavMeshSurface>().defaultArea != 1)
+            {
+                n.GetComponent<Node>().ResetNode();
+                n.transform.Find("Detector").gameObject.SetActive(true);
+            }
         }
     }
 }

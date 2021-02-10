@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         gameIsOver = false;
+
+        brewery = GameObject.FindGameObjectWithTag("Well");
     }
 
     private void Update()
