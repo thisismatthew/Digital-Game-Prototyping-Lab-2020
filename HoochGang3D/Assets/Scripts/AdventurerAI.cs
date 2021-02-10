@@ -16,6 +16,14 @@ public class AdventurerAI : MonoBehaviour
     public NavMeshAgent agent;
     public float chasePercent = .50f; //1 is 50% chance, 2 is 75% chance etc.
 
+    public void Start()
+    {
+        if(movementRange < 1)
+        {
+            movementRange = 1;
+        }
+    }
+
     public void Update()
     {
         targetsWithinRange = los.GetTargetsInRange();
@@ -67,7 +75,7 @@ public class AdventurerAI : MonoBehaviour
             float dist = Vector3.Distance(n.transform.position, adventurer.transform.position);
             if (dist < movementRange * 6 && dist > 1f)
             {
-                if (n.transform.childCount < 2) // checks there is no obstacle child
+                if (n.transform.childCount < 3) // checks there is no obstacle child
                 {
                     nodesWithinRange.Add(n);
                 }
@@ -139,7 +147,7 @@ public class AdventurerAI : MonoBehaviour
             float dist = Vector3.Distance(n.transform.position, a.transform.position);
             if (dist < movementRange * 6 && dist > 1f)
             {
-                if (n.transform.childCount < 2) // checks there is no obstacle child
+                if (n.transform.childCount < 3) // checks there is no obstacle child
                 {
                     nodesWithinRange.Add(n);
                 }
