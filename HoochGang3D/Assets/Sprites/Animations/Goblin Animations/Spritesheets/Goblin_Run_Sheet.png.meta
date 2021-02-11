@@ -1,0 +1,886 @@
+fileFormatVersion: 2
+guid: 6476565e484b8094c8ec4c6917d98272
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6327200609710142538
+    second: Goblin_Run_Sheet_0
+  - first:
+      213: -7908342454611115995
+    second: Goblin_Run_Sheet_1
+  - first:
+      213: 4929192378225163912
+    second: Goblin_Run_Sheet_2
+  - first:
+      213: 5858417751169042270
+    second: Goblin_Run_Sheet_3
+  - first:
+      213: -3623799463384281676
+    second: Goblin_Run_Sheet_4
+  - first:
+      213: 3846904274652222626
+    second: Goblin_Run_Sheet_5
+  - first:
+      213: -8268152425590700131
+    second: Goblin_Run_Sheet_6
+  - first:
+      213: 1893867419936597776
+    second: Goblin_Run_Sheet_7
+  - first:
+      213: 6286486531910827419
+    second: Goblin_Run_Sheet_8
+  - first:
+      213: 465755059999336053
+    second: Goblin_Run_Sheet_9
+  - first:
+      213: 892113022381824240
+    second: Goblin_Run_Sheet_10
+  - first:
+      213: -2494421226049912232
+    second: Goblin_Run_Sheet_11
+  - first:
+      213: 8034930770658959137
+    second: Goblin_Run_Sheet_12
+  - first:
+      213: -2186010854904464498
+    second: Goblin_Run_Sheet_13
+  - first:
+      213: 4826492642961442012
+    second: Goblin_Run_Sheet_14
+  - first:
+      213: 6828742769405357479
+    second: Goblin_Run_Sheet_15
+  - first:
+      213: 2831063392501771267
+    second: Goblin_Run_Sheet_16
+  - first:
+      213: -2928165146777194210
+    second: Goblin_Run_Sheet_17
+  - first:
+      213: -6558704853286737806
+    second: Goblin_Run_Sheet_18
+  - first:
+      213: 2338747412319399377
+    second: Goblin_Run_Sheet_19
+  - first:
+      213: 9134727720001932249
+    second: Goblin_Run_Sheet_20
+  - first:
+      213: 1764261601507463308
+    second: Goblin_Run_Sheet_21
+  - first:
+      213: 6836200304477656642
+    second: Goblin_Run_Sheet_22
+  - first:
+      213: 1426148339504582869
+    second: Goblin_Run_Sheet_23
+  - first:
+      213: 8228465179054271569
+    second: Goblin_Run_Sheet_24
+  - first:
+      213: 8195927770214850920
+    second: Goblin_Run_Sheet_25
+  - first:
+      213: 8139447978629803088
+    second: Goblin_Run_Sheet_26
+  - first:
+      213: 998282789657185053
+    second: Goblin_Run_Sheet_27
+  - first:
+      213: 2687984202636190789
+    second: Goblin_Run_Sheet_28
+  - first:
+      213: -4925735423943154952
+    second: Goblin_Run_Sheet_29
+  - first:
+      213: 6917278951894568808
+    second: Goblin_Run_Sheet_30
+  - first:
+      213: -3181065089067806753
+    second: Goblin_Run_Sheet_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 793
+        width: 157
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44786c7e6bbec750800000000000000
+      internalID: 6327200609710142538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 796
+        width: 217
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52083ce007cef3290800000000000000
+      internalID: -7908342454611115995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 798
+        width: 220
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e7cad1a52086440800000000000000
+      internalID: 4929192378225163912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 802
+        width: 227
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57064cc7e74d4150800000000000000
+      internalID: 5858417751169042270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 801
+        width: 143
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd8ab7769da5bdc0800000000000000
+      internalID: -3623799463384281676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 800
+        width: 143
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4d3975e03f26530800000000000000
+      internalID: 3846904274652222626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 801
+        width: 143
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97c1ebec2f914d80800000000000000
+      internalID: -8268152425590700131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 813
+        width: 162
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017a101626e584a10800000000000000
+      internalID: 1893867419936597776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 519
+        width: 162
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d72db81361e3750800000000000000
+      internalID: 6286486531910827419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 526
+        width: 143
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576e99762c1b67600800000000000000
+      internalID: 465755059999336053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 513
+        width: 143
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f89196311c616c00800000000000000
+      internalID: 892113022381824240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 527
+        width: 143
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852c9156c19026dd0800000000000000
+      internalID: -2494421226049912232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 531
+        width: 228
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f9bfb07fec18f60800000000000000
+      internalID: 8034930770658959137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 534
+        width: 220
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b754e95bab9a1e0800000000000000
+      internalID: -2186010854904464498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 528
+        width: 216
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4c0c6ac752bf240800000000000000
+      internalID: 4826492642961442012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 534
+        width: 158
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad6ce85e5194ce50800000000000000
+      internalID: 6828742769405357479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 279
+        width: 163
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c2ea6e725f94720800000000000000
+      internalID: 2831063392501771267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 275
+        width: 185
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e117aa620511d57d0800000000000000
+      internalID: -2928165146777194210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 270
+        width: 163
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278a6397faccaf4a0800000000000000
+      internalID: -6558704853286737806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 278
+        width: 187
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd69aa5166e47020800000000000000
+      internalID: 2338747412319399377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 285
+        width: 175
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db01a6a67215ce70800000000000000
+      internalID: 9134727720001932249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 285
+        width: 229
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80d6b0449aeb7810800000000000000
+      internalID: 1764261601507463308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 270
+        width: 191
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246dec905ff0fde50800000000000000
+      internalID: 6836200304477656642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 269
+        width: 185
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d01f25db52bac310800000000000000
+      internalID: 1426148339504582869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 9
+        width: 186
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c633ceb71613270800000000000000
+      internalID: 8228465179054271569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 9
+        width: 191
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8616a6412e8cdb170800000000000000
+      internalID: 8195927770214850920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 5
+        width: 229
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c200adfc025f070800000000000000
+      internalID: 8139447978629803088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 5
+        width: 176
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b07e678ec9add00800000000000000
+      internalID: 998282789657185053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 6
+        width: 186
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544edf70463ad4520800000000000000
+      internalID: 2687984202636190789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 4
+        width: 164
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f26f46cab544abb0800000000000000
+      internalID: -4925735423943154952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 5
+        width: 186
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f46f3be8c1fff50800000000000000
+      internalID: 6917278951894568808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Run_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 9
+        width: 162
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf87bec7269ad3d0800000000000000
+      internalID: -3181065089067806753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4f3852bc868763d4c97df013dbbdcb70
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
