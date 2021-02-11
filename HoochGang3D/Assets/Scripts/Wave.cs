@@ -3,6 +3,6 @@
 [System.Serializable]
 public class Wave
 {
-    public GameObject enemy;
-    public Transform[] startLocations;
+    [HideInInspector]public GameObject _enemyPrefab;
+    public Node[] startingNodes;
 }

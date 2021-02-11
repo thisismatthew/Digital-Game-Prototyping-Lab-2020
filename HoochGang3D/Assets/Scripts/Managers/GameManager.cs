@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public GameObject[][] worldGraph;
     public GameObject endUI;
 
+    public WaveManager wm;
+
     private void Start()
     {
         Time.timeScale = 1;
@@ -31,8 +33,16 @@ public class GameManager : MonoBehaviour
 
         if (!GetComponent<TurnManager>().CharactersAlive("a")) //if all adventurers dead
         {
-            GetComponent<WaveManager>().NextWave();
-            return;
+            if(wm.NoMoreWaves())
+            {
+                EndGame("Victory");
+                return;
+            }
+            else
+            {
+                Debug.Log("Spawned a wave");
+                wm.SpawnCurrentWave();
+            }
         }
 
         if (!GetComponent<TurnManager>().CharactersAlive("g") || brewery == null) //if all goblins dead or brewery destroyed
