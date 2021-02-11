@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
         if (!GetComponent<TurnManager>().CharactersAlive("a")) //if all adventurers dead
         {
-            EndGame("Victory");
+            GetComponent<WaveManager>().NextWave();
             return;
         }
 
