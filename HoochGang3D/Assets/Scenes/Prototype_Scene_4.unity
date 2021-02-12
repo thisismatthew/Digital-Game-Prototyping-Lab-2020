@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 43ad4c3822756bf449916a45378361bb, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 2cdc79ae53151d74d9c0c44e7cd9187a, type: 2}
 --- !u!1001 &2805231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25477,12 +25477,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
-      propertyPath: m_AngularSpeed
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5008246196909650690, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
 --- !u!1001 &1060597851
 PrefabInstance:
@@ -25501,7 +25496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1460882602476531122, guid: 7de346c3c277bc24da5b1fd9a2c1f7b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 5.25
       objectReference: {fileID: 0}
     - target: {fileID: 1460882602476531122, guid: 7de346c3c277bc24da5b1fd9a2c1f7b7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -40004,6 +39999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWaveIndex: 0
   enemyPrefab: {fileID: 4663856980244569230, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
+  spawnOffset: {x: 3.2, y: 1.8, z: 2.6}
   waves:
   - _enemyPrefab: {fileID: 0}
     startingNodes:
@@ -52039,14 +52035,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 454474630}
     m_Modifications:
-    - target: {fileID: 1794152868538446057, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794152868538446057, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6367885027542302218, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -52095,12 +52083,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin
       objectReference: {fileID: 0}
-    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
-      propertyPath: m_AngularSpeed
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5008246196909650690, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
 --- !u!1001 &4329557028179321167
 PrefabInstance:
