@@ -128,17 +128,20 @@ public class AdventurerAI : MonoBehaviour
         }
         else if(targetsWithinRange.Count == 1) //if we can see a goblin, move toward it
         {
-            MoveTo(a, targetsWithinRange[0].transform);
+            StartCoroutine(MoveTo(a, targetsWithinRange[0].transform));
         }
         else if(targetsWithinRange.Count > 1) //if there is more than one goblin, select one to move to at random
         {
-            MoveTo(a, targetsWithinRange[Random.Range(0, targetsWithinRange.Count)].transform);
+            StartCoroutine(MoveTo(a, targetsWithinRange[Random.Range(0, targetsWithinRange.Count)].transform));
         }
     }
 
-    private void MoveTo(Adventurer a, Transform t)
+    private IEnumerator MoveTo(Adventurer a, Transform t)
     {
         //modified version of GoToWell that takes in a transform instead of finding the well
+
+        //wait one second on begining this coroutine
+        yield return new WaitForSeconds(1); //value can be changed
 
         //find all nodes within range
         //TODO check to make sure that the nodes arent occupied by walls or other characters. 
