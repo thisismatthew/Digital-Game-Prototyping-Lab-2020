@@ -18,6 +18,7 @@ public class TurnManager : MonoBehaviour
     public Text actionsIndicator;
     public CameraController cameraController;
     public float secondsBetweenTurns = 1;
+    public WaveManager wm;
 
     // Start is called before the first frame update
     void Start()

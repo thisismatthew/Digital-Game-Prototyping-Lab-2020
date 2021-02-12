@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("Spawned a wave");
                 wm.SpawnCurrentWave();
+                wm.NextWave();
             }
         }
 

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    private int currentWaveIndex = 0; //start at -1 so that this always accurately refers to the correct wave
+    public int currentWaveIndex = 0; //start at -1 so that this always accurately refers to the correct wave
     public GameObject enemyPrefab;
     public Vector3 spawnOffset = new Vector3(3.2f, 1.8f, 2.6f);
     public Wave[] waves;
     private bool noMoreWaves = false;
+    public TurnManager tm;
 
     public void Start()
     {
@@ -21,11 +22,23 @@ public class WaveManager : MonoBehaviour
     public void SpawnCurrentWave()
     {
         Vector3 spawnpoint;
+        GameObject addedCharacter;
         foreach(Node n in waves[currentWaveIndex].startingNodes)
         {
             spawnpoint = n.transform.position + spawnOffset;
-            Instantiate(waves[currentWaveIndex]._enemyPrefab, spawnpoint, Quaternion.identity); //spawn an enemy for each 
+            addedCharacter = (Instantiate(waves[currentWaveIndex]._enemyPrefab, spawnpoint, Quaternion.identity)); //spawn an enemy for each 
+            tm.adventurers.Add(addedCharacter);
         }
+
+        if(currentWaveIndex+1 >= waves.Length)
+        {
+            noMoreWaves = true;
+        }
+    }
+
+    public Wave GetCurrentWave()
+    {
+        return waves[currentWaveIndex];
     }
 
     public void NextWave()
@@ -35,6 +48,6 @@ public class WaveManager : MonoBehaviour
 
     public bool NoMoreWaves()
     {
-        return waves[currentWaveIndex] == null; //if the wave index is greater than or equal to the number of waves, the game is over
+        return noMoreWaves;
     }
 }
