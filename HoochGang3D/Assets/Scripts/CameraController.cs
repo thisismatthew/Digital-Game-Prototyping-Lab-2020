@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
     private Transform placeToCentreOn;
     private bool centred = true;
     public int centreSpeed = 9;
-    public bool debug = false;
+    public bool dontCentreOnCharacter = false;
 
     private void Start()
     {
@@ -95,7 +95,7 @@ public class CameraController : MonoBehaviour
 
     public void CentreCameraOnTransform(Transform t)
     {
-        if(!debug)
+        if(!dontCentreOnCharacter)
         {
             centred = false;
         }
