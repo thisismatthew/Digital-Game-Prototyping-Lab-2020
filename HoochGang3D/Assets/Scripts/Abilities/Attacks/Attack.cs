@@ -5,6 +5,7 @@ using UnityEngine;
 public class Attack : Ability
 {
     public Material attackMaterial;
+    public Color attackColor;
     protected GameObject target;
     protected LineOfSight lineOfSight;
     [HideInInspector]public bool isRanged;

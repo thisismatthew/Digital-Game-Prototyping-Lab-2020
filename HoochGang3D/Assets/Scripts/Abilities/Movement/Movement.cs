@@ -8,6 +8,7 @@ public abstract class Movement : Ability
     //does the agent actually move from here?
     public NavMeshAgent agent;
     public Material moveMaterial;
+    public Color moveColor;
 
     protected override void Start()
     {

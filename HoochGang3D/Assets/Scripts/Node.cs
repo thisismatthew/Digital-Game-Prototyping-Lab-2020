@@ -7,11 +7,11 @@ public class Node : MonoBehaviour
     private Renderer rend;
     public Material startMaterial;
     public Material highlightMaterial;
-    
     private TurnManager tm;
     private NodeManager nm;
     private NavMeshSurface surface;
     private bool isHighlighted;
+    public SpriteRenderer spriteRend;
 
     private void Start()
     {
@@ -96,9 +96,21 @@ public class Node : MonoBehaviour
         isHighlighted = true;
     }
 
+    public void SpriteHighlight(Color c)
+    {
+        if (surface.defaultArea == 1) //not walkable
+        {
+            return;
+        }
+
+        spriteRend.color = c;
+        isHighlighted = true;
+    }
+
     public void ResetNode()
     {
         rend.material = startMaterial;
+        spriteRend.color = Color.white;
         isHighlighted = false;
     }
 
