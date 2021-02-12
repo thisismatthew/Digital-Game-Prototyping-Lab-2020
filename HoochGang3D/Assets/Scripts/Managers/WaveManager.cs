@@ -6,7 +6,7 @@ public class WaveManager : MonoBehaviour
 {
     public int currentWaveIndex = 0; //start at -1 so that this always accurately refers to the correct wave
     public GameObject enemyPrefab;
-    public Vector3 spawnOffset = new Vector3(3.2f, 1.8f, 2.6f);
+    //public Vector3 spawnOffset = new Vector3(3.2f, 1.8f, 2.6f);
     public Wave[] waves;
     private bool noMoreWaves = false;
     public TurnManager tm;
@@ -25,7 +25,7 @@ public class WaveManager : MonoBehaviour
         GameObject addedCharacter;
         foreach(Node n in waves[currentWaveIndex].startingNodes)
         {
-            spawnpoint = n.transform.position + spawnOffset;
+            spawnpoint = n.transform.position;
             addedCharacter = (Instantiate(waves[currentWaveIndex]._enemyPrefab, spawnpoint, Quaternion.identity)); //spawn an enemy for each 
             tm.adventurers.Add(addedCharacter);
         }
