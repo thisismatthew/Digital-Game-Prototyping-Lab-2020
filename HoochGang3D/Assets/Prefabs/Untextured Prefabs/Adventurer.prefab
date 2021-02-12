@@ -168,8 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953f5ebb156c7f640ae1dc32df578a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementRange: 1
   los: {fileID: 4702249626733565877}
   projectile: {fileID: 5328101574346610163, guid: be6b37b048f74104d9796d4b56e841b9, type: 3}
+  agent: {fileID: 0}
+  chasePercent: 0.5
 --- !u!114 &4702249626733565877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +188,7 @@ MonoBehaviour:
   enemyTag: 
   range: 2
   lineOfSightMaterial: {fileID: 2100000, guid: a0e3f2a98b62b7a419331c5e2b0d092d, type: 2}
+  lineOfSightColor: {r: 1, g: 0.09811318, b: 0.09811318, a: 1}
 --- !u!114 &-1037944684475319318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +205,7 @@ MonoBehaviour:
   isAttack: 0
   agent: {fileID: 0}
   moveMaterial: {fileID: 0}
+  moveColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &7903383673479185414
 PrefabInstance:
   m_ObjectHideFlags: 0

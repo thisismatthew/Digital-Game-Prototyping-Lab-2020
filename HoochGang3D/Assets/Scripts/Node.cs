@@ -24,7 +24,7 @@ public class Node : MonoBehaviour
         rend.material = startMaterial;
         spriteRend.color = startColor;
 
-        if (transform.childCount > 1) //means it has an obstacle attached
+        if (transform.childCount > 2) //means it has an obstacle attached
         {
             surface.defaultArea = 1;
             transform.Find("Detector").gameObject.SetActive(false);
