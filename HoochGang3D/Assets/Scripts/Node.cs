@@ -11,7 +11,7 @@ public class Node : MonoBehaviour
     private NodeManager nm;
     private NavMeshSurface surface;
     private bool isHighlighted;
-    public SpriteRenderer spriteRend;
+    private SpriteRenderer spriteRend;
     public Color startColor;
 
     private void Start()
@@ -24,7 +24,7 @@ public class Node : MonoBehaviour
         rend.material = startMaterial;
         spriteRend.color = startColor;
 
-        if (transform.childCount > 1) //means it has an obstacle attached
+        if (transform.Find("InvisibleObstacle") != null) //means it has an obstacle attached
         {
             surface.defaultArea = 1;
             transform.Find("Detector").gameObject.SetActive(false);
