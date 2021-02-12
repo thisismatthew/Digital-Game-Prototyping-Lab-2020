@@ -25477,6 +25477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
 --- !u!1001 &1060597851
@@ -39999,7 +40003,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWaveIndex: 0
   enemyPrefab: {fileID: 4663856980244569230, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
-  spawnOffset: {x: 3.2, y: 1.8, z: 2.6}
   waves:
   - _enemyPrefab: {fileID: 0}
     startingNodes:
@@ -52082,6 +52085,10 @@ PrefabInstance:
     - target: {fileID: 6367885027542302220, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: m_Name
       value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}

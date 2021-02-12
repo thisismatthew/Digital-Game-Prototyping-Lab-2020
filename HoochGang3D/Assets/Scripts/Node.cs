@@ -20,6 +20,7 @@ public class Node : MonoBehaviour
         nm = GameObject.Find("GameManager").GetComponent<NodeManager>();
         rend = GetComponent<Renderer>();
         surface = GetComponent<NavMeshSurface>();
+        spriteRend = transform.Find("Tile_Sprite").GetComponent<SpriteRenderer>();
         rend.material = startMaterial;
         spriteRend.color = startColor;
 
