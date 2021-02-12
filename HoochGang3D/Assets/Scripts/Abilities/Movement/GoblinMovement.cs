@@ -13,7 +13,8 @@ public class GoblinMovement : Movement
 
             if (dist < range * 6 && dist > 1f)
             {
-                n.GetComponent<Node>().Highlight(moveMaterial);
+                //n.GetComponent<Node>().Highlight(moveMaterial);
+                n.GetComponent<Node>().SpriteHighlight(moveColor);
                 continue;
             }
 

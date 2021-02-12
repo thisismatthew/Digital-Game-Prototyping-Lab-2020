@@ -12,6 +12,7 @@ public class Node : MonoBehaviour
     private NavMeshSurface surface;
     private bool isHighlighted;
     public SpriteRenderer spriteRend;
+    public Color startColor;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class Node : MonoBehaviour
         rend = GetComponent<Renderer>();
         surface = GetComponent<NavMeshSurface>();
         rend.material = startMaterial;
+        spriteRend.color = startColor;
 
         if (transform.childCount > 1) //means it has an obstacle attached
         {
@@ -110,7 +112,7 @@ public class Node : MonoBehaviour
     public void ResetNode()
     {
         rend.material = startMaterial;
-        spriteRend.color = Color.white;
+        spriteRend.color = startColor;
         isHighlighted = false;
     }
 
