@@ -25,8 +25,12 @@ public class BottleRocket : Attack
                 {
                     node.Highlight(attackMaterial);
                 }*/
+<<<<<<< HEAD
                 //node.Highlight(attackMaterial);
                 node.SpriteHighlight(attackColor);
+=======
+                node.SpriteHighlight(Color.red);
+>>>>>>> e2c7ed0c92e442e4d828bd69ea1f8c013ecaf479
                 nodesInRange.Add(n);
             }
             else
