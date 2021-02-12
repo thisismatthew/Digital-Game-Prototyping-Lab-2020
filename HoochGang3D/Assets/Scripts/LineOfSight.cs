@@ -8,6 +8,7 @@ public class LineOfSight : MonoBehaviour
     [HideInInspector]public string enemyTag;
     [SerializeField]private float range;
     public Material lineOfSightMaterial;
+    public Color lineOfSightColor;
 
     public float Range
     {
@@ -50,7 +51,8 @@ public class LineOfSight : MonoBehaviour
             dot = Vector3.Dot(charToColl, transform.forward); //convert it to a float
             if (dot >= Mathf.Cos(45) && c.CompareTag("Detector"))
             {
-                c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
+                //c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
+                c.gameObject.GetComponentInParent<Node>().SpriteHighlight(lineOfSightColor);
             }
         }
     }
@@ -71,7 +73,8 @@ public class LineOfSight : MonoBehaviour
                 {
                     if (hit.collider.gameObject == c.gameObject)
                     {
-                        c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
+                        //c.gameObject.GetComponentInParent<Node>().Highlight(lineOfSightMaterial);
+                        c.gameObject.GetComponentInParent<Node>().SpriteHighlight(lineOfSightColor);
                     }
                 }
             }

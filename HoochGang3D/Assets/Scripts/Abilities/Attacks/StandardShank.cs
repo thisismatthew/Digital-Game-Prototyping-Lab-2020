@@ -19,7 +19,8 @@ public class StandardShank : Attack
         {
             if (Vector3.Distance(transform.position, n.transform.position) <= range*6)
             {
-                n.GetComponent<Node>().Highlight(attackMaterial);
+                //n.GetComponent<Node>().Highlight(attackMaterial);
+                n.GetComponent<Node>().SpriteHighlight(attackColor);
                 nodesInRange.Add(n);
             }
             else
