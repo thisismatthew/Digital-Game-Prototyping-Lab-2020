@@ -6,7 +6,7 @@ public class WaveManager : MonoBehaviour
 {
     private int currentWaveIndex = 0; //start at -1 so that this always accurately refers to the correct wave
     public GameObject enemyPrefab;
-    public Vector3 spawnOffset;
+    public Vector3 spawnOffset = new Vector3(3.2f, 1.8f, 2.6f);
     public Wave[] waves;
     private bool noMoreWaves = false;
 

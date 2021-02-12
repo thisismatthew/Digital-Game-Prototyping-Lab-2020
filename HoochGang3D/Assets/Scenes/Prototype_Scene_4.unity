@@ -4991,6 +4991,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1460882602476531122, guid: 7de346c3c277bc24da5b1fd9a2c1f7b7, type: 3}
   m_PrefabInstance: {fileID: 216867081}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &224976997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1317710809619530582, guid: 7de346c3c277bc24da5b1fd9a2c1f7b7, type: 3}
+  m_PrefabInstance: {fileID: 68186497}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d7e4bb982eb3d4fa9bb450efda74b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &225223938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40055,6 +40066,7 @@ GameObject:
   - component: {fileID: 1629255950}
   - component: {fileID: 1629255953}
   - component: {fileID: 1629255952}
+  - component: {fileID: 1629255954}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -40077,6 +40089,7 @@ MonoBehaviour:
   brewery: {fileID: 425567441}
   gameIsOver: 0
   endUI: {fileID: 1331940637}
+  wm: {fileID: 1629255954}
 --- !u!4 &1629255951
 Transform:
   m_ObjectHideFlags: 0
@@ -40127,6 +40140,24 @@ MonoBehaviour:
   actionsIndicator: {fileID: 1331940638}
   cameraController: {fileID: 914846180}
   secondsBetweenTurns: 1
+--- !u!114 &1629255954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629255949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62d665d713519142a9bf1eb6d08814f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 4663856980244569230, guid: 1ca8746af64035b44aaae7e4dba1ed08, type: 3}
+  spawnOffset: {x: 3.2, y: 1.8, z: 2.6}
+  waves:
+  - _enemyPrefab: {fileID: 0}
+    startingNodes:
+    - {fileID: 224976997}
 --- !u!1001 &1631538505
 PrefabInstance:
   m_ObjectHideFlags: 0
