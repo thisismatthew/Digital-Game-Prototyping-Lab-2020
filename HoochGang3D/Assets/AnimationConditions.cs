@@ -8,34 +8,52 @@ public class AnimationConditions : MonoBehaviour
 {
     NavMeshAgent agent;
     Animator animator;
-    public float magnitude;
-    Vector3 stationary = new Vector3(0, 0, 0);
-    Vector3 currentMovement;
+    SpriteRenderer spriteRenderer;
+    public float arrivalRadius = 2f;
+    public float distanceToDest;
+    public bool movingAway = false;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        magnitude = agent.velocity.magnitude;
+        distanceToDest = Vector3.Distance(transform.position, agent.destination);
         //setting moving away bool
-        if (agent.velocity.x > 0f || agent.velocity.z > 0f)
+        if ((transform.position.x < agent.destination.x) || (transform.position.z < agent.destination.z))
         {
+            movingAway = true;
             animator.SetBool("MovingAway", true);
         }
         else
         {
+            movingAway = false;
             animator.SetBool("MovingAway", false);
         }
 
+        //moving left
+        if ((transform.position.x > agent.destination.x))
+        {
+            spriteRenderer.flipX = true;
+        }
+
+        //moving right
+        if ((transform.position.z > agent.destination.z))
+        {
+            spriteRenderer.flipX = false;
+        }
+
+
 
         //setting movement 
-        if (agent.velocity.magnitude != 0.00f)
+        if (Vector3.Distance(transform.position, agent.destination) > arrivalRadius)
         {
             animator.SetFloat("Speed", 0.2f);
         }
