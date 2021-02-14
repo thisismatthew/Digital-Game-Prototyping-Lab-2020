@@ -25566,7 +25566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: m_Acceleration
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: m_AngularSpeed
@@ -33406,6 +33406,42 @@ PrefabInstance:
     - target: {fileID: 2062207750792437330, guid: 143f303a24d7c024c9ec45a3ae871935, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326928514541877241, guid: 143f303a24d7c024c9ec45a3ae871935, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326928514541877241, guid: 143f303a24d7c024c9ec45a3ae871935, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326928514541877241, guid: 143f303a24d7c024c9ec45a3ae871935, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326928514541877241, guid: 143f303a24d7c024c9ec45a3ae871935, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326928514541877241, guid: 143f303a24d7c024c9ec45a3ae871935, type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326928514541877241, guid: 143f303a24d7c024c9ec45a3ae871935, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326928514541877241, guid: 143f303a24d7c024c9ec45a3ae871935, type: 3}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326928515488146174, guid: 143f303a24d7c024c9ec45a3ae871935, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326928515488146174, guid: 143f303a24d7c024c9ec45a3ae871935, type: 3}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 143f303a24d7c024c9ec45a3ae871935, type: 3}
@@ -52328,7 +52364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: m_Acceleration
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: m_AngularSpeed
