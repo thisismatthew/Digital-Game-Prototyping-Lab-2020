@@ -8,6 +8,8 @@ public class AbilityUI : MonoBehaviour
     private TurnManager tm;
     private NodeManager nm;
     public Button[] buttons;
+    public Sprite pressedButtonSprite;
+    public Sprite defaultSprite;
 
     private void Start()
     {
@@ -27,12 +29,14 @@ public class AbilityUI : MonoBehaviour
             ResetButton(b.gameObject);
         }
 
-        pressedButton.GetComponent<Image>().color = Color.red; //provide a visual indicator that shows the button has been pressed
+        //pressedButton.GetComponent<Image>().color = Color.red; //provide a visual indicator that shows the button has been pressed
+        pressedButton.GetComponent<Image>().sprite = pressedButtonSprite;
     }
 
     private void ResetButton(GameObject b)
     {
-        b.GetComponent<Image>().color = Color.white; //return the button to what it was when we started
+        //b.GetComponent<Image>().color = Color.white; //return the button to what it was when we started
+        b.GetComponent<Image>().sprite = defaultSprite;
     }
 
     public void MoveAbility()
