@@ -25556,6 +25556,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_Speed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_Acceleration
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6592568007220276035, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: attackColor.a
       value: 1
@@ -52301,6 +52317,22 @@ PrefabInstance:
     - target: {fileID: 6367885027542302220, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: m_Name
       value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_Speed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_Acceleration
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367885027542302222, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6592568007220276035, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: attackColor.a

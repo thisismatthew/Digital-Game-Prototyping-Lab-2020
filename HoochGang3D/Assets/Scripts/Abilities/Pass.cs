@@ -6,11 +6,13 @@ public class Pass : Ability
 {
     public override void Execute() 
     {
+        base.Execute();
         PassTurn();
     }
 
     public override void Execute(GameObject node)
     {
+        base.Execute();
         PassTurn();
     }
 
