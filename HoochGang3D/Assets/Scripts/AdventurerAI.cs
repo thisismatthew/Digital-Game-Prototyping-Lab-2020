@@ -141,7 +141,7 @@ public class AdventurerAI : MonoBehaviour
         //modified version of GoToWell that takes in a transform instead of finding the well
 
         //wait one second on begining this coroutine
-        yield return new WaitForSeconds(1); //value can be changed
+        yield return new WaitForSeconds(5); //value can be changed
 
         //find all nodes within range
         //TODO check to make sure that the nodes arent occupied by walls or other characters. 

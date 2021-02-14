@@ -38,6 +38,8 @@ public class BottleRocket : Attack
 
     public override void Execute(GameObject _gameObject)
     {
+        base.Execute();
+
         //find out if the game object is a node, or if the gameobject is a character
         if(_gameObject.GetComponent<Adventurer>() == null)
         {

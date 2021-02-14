@@ -21,8 +21,14 @@ public abstract class Ability : MonoBehaviour
     }
 
     public virtual void DisplayRange() {}
-    public virtual void Execute() {}
-    public virtual void Execute(GameObject node){ }
+    public virtual void Execute() 
+    {
+        nm.ResetAllNodes();
+    }
+    public virtual void Execute(GameObject node)
+    {
+        nm.ResetAllNodes();
+    }
 
     public float Range
     {
