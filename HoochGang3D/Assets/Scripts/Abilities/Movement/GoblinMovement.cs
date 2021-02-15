@@ -25,6 +25,7 @@ public class GoblinMovement : Movement
 
     public override void Execute(GameObject goal)
     {
+        base.Execute();
         agent.destination = goal.transform.position;
         gameObject.GetComponent<Goblin>().CurrentNode = goal;
         GetComponent<Goblin>().ActionsLeft -= 1;

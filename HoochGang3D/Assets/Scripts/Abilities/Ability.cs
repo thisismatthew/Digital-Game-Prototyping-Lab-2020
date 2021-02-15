@@ -21,8 +21,16 @@ public abstract class Ability : MonoBehaviour
     }
 
     public virtual void DisplayRange() {}
-    public virtual void Execute() {}
-    public virtual void Execute(GameObject node){ }
+    public virtual void Execute() 
+    {
+        nm.ResetAllNodes();
+        GameObject.Find("Abilities").GetComponent<AbilityUI>().ResetAllButtons();
+        tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
+    }
+    public virtual void Execute(GameObject node)
+    {
+        nm.ResetAllNodes();
+    }
 
     public float Range
     {

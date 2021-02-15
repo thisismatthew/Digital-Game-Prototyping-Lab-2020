@@ -32,7 +32,7 @@ public class StandardShank : Attack
 
     public override void Execute(GameObject target)
     {
-
+        base.Execute();
         if (target.CompareTag("Adventurer"))
         {
             target.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
