@@ -24,8 +24,6 @@ public class Goblin : Character
     private void Update()
     {
 
-
-
         if (tm.currentCharacter == this.gameObject)
         {
             agentUI.SetActive(true);
@@ -45,7 +43,10 @@ public class Goblin : Character
         {
             return;
         }
-
+        if (actionsLeft <= 0)
+        {
+            return;
+        }
         tm.currentCharacter = this.gameObject;
         nm.ResetAllNodes();
     }
