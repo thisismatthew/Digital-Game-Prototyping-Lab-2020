@@ -78,7 +78,7 @@ public class Node : MonoBehaviour
         {
             if (c != null && c.CompareTag(tm.currentCharacter.tag)) //make sure the character is alive and an ally
             {
-                if (this.gameObject == c.GetComponent<Character>().CurrentNode && c.GetComponent<Character>().ActionsLeft > 0) //if on this node
+                if (this.gameObject == c.GetComponent<Character>().CurrentNode && c.GetComponent<Character>().ActionsLeft > 0) //if on this node and has actions left
                 {
                     return c;
                 }

@@ -43,7 +43,7 @@ public class Goblin : Character
         {
             return;
         }
-        if (actionsLeft <= 0)
+        if (actionsLeft <= 0) //if this character can still take actions
         {
             return;
         }

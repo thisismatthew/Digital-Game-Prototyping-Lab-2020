@@ -25492,6 +25492,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 454474630}
     m_Modifications:
+    - target: {fileID: 3743448884630472169, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598721900006109079, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925600551693809519, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5008246196909650690, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: attackColor.a
       value: 1
@@ -25507,6 +25519,62 @@ PrefabInstance:
     - target: {fileID: 5008246196909650690, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: attackColor.r
       value: 0.8196079
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_PreInfinity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_PostInfinity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[0].time
+      value: -0.000001527369
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[1].time
+      value: 0.9916687
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[0].value
+      value: 2.0047095
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[1].value
+      value: 1.4952698
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[1].tangentMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367885027542302218, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: m_RootOrder
@@ -52290,6 +52358,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 454474630}
     m_Modifications:
+    - target: {fileID: 303604919524068200, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925600551693809519, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5008246196909650690, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: attackColor.a
       value: 1
@@ -52305,6 +52381,38 @@ PrefabInstance:
     - target: {fileID: 5008246196909650690, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: attackColor.r
       value: 0.8196079
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_PreInfinity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_PostInfinity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[0].time
+      value: -0.000001527369
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[1].time
+      value: 0.9916687
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[0].value
+      value: 2.0047095
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622502743440872965, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
+      propertyPath: bobbing.m_Curve.Array.data[1].value
+      value: 1.4952698
       objectReference: {fileID: 0}
     - target: {fileID: 6367885027542302218, guid: 07cb67e00ffd9404491ec34d289de3d6, type: 3}
       propertyPath: m_RootOrder
