@@ -34,11 +34,20 @@ public class Projectile : MonoBehaviour
     void HitTarget()
     {
         Damage(target);
-        Destroy(gameObject);
+        if (gameObject.tag == "Adventurer")
+            gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
+        else
+            gameObject.GetComponentInChildren<Animator>().Play("Goblin_death");
+
+        Destroy(gameObject, 3f);
     }
     
     void Damage(Transform enemy)
     {
-        Destroy(enemy.gameObject);
+        if (enemy.gameObject.tag == "Adventurer")
+            enemy.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
+        else
+            enemy.gameObject.GetComponentInChildren<Animator>().Play("Goblin_death");
+        Destroy(enemy.gameObject, 3f);
     }
 }

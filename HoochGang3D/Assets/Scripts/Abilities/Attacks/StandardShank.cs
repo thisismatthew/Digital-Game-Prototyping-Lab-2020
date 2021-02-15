@@ -35,7 +35,8 @@ public class StandardShank : Attack
 
         if (target.CompareTag("Adventurer"))
         {
-            Destroy(target);
+            target.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
+            Destroy(target, 3f);
             GetComponent<Goblin>().ActionsLeft -= 1;
         }
         else
@@ -46,7 +47,8 @@ public class StandardShank : Attack
                 {
                     if (c.GetComponent<Character>().CurrentNode == target)
                     {
-                        Destroy(c);
+                        target.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
+                        Destroy(target, 3f);
                         GetComponent<Goblin>().ActionsLeft -= 1;
                         break;
                     }

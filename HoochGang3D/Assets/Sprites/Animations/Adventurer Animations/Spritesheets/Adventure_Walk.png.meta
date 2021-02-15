@@ -152,12 +152,12 @@ TextureImporter:
       name: Adventure_Walk_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 672
-        width: 249
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 61
+        y: 683
+        width: 195
+        height: 291
+      alignment: 9
+      pivot: {x: 0.38410825, y: 0.49223384}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,12 +173,12 @@ TextureImporter:
       name: Adventure_Walk_1
       rect:
         serializedVersion: 2
-        x: 297
-        y: 668
-        width: 166
-        height: 306
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 296
+        y: 671
+        width: 226
+        height: 303
+      alignment: 9
+      pivot: {x: 0.28001094, y: 0.5223749}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: Adventure_Walk_2
       rect:
         serializedVersion: 2
-        x: 497
-        y: 672
-        width: 232
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 550
+        y: 679
+        width: 189
+        height: 295
+      alignment: 9
+      pivot: {x: 0.40434337, y: 0.4999998}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: Adventure_Walk_3
       rect:
         serializedVersion: 2
-        x: 782
-        y: 681
-        width: 165
-        height: 314
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 777
+        y: 679
+        width: 174
+        height: 319
+      alignment: 9
+      pivot: {x: 0.40908462, y: 0.45749408}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,12 +236,12 @@ TextureImporter:
       name: Adventure_Walk_4
       rect:
         serializedVersion: 2
-        x: 981
-        y: 679
-        width: 174
-        height: 319
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 985
+        y: 681
+        width: 165
+        height: 314
+      alignment: 9
+      pivot: {x: 0.41782153, y: 0.47121143}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: Adventure_Walk_5
       rect:
         serializedVersion: 2
-        x: 1193
-        y: 679
-        width: 189
-        height: 295
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1203
+        y: 672
+        width: 232
+        height: 302
+      alignment: 9
+      pivot: {x: 0.22725493, y: 0.51496595}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,12 +278,12 @@ TextureImporter:
       name: Adventure_Walk_6
       rect:
         serializedVersion: 2
-        x: 1410
-        y: 671
-        width: 226
-        height: 303
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1469
+        y: 668
+        width: 166
+        height: 306
+      alignment: 9
+      pivot: {x: 0.44554487, y: 0.5073851}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,12 +299,12 @@ TextureImporter:
       name: Adventure_Walk_7
       rect:
         serializedVersion: 2
-        x: 1676
-        y: 683
-        width: 195
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1653
+        y: 672
+        width: 249
+        height: 302
+      alignment: 9
+      pivot: {x: 0.3638622, y: 0.4999998}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,12 +320,12 @@ TextureImporter:
       name: Adventure_Walk_8
       rect:
         serializedVersion: 2
-        x: 27
-        y: 59
-        width: 162
-        height: 310
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 28
+        y: 57
+        width: 231
+        height: 284
+      alignment: 9
+      pivot: {x: 0.7347935, y: 0.49999973}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,12 +341,12 @@ TextureImporter:
       name: Adventure_Walk_9
       rect:
         serializedVersion: 2
-        x: 231
-        y: 71
-        width: 162
-        height: 305
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 269
+        y: 52
+        width: 214
+        height: 289
+      alignment: 9
+      pivot: {x: 0.7640054, y: 0.47654086}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,12 +362,12 @@ TextureImporter:
       name: Adventure_Walk_10
       rect:
         serializedVersion: 2
-        x: 451
-        y: 70
-        width: 230
-        height: 271
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 514
+        y: 59
+        width: 231
+        height: 282
+      alignment: 9
+      pivot: {x: 0.656529, y: 0.45993087}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,12 +383,12 @@ TextureImporter:
       name: Adventure_Walk_11
       rect:
         serializedVersion: 2
-        x: 690
-        y: 68
-        width: 229
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 759
+        y: 54
+        width: 237
+        height: 287
+      alignment: 9
+      pivot: {x: 0.5858183, y: 0.4606288}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,12 +404,12 @@ TextureImporter:
       name: Adventure_Walk_12
       rect:
         serializedVersion: 2
-        x: 936
-        y: 54
-        width: 237
-        height: 287
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1013
+        y: 68
+        width: 229
+        height: 273
+      alignment: 9
+      pivot: {x: 0.70485157, y: 0.45090455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,12 +425,12 @@ TextureImporter:
       name: Adventure_Walk_13
       rect:
         serializedVersion: 2
-        x: 1187
-        y: 59
-        width: 231
-        height: 282
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1253
+        y: 70
+        width: 230
+        height: 271
+      alignment: 9
+      pivot: {x: 0.7719477, y: 0.44229898}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,12 +446,12 @@ TextureImporter:
       name: Adventure_Walk_14
       rect:
         serializedVersion: 2
-        x: 1449
-        y: 52
-        width: 214
-        height: 289
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1539
+        y: 71
+        width: 162
+        height: 305
+      alignment: 9
+      pivot: {x: 0.6378927, y: 0.4047864}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,12 +467,12 @@ TextureImporter:
       name: Adventure_Walk_15
       rect:
         serializedVersion: 2
-        x: 1673
-        y: 57
-        width: 231
-        height: 284
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1743
+        y: 59
+        width: 162
+        height: 310
+      alignment: 9
+      pivot: {x: 0.6103139, y: 0.4351464}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

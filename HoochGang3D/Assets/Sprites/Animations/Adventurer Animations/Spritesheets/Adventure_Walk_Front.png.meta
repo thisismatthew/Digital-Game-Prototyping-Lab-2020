@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 46c08f5b10cf02e4eae46190b6609814
+guid: c96a58bd9de5b3a42935d59273616133
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5895459994180087371
-    second: Adventure_Idle_0
+      213: 4898364084357545227
+    second: Adventure_Walk_Front_0
   - first:
-      213: 7201598944158485484
-    second: Adventure_Idle_1
+      213: 8522776968000487407
+    second: Adventure_Walk_Front_1
   - first:
-      213: -2217774429223380945
-    second: Adventure_Idle_2
+      213: -1682700198245190952
+    second: Adventure_Walk_Front_2
   - first:
-      213: -7546826676080078562
-    second: Adventure_Idle_3
+      213: -9173912800827121835
+    second: Adventure_Walk_Front_3
   - first:
-      213: 8391174847997304151
-    second: Adventure_Idle_4
+      213: 4053309675810662869
+    second: Adventure_Walk_Front_4
   - first:
-      213: -4376727446127782998
-    second: Adventure_Idle_5
+      213: -2732812770720661563
+    second: Adventure_Walk_Front_5
   - first:
-      213: -3282501164353204773
-    second: Adventure_Idle_6
+      213: 4645999281158970183
+    second: Adventure_Walk_Front_6
   - first:
-      213: -6336833542568456899
-    second: Adventure_Idle_7
+      213: 8528637532090054814
+    second: Adventure_Walk_Front_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -125,169 +125,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Adventure_Idle_0
+      name: Adventure_Walk_Front_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 632
-        width: 316
-        height: 415
-      alignment: 9
-      pivot: {x: 0.23539291, y: 0.4782178}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4e61a411a1e0d150800000000000000
-      internalID: 5895459994180087371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Adventure_Idle_1
-      rect:
-        serializedVersion: 2
-        x: 376
-        y: 631
-        width: 324
+        x: 121
+        y: 560
+        width: 276
         height: 410
       alignment: 9
-      pivot: {x: 0.27680132, y: 0.46692833}
+      pivot: {x: 0.41880804, y: 0.48906875}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ceb0561851831f360800000000000000
-      internalID: 7201598944158485484
+      spriteID: b0db9ac9e2c7af340800000000000000
+      internalID: 4898364084357545227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Adventure_Idle_2
+      name: Adventure_Walk_Front_1
       rect:
         serializedVersion: 2
-        x: 736
-        y: 631
-        width: 317
-        height: 414
+        x: 450
+        y: 543
+        width: 319
+        height: 427
       alignment: 9
-      pivot: {x: 0.25761437, y: 0.50545853}
+      pivot: {x: 0.2822325, y: 0.5157438}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f28123a28e1e831e0800000000000000
-      internalID: -2217774429223380945
+      spriteID: fefbc8d2f7cf64670800000000000000
+      internalID: 8522776968000487407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Adventure_Idle_3
+      name: Adventure_Walk_Front_2
       rect:
         serializedVersion: 2
-        x: 1080
-        y: 632
-        width: 315
+        x: 806
+        y: 554
+        width: 267
+        height: 416
+      alignment: 9
+      pivot: {x: 0.37410665, y: 0.4999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2bd14c519d5a8e0800000000000000
+      internalID: -1682700198245190952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_3
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 554
+        width: 246
+        height: 448
+      alignment: 9
+      pivot: {x: 0.39979714, y: 0.45998383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f5a42c9e6bfa080800000000000000
+      internalID: -9173912800827121835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_4
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 42
+        width: 222
+        height: 421
+      alignment: 9
+      pivot: {x: 0.4596233, y: 0.45209467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9295fbcaf304830800000000000000
+      internalID: 4053309675810662869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_5
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 30
+        width: 313
+        height: 406
+      alignment: 9
+      pivot: {x: 0.26373935, y: 0.5220778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf3b8b9349131ad0800000000000000
+      internalID: -2732812770720661563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_6
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 25
+        width: 224
         height: 411
       alignment: 9
-      pivot: {x: 0.26324987, y: 0.5109969}
+      pivot: {x: 0.4399752, y: 0.5163567}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e111ec67f19444790800000000000000
-      internalID: -7546826676080078562
+      spriteID: 74b533c0bb7e97040800000000000000
+      internalID: 4645999281158970183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Adventure_Idle_4
+      name: Adventure_Walk_Front_7
       rect:
         serializedVersion: 2
-        x: 562
-        y: 29
-        width: 298
-        height: 413
-      alignment: 9
-      pivot: {x: 0.7502558, y: 0.48358417}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75d521fd011737470800000000000000
-      internalID: 8391174847997304151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Adventure_Idle_5
-      rect:
-        serializedVersion: 2
-        x: 888
+        x: 1553
         y: 30
-        width: 310
-        height: 414
+        width: 335
+        height: 406
       alignment: 9
-      pivot: {x: 0.76972854, y: 0.50545853}
+      pivot: {x: 0.35283604, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa3d9de939db243c0800000000000000
-      internalID: -4376727446127782998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Adventure_Idle_6
-      rect:
-        serializedVersion: 2
-        x: 1224
-        y: 34
-        width: 324
-        height: 413
-      alignment: 9
-      pivot: {x: 0.75807357, y: 0.4999998}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bddcbeb15963272d0800000000000000
-      internalID: -3282501164353204773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Adventure_Idle_7
-      rect:
-        serializedVersion: 2
-        x: 1573
-        y: 30
-        width: 310
-        height: 414
-      alignment: 9
-      pivot: {x: 0.7624382, y: 0.5109172}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3d4d6e877b0f08a0800000000000000
-      internalID: -6336833542568456899
+      spriteID: e98ba4616aecb5670800000000000000
+      internalID: 8528637532090054814
       vertices: []
       indices: 
       edges: []
@@ -295,7 +295,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 156ff4bb78bda9345acaa6d97340807d
+    spriteID: 4184b75004dc5c6479a5f9834a282269
     internalID: 0
     vertices: []
     indices: 
