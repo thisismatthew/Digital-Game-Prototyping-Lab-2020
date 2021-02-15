@@ -39,6 +39,14 @@ public class AbilityUI : MonoBehaviour
         b.GetComponent<Image>().sprite = defaultSprite;
     }
 
+    public void ResetAllButtons()
+    {
+        foreach (Button b in buttons)
+        {
+            ResetButton(b.gameObject);
+        }
+    }
+
     public void MoveAbility()
     {
         if(GetCurrentAbilities().CurrentAbility is GoblinMovement)
