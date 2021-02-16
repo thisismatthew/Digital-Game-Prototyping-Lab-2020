@@ -36,7 +36,7 @@ public class LineOfSight : MonoBehaviour
 
     private Collider[] GetCollisions()
     {
-        Collider[] result = Physics.OverlapSphere(transform.position, range*5);
+        Collider[] result = Physics.OverlapSphere(transform.position, range*5f);
         return result;
     }
 
@@ -57,7 +57,7 @@ public class LineOfSight : MonoBehaviour
         }
     }
 
-    private void CheckHitUsingRayCast()
+    /*private void CheckHitUsingRayCast()
     {
         Vector3 charToColl;
         float dot;
@@ -79,7 +79,7 @@ public class LineOfSight : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 
     public List<GameObject> GetTargetsInRange()
     {
@@ -104,7 +104,6 @@ public class LineOfSight : MonoBehaviour
                 }
             }
         }
-
         return result; 
     }
 }

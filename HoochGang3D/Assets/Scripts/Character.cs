@@ -40,6 +40,7 @@ public abstract class Character : MonoBehaviour
             Debug.Log(name + " does not have a current node");
         }
 
+        GetComponent<Movement>().SetDest(nearestNode.transform.position);
         currentNode = nearestNode;
     }
 

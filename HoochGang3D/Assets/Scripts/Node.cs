@@ -24,7 +24,6 @@ public class Node : MonoBehaviour
         rend.material = startMaterial;
         spriteRend.color = startColor;
 
-        //Debug.Log(spriteRend.GetComponent<Sprite>().name);
         if (spriteRend.sprite.name == "_irt_Tile") //means it has an obstacle attached
         {
             surface.defaultArea = 1;
