@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     //public float panBorderThickness = 10f;
     public float scrollSpeed = 5f;
     public float minZoom = 10f;
-    public float maxZoom = 80f;
+    public float maxZoom = 50f;
     public Camera thisCamera;
     private Vector3 positionToCentreOn;
     private bool centred = true;
@@ -15,9 +15,9 @@ public class CameraController : MonoBehaviour
     public bool dontMoveCamera = false;
     private float startingOrthographicSize;
     private bool unfocused;
-    public int unfocusedCameraSize = 80;
+    public int unfocusedCameraSize = 50;
     public int zoomSpeed = 5;
-    public float timer = 0; //delay for zooming out and changing the camera during enemy turns
+    //public float timer = 0; //delay for zooming out and changing the camera during enemy turns
     private Vector3 worldCentre;
 
     private void Start()
@@ -124,11 +124,11 @@ public class CameraController : MonoBehaviour
             //transform.position = Vector3.Lerp(positionToCentreOn, transform.position, 0.5f);
         }
 
-        /*if(!unfocused && thisCamera.orthographicSize < unfocusedCameraSize)
+        if(!unfocused && thisCamera.orthographicSize < unfocusedCameraSize)
         {
             thisCamera.orthographicSize += zoomSpeed;
-            transform.position = Vector3.Lerp(placeToCentreOn.position, transform.position, 0.5f);
-        }*/
+            //transform.position = Vector3.Lerp(positionToCentreOn, transform.position, 0.5f);
+        }
     }
 
     public void CentreCameraOnTransform(Vector3 pos)

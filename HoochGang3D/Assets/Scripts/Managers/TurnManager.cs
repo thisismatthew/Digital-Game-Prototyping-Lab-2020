@@ -128,7 +128,7 @@ public class TurnManager : MonoBehaviour
                 //also call the first move from the AI
                 currentCharacter.GetComponent<Adventurer>().TakeTurn();
             }
-            
+            cameraController.CentreCameraOnTransform(currentCharacter.transform.position);
         }
 
         if (!playersTurn)
@@ -155,10 +155,10 @@ public class TurnManager : MonoBehaviour
                 playersTurn = true;
             }
             //cameraController.timer = 5f;
-            //cameraController.UnFocus();
+            cameraController.UnFocus();
         }
 
-        cameraController.CentreCameraOnTransform(currentCharacter.transform.position);
+        //cameraController.CentreCameraOnTransform(currentCharacter.transform.position);
     }
 
     public bool CharactersAlive(string tag)
