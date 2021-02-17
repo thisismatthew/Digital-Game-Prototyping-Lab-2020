@@ -254,6 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2480677143271852063}
   - component: {fileID: 1506554840731020137}
+  - component: {fileID: 8267041772799542541}
   m_Layer: 0
   m_Name: AgentUI
   m_TagString: Untagged
@@ -326,6 +327,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8267041772799542541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562415363811174449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cedce0f2b4dcc741a2ceaf1f55d3cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobbing:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.000001527369
+      value: 2.0047095
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9916687
+      value: 1.4952698
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
+    m_PostInfinity: 0
+    m_RotationOrder: 4
 --- !u!1 &6057619105385025677
 GameObject:
   m_ObjectHideFlags: 0
