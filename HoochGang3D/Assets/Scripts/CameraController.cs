@@ -7,16 +7,25 @@ public class CameraController : MonoBehaviour
     //public float panBorderThickness = 10f;
     public float scrollSpeed = 5f;
     public float minZoom = 10f;
-    public float maxZoom = 30f;
+    public float maxZoom = 80f;
     public Camera thisCamera;
-    private Transform placeToCentreOn;
+    private Vector3 positionToCentreOn;
     private bool centred = true;
     public int centreSpeed = 9;
-    public bool dontCentreOnCharacter = false;
+    public bool dontMoveCamera = false;
+    private float startingOrthographicSize;
+    private bool unfocused;
+    public int unfocusedCameraSize = 80;
+    public int zoomSpeed = 5;
+    public float timer = 0; //delay for zooming out and changing the camera during enemy turns
+    private Vector3 worldCentre;
 
     private void Start()
     {
         thisCamera = this.gameObject.GetComponentInChildren<Camera>();
+        startingOrthographicSize = thisCamera.orthographicSize;
+        unfocused = !centred;
+        worldCentre = new Vector3(60f,0f,60f);
     }
 
     // Update is called once per frame
@@ -77,29 +86,58 @@ public class CameraController : MonoBehaviour
             thisCamera.orthographicSize = Mathf.Clamp(thisCamera.orthographicSize, minZoom, maxZoom);    
         }
 
-        if(placeToCentreOn != null && Vector3.Distance(transform.position, placeToCentreOn.position) <= 1) //if the distances are within 0.5 units of eachother and it isn't null
+        if(positionToCentreOn != null && Vector3.Distance(transform.position, positionToCentreOn) <= 1) //if the distances are within 0.5 units of eachother and it isn't null
         {
             centred = true;
-        }    
+        }
+
+        /*if(unfocused == false && thisCamera.orthographicSize >= unfocusedCameraSize)
+        {
+            unfocused = true;
+        }*/
     }
 
     private void FixedUpdate()
     {
-        if(!centred && placeToCentreOn != null)
+        /*timer -= Time.deltaTime;
+
+        if(timer < 0)
+        {
+            if(!centred && positionToCentreOn != null)
+            {
+                //move towards the character we want to centre on, the two lines below have a similar behaviour
+                //transform.Translate((placeToCentreOn.position - transform.position) * panSpeed / centreSpeed  * Time.deltaTime, Space.World);
+                transform.position = Vector3.Lerp(positionToCentreOn, transform.position, 0.5f);
+            }
+        }
+        else if(!unfocused && thisCamera.orthographicSize < unfocusedCameraSize)
+        {
+            Debug.Log("Current place to centre on: " + positionToCentreOn.ToString());
+            thisCamera.orthographicSize += zoomSpeed;
+            transform.position = Vector3.Lerp(positionToCentreOn, transform.position, 0.5f);
+        }*/
+        
+        if(!centred && positionToCentreOn != null)
         {
             //move towards the character we want to centre on, the two lines below have a similar behaviour
-            transform.Translate((placeToCentreOn.position - transform.position) * panSpeed / centreSpeed  * Time.deltaTime, Space.World);
-            //transform.position = Vector3.Lerp(placeToCentreOn.position, transform.position, 0.5f);
+            transform.Translate((positionToCentreOn - transform.position) * panSpeed / centreSpeed  * Time.deltaTime, Space.World);
+            //transform.position = Vector3.Lerp(positionToCentreOn, transform.position, 0.5f);
         }
+
+        /*if(!unfocused && thisCamera.orthographicSize < unfocusedCameraSize)
+        {
+            thisCamera.orthographicSize += zoomSpeed;
+            transform.position = Vector3.Lerp(placeToCentreOn.position, transform.position, 0.5f);
+        }*/
     }
 
-    public void CentreCameraOnTransform(Transform t)
+    public void CentreCameraOnTransform(Vector3 pos)
     {
-        if(!dontCentreOnCharacter)
+        if(!dontMoveCamera)
         {
             centred = false;
         }
-        placeToCentreOn = t;
+        positionToCentreOn = pos;
         //transform.position = t.position; //set the camera transform the position of the character whose turn it is
         //the above code is really jarring, and it lets the user know there is a unit that can move, but it is not clear what's happening when it changes.
         //In future, I think it would be better to use a cooroutine, see below
@@ -110,6 +148,15 @@ public class CameraController : MonoBehaviour
         //Debug.Log(newVector.normalized);
         //transform.Translate(newVector.normalized * panSpeed * Time.deltaTime, Space.World);
         //StartCoroutine(Move(newVector.normalized));
+    }
+
+    public void UnFocus()
+    {
+        if(!dontMoveCamera)
+        {
+            unfocused = false;
+        }
+        CentreCameraOnTransform(worldCentre);
     }
 
     /*IEnumerator Move(Transform placeToGoTo)

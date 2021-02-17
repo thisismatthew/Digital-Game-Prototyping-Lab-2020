@@ -32,7 +32,7 @@ public class TurnManager : MonoBehaviour
 
         currentCharacter = goblins[0]; //player goes first to set up
 
-        cameraController.CentreCameraOnTransform(currentCharacter.transform);
+        cameraController.CentreCameraOnTransform(currentCharacter.transform.position);
     }
 
     // Update is called once per frame
@@ -154,9 +154,11 @@ public class TurnManager : MonoBehaviour
                 currentCharacter = goblins[0];
                 playersTurn = true;
             }
+            //cameraController.timer = 5f;
+            //cameraController.UnFocus();
         }
 
-        cameraController.CentreCameraOnTransform(currentCharacter.transform);
+        cameraController.CentreCameraOnTransform(currentCharacter.transform.position);
     }
 
     public bool CharactersAlive(string tag)
