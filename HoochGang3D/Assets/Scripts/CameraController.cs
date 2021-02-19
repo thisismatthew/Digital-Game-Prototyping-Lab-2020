@@ -91,10 +91,10 @@ public class CameraController : MonoBehaviour
             centred = true;
         }
 
-        /*if(unfocused == false && thisCamera.orthographicSize >= unfocusedCameraSize)
+        if(unfocused == false && thisCamera.orthographicSize >= unfocusedCameraSize)
         {
             unfocused = true;
-        }*/
+        }
     }
 
     private void FixedUpdate()
