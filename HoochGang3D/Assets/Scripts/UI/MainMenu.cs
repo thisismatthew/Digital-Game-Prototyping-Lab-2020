@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject credits;
+
     public void StartGame(string sceneName)
     {
         SceneManager.LoadScene(sceneName); //presumably we'll move on from Prototype_Environment_2
@@ -13,5 +15,10 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void DisplayCredits()
+    {
+        credits.SetActive(true);
     }
 }
