@@ -18,7 +18,7 @@ public class Pass : Ability
 
     private void PassTurn()
     {
-        Debug.Log("Passed Turn");
+        GetComponent<Character>().ActionsLeft = 0;
         StartCoroutine(GameObject.Find("GameManager").GetComponent<TurnManager>().NextCharacter());
     }
 }

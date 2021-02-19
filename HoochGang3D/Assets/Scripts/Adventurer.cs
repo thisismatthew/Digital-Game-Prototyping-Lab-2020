@@ -6,10 +6,11 @@ public class Adventurer : Character
 {
     public GameObject agentUI;
     public AdventurerAI ai;
-
+    public CameraController cc;
 
     protected override void Start()
     {
+        cc = GameObject.Find("Camera").GetComponent<CameraController>();
         ai = gameObject.GetComponent<AdventurerAI>();
         base.Start();
     }
@@ -76,6 +77,7 @@ public class Adventurer : Character
     // this is called by the turn manager and uses the ai script to take actions
     public void TakeTurn()
     {
+        cc.CentreCameraOnTransform(transform.position);
         ai.Action(this); //NextCharacter moved into AdventurerAI script
     }
 }

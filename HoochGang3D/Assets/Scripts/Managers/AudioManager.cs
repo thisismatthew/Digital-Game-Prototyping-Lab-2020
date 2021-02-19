@@ -7,6 +7,11 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] sounds;
 
+    private void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("music_main");
+    }
+
     // This is Brackeys Audio Manager system with some small tweaks. 
     void Awake()
     {
