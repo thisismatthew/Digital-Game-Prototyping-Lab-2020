@@ -41,16 +41,19 @@ public class BottleRocket : Attack
         base.Execute();
 
         //find out if the game object is a node, or if the gameobject is a character
-        if(_gameObject.GetComponent<Adventurer>() == null)
+        if(!_gameObject.CompareTag("Adventurer"))
         {
-            //Debug.Log("We have a node called: " + _gameObject.name + ". Converting to a character to shoot at");
             target = NodeToTarget(_gameObject);
+            if (target == null)
+            {
+                return;
+            }
         }
         else
         {
-            //Debug.Log("We have a character called: " + _gameObject.name);
             target = _gameObject;
         }
+
         if(Vector3.Distance(transform.position, target.transform.position) < range*6)
         {
             Ray ray = new Ray(transform.position, (target.transform.position - transform.position));

@@ -12,6 +12,7 @@ public class Adventurer : Character
     {
         cc = GameObject.Find("Camera").GetComponent<CameraController>();
         ai = gameObject.GetComponent<AdventurerAI>();
+        agentUI = transform.Find("AgentUI").gameObject;
         base.Start();
     }
 
