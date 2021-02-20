@@ -12,6 +12,8 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
+        transform.rotation = Quaternion.identity;
+
         if(target == null)
         {
             Destroy(gameObject);
@@ -28,7 +30,7 @@ public class Projectile : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-        transform.LookAt(target);
+        //transform.LookAt(target);
     }
 
     void HitTarget()
