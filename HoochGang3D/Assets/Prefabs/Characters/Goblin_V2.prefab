@@ -179,7 +179,7 @@ MonoBehaviour:
   isAttack: 0
   agent: {fileID: 0}
   moveMaterial: {fileID: 2100000, guid: 43786be90bde26b4d803d83b4f824951, type: 2}
-  moveColor: {r: 0.078704715, g: 1, b: 0, a: 0.74509805}
+  moveColor: {r: 0.4943396, g: 1, b: 0.6492055, a: 1}
 --- !u!114 &1696556681180957482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   range: 0
   isAttack: 0
   attackMaterial: {fileID: 2100000, guid: f3c64502621dfdf47ad5c7d940dfff7e, type: 2}
-  attackColor: {r: 1, g: 0, b: 0, a: 0.74509805}
+  attackColor: {r: 1, g: 0.5415094, b: 0.5415094, a: 1}
   isRanged: 0
 --- !u!114 &681800142313182059
 MonoBehaviour:
@@ -212,9 +212,9 @@ MonoBehaviour:
   range: 3
   isAttack: 0
   attackMaterial: {fileID: 2100000, guid: f3c64502621dfdf47ad5c7d940dfff7e, type: 2}
-  attackColor: {r: 1, g: 0, b: 0, a: 0.74509805}
+  attackColor: {r: 1, g: 0.48490566, b: 0.48490566, a: 1}
   isRanged: 0
-  projectile: {fileID: 5328101574346610163, guid: be6b37b048f74104d9796d4b56e841b9, type: 3}
+  projectile: {fileID: 5328101574346610163, guid: b27d258536ae59d47ac543bc50463f9e, type: 3}
 --- !u!114 &1801222853147141384
 MonoBehaviour:
   m_ObjectHideFlags: 0

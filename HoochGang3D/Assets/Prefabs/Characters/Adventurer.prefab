@@ -191,7 +191,7 @@ MonoBehaviour:
   enemyTag: 
   range: 2
   lineOfSightMaterial: {fileID: 2100000, guid: a0e3f2a98b62b7a419331c5e2b0d092d, type: 2}
-  lineOfSightColor: {r: 1, g: 0.09811318, b: 0.09811318, a: 1}
+  lineOfSightColor: {r: 1, g: 0.27348557, b: 0.22075468, a: 1}
 --- !u!114 &1400376274445449859
 MonoBehaviour:
   m_ObjectHideFlags: 0
