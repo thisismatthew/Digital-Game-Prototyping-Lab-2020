@@ -5,13 +5,11 @@ using UnityEngine.AI;
 
 public class NodeManager : MonoBehaviour
 {
-    [HideInInspector]public Graph graph;
     [HideInInspector]public GameObject[] nodes;
 
     void Start()
     {
         nodes = GameObject.FindGameObjectsWithTag("Node");
-        graph = new Graph(nodes);
     }
 
     public void ResetAllNodes()
