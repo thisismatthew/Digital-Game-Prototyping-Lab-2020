@@ -43,7 +43,11 @@ public class Projectile : MonoBehaviour
     void Damage(Transform enemy)
     {
         if (enemy.gameObject.CompareTag("Adventurer"))
+        {
             enemy.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
+            Debug.Log("human death sound");
+            FindObjectOfType<AudioManager>().Play("human_death");
+        }
         else
             enemy.gameObject.GetComponentInChildren<Animator>().Play("Goblin_death");
         Destroy(enemy.gameObject, 3f);

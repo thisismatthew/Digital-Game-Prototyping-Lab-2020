@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<AudioManager>().Play("music_main");
+        Play("music");
     }
 
     // This is Brackeys Audio Manager system with some small tweaks. 
@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+        Debug.Log("Attempting to play " + name);
         s.source.Play();
     }
 
@@ -48,5 +49,13 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.UnPause();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)){
+            Debug.Log("Play Dead");
+            Play("human_death");
+        }
     }
 }
