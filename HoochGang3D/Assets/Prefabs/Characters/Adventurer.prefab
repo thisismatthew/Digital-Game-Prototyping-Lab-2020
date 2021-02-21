@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 4767460684133114307}
   - component: {fileID: 7647667977054698546}
   - component: {fileID: 2573498350603704028}
-  - component: {fileID: 1400376274445449859}
   - component: {fileID: 2471914571575025126}
   m_Layer: 0
   m_Name: Adventurer
@@ -192,23 +191,6 @@ MonoBehaviour:
   range: 2
   lineOfSightMaterial: {fileID: 2100000, guid: a0e3f2a98b62b7a419331c5e2b0d092d, type: 2}
   lineOfSightColor: {r: 1, g: 0.27348557, b: 0.22075468, a: 1}
---- !u!114 &1400376274445449859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2471914571575025127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a675aa93d3644c74ab4c78ed3c07ee36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 0
-  isAttack: 0
-  agent: {fileID: 0}
-  moveMaterial: {fileID: 0}
-  moveColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &2471914571575025126
 MonoBehaviour:
   m_ObjectHideFlags: 0

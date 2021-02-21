@@ -40,7 +40,14 @@ public abstract class Character : MonoBehaviour
             Debug.Log(name + " does not have a current node");
         }
 
-        GetComponent<Movement>().SetDest(nearestNode.transform.position);
+        if (CompareTag("Adventurer")){ //character is adventurer
+            GetComponent<AdventurerAI>().agent.SetDestination(nearestNode.transform.position); //navmeshagent ref in AdventurerAI
+        }
+        else //character is goblin
+        {
+            GetComponent<GoblinMovement>().SetDest(nearestNode.transform.position); //navmeshagent ref in Movement
+        }
+        
         currentNode = nearestNode;
     }
 

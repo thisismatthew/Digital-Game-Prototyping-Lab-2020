@@ -18,6 +18,8 @@ public class AdventurerAI : MonoBehaviour
 
     public void Start()
     {
+        agent = gameObject.GetComponent<NavMeshAgent>();
+
         if(movementRange < 1)
         {
             movementRange = 1;
