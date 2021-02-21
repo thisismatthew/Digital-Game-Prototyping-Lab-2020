@@ -40,12 +40,13 @@ public abstract class Character : MonoBehaviour
             Debug.Log(name + " does not have a current node");
         }
 
-        if (CompareTag("Adventurer")){ //character is adventurer
-            GetComponent<AdventurerAI>().agent.SetDestination(nearestNode.transform.position); //navmeshagent ref in AdventurerAI
+        if (gameObject.name.Contains("Adventurer")) //character is adventurer
+        { 
+            gameObject.GetComponent<AdventurerAI>().agent.destination = nearestNode.transform.position; //navmeshagent ref in AdventurerAI
         }
         else //character is goblin
         {
-            GetComponent<GoblinMovement>().SetDest(nearestNode.transform.position); //navmeshagent ref in Movement
+            gameObject.GetComponent<GoblinMovement>().SetDest(nearestNode.transform.position); //navmeshagent ref in Movement
         }
         
         currentNode = nearestNode;
