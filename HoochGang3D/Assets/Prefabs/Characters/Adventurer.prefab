@@ -172,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementRange: 1
   los: {fileID: 2573498350603704028}
-  projectile: {fileID: 5328101574346610163, guid: be6b37b048f74104d9796d4b56e841b9, type: 3}
+  projectile: {fileID: 5328101574346610163, guid: f07c7ae33c9eaf04cbf78413278e9f8b, type: 3}
   agent: {fileID: 2471914571575025125}
   chasePercent: 0.5
 --- !u!114 &2573498350603704028

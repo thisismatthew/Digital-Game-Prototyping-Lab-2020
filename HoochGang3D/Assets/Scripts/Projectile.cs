@@ -4,17 +4,16 @@ public class Projectile : MonoBehaviour
 {
     private Transform target;
     public float speed = 70f;
+    [SerializeField] private Transform spriteTransform;
 
     public void Seek(Transform _target)
     {
         target = _target;
-        //PointAtTarget(target.transform.position);
+        PointAtTarget(target.transform.position);
     }
 
     void Update()
     {
-        //transform.rotation = Quaternion.identity;
-
         if(target == null)
         {
             Destroy(gameObject);
@@ -31,7 +30,6 @@ public class Projectile : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-        //transform.LookAt(target);
     }
 
     void HitTarget()
@@ -55,37 +53,98 @@ public class Projectile : MonoBehaviour
 
     private void PointAtTarget(Vector3 targetPos)
     {
-        //Get the transform of the child sprite
-        Quaternion spriteRotation = GetComponentInChildren<Transform>().rotation;
-        Vector3 debugForward = Vector3.forward;
+        //define the other vectors we need
+        Vector3 isometricUp = new Vector3(1,0,1);
+        Vector3 isometricLeft = new Vector3(-1,0,1);
+        Vector3 isometricDown = new Vector3(-1,0,-1);
+        Vector3 isometricRight = new Vector3(1,0,-1);
 
         //find the direction that the target is in
         Vector3 dir = Vector3.Normalize(transform.position - targetPos);
 
-        if(dir.normalized.Equals(Vector3.forward)) //up + left
+        if(name == "GoblinProjectile(Clone)")
         {
-            //set rotation of projectile in Z axis to 25
-            spriteRotation.eulerAngles = new Vector3(spriteRotation.x, spriteRotation.y, 25);
+            int forwardZAngle = 208;
+            int backZAngle = 25;
+            int leftZAngle = 280;
+            int rightZAngle = 95;
+            int isoUpZAngle = 150;
+            int isoDownZAngle = 333;
+            int isoLeftZAngle = 241;
+            int isRightZAngle = 60;
         }
-        else if(dir.normalized.Equals(Vector3.back)) //down + right
+        else if(name == "AdventurerProjectile(Clone)")
         {
-            //set rotation of projectile in Z axis to 208
-            spriteRotation.eulerAngles = new Vector3(spriteRotation.x, spriteRotation.y, 208);
-        }
-        else if(dir.normalized.Equals(Vector3.left)) //down + left
-        {
-            //set rotation of projectile in Z axis to 95
-            spriteRotation.eulerAngles = new Vector3(spriteRotation.x, spriteRotation.y, 95);
-        }
-        else if(dir.normalized.Equals(Vector3.right)) //up + right
-        {
-            //set rotation of projectile in Z axis to 280
-            spriteRotation.eulerAngles = new Vector3(spriteRotation.x, spriteRotation.y, 280);
+            int forwardZAngle = 208;
+            int backZAngle = 29;
+            int leftZAngle = 334;
+            int rightZAngle = 155;
+            int isoUpZAngle = 267;
+            int isoDownZAngle = 87;
+            int isoLeftZAngle = 357;
+            int isRightZAngle = 177;
         }
         else
         {
-            Debug.Log("Projectile is pointing in direction: " + dir.ToString() + ". This is not properly handled.");
-            Debug.Log(Vector3.forward.ToString());
+            Debug.Log("Name of projectile needs to be either AdventurerProjectile or GoblinProjectile. Currently is it:" + name.ToString());
+        }
+
+        if(Vector3.Dot(dir, Vector3.forward) > 0.8 ) //down + right
+        {
+            //set rotation of projectile in Z axis to 25
+            //Debug.Log("Rotated Z axis to 208 degrees");
+            //Debug.Log(spriteTransform.name);
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+208));
+        }
+        else if(Vector3.Dot(dir, Vector3.back) > 0.8) //up + left
+        {
+            //set rotation of projectile in Z axis to 25
+            //Debug.Log("Rotated Z axis to 25 degrees");
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+25));
+        }
+        else if(Vector3.Dot(dir, Vector3.left) > 0.8) //up + right
+        {
+            //set rotation of projectile in Z axis to 280
+            //Debug.Log("Rotated Z axis to 280 degrees");
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+280));
+        }
+        else if(Vector3.Dot(dir, Vector3.right) > 0.8) //down + left
+        {
+            //set rotation of projectile in Z axis to 95
+            //Debug.Log("Rotated Z axis to 95 degrees");
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+95));
+        }
+        else if(Vector3.Dot(dir, isometricUp) > 0.9)
+        {
+            //set rotation of projectile in Z axis to 150
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+150));
+        }
+        else if(Vector3.Dot(dir, isometricDown) > 0.9)
+        {
+            //set rotation of projectile in Z axis to 333
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+333));
+        }
+        else if(Vector3.Dot(dir, isometricLeft) > 0.9)
+        {
+            //set rotation of projectile in Z axis to 241
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+241));
+        }
+        else if(Vector3.Dot(dir, isometricRight) > 0.9)
+        {
+            //set rotation of projectile in Z axis to 60
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+60));
+        }
+        else
+        {
+            Debug.Log("Dot product of 4 directions");
+            Debug.Log(Vector3.Dot(dir, Vector3.forward).ToString());
+            Debug.Log(Vector3.Dot(dir, Vector3.back).ToString());
+            Debug.Log(Vector3.Dot(dir, Vector3.left).ToString());
+            Debug.Log(Vector3.Dot(dir, Vector3.right).ToString());
+            Debug.Log(Vector3.Dot(dir, isometricUp).ToString());
+            Debug.Log(Vector3.Dot(dir, isometricDown).ToString());
+            Debug.Log(Vector3.Dot(dir, isometricLeft).ToString());
+            Debug.Log(Vector3.Dot(dir, isometricRight).ToString());
         }
     }
 }
