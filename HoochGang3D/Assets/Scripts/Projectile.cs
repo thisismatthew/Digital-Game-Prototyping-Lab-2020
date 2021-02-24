@@ -5,6 +5,11 @@ public class Projectile : MonoBehaviour
     private Transform target;
     public float speed = 70f;
     [SerializeField] private Transform spriteTransform;
+    public void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("Ranged_Attack");
+
+    }
 
     public void Seek(Transform _target)
     {
@@ -44,10 +49,10 @@ public class Projectile : MonoBehaviour
         {
             enemy.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
             Debug.Log("human death sound");
-            FindObjectOfType<AudioManager>().Play("human_death");
+            FindObjectOfType<AudioManager>().Play("Adventurer_Death_1");
         }
         else
-            enemy.gameObject.GetComponentInChildren<Animator>().Play("Goblin_death");
+            enemy.gameObject.GetComponentInChildren<Animator>().Play("Goblin_Death_1");
         Destroy(enemy.gameObject, 3f);
     }
 

@@ -35,7 +35,7 @@ public class StandardShank : Attack
         base.Execute();
         if (target.CompareTag("Adventurer"))
         {
-            target.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
+            target.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_Death_1");
             Destroy(target, 3f);
             GetComponent<Goblin>().ActionsLeft -= 1;
         }
