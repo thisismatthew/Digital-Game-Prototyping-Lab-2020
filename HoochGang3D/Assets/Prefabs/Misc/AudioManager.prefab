@@ -44,9 +44,99 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: music_main
+  - name: music
     clip: {fileID: 8300000, guid: 3176b0e2fde172a4cbf84c2ba9abe4ea, type: 3}
     volume: 0.5
-    pitch: 0
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Adventurer_Death_1
+    clip: {fileID: 8300000, guid: ec69b7289e0285548a1fa91737bbf564, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Adventurer_Death_2
+    clip: {fileID: 8300000, guid: 57278d4cc1d0ab2428a97a71d02d5a3e, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Wave_Begin_1
+    clip: {fileID: 8300000, guid: 51d50ec9fa7ca954885d913829a5709a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Wave_Begin_2
+    clip: {fileID: 8300000, guid: e2b19b6d6ae9b8d48ac8b74316cf6fde, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Goblin_Death_1
+    clip: {fileID: 8300000, guid: 162e5b3f40ffe6542bd785fdffb1cbe7, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Goblin_Death_2
+    clip: {fileID: 8300000, guid: f05d92c3a0f0c014b9e47053deb2ca81, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Goblin_Attack_1
+    clip: {fileID: 8300000, guid: f7bd3325276fc6143bbe3ffe0516fca8, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Goblin_Attack_2
+    clip: {fileID: 8300000, guid: 05583486b702c3c4394f463d28e90d73, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Goblin_Select
+    clip: {fileID: 8300000, guid: 65ba0fb26fd05e140aef3e3e276f25df, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Gameplay_Music
+    clip: {fileID: 8300000, guid: f749c3ac9e7e1c74b8bdbc1aba549255, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Ranged_Attack
+    clip: {fileID: 8300000, guid: befb1e490ca9deb4cb688f8c07bf05b3, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Melee_Attack
+    clip: {fileID: 8300000, guid: 99afb9f5859594f47a36a73505b61cc9, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Goblin_Movement
+    clip: {fileID: 8300000, guid: 14549b3451251af4f8f1701644de4541, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Goblins_Turn_Bottle
+    clip: {fileID: 8300000, guid: 2e097b444050f1844b2aef5956fa4f3c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Adventurer_Turns_March
+    clip: {fileID: 8300000, guid: ec69b7289e0285548a1fa91737bbf564, type: 3}
+    volume: 0.5
+    pitch: 1
     loop: 0
     source: {fileID: 0}
