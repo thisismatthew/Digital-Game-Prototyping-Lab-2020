@@ -114,8 +114,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 100
-  m_Acceleration: 100
+  m_Speed: 50
+  m_Acceleration: 500
   avoidancePriority: 50
   m_AngularSpeed: 0
   m_StoppingDistance: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953f5ebb156c7f640ae1dc32df578a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementRange: 1
+  movementRange: 4
   los: {fileID: 2573498350603704028}
   projectile: {fileID: 5328101574346610163, guid: f07c7ae33c9eaf04cbf78413278e9f8b, type: 3}
   agent: {fileID: 2471914571575025125}
