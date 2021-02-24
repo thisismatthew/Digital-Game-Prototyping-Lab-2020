@@ -43,6 +43,8 @@ public class Node : MonoBehaviour
         {
             //if occupied by an ally, thats now selected as the current target
             tm.currentCharacter = IsNodeTaken();
+            Debug.Log("play select sound");
+            FindObjectOfType<AudioManager>().Play("Goblin_Select");
             nm.ResetAllNodes();
             return;
         }

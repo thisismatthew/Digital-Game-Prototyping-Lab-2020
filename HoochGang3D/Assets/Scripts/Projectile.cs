@@ -48,7 +48,6 @@ public class Projectile : MonoBehaviour
         if (enemy.gameObject.CompareTag("Adventurer"))
         {
             enemy.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
-            Debug.Log("human death sound");
             FindObjectOfType<AudioManager>().Play("Adventurer_Death_1");
         }
         else

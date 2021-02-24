@@ -35,7 +35,10 @@ public class StandardShank : Attack
         base.Execute();
         if (target.CompareTag("Adventurer"))
         {
-            target.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_Death_1");
+            FindObjectOfType<AudioManager>().Play("Melee_Attack");
+            target.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
+            FindObjectOfType<AudioManager>().Play("Adventurer_Death_1");
+
             Destroy(target, 3f);
             GetComponent<Goblin>().ActionsLeft -= 1;
         }
@@ -47,7 +50,10 @@ public class StandardShank : Attack
                 {
                     if (c.GetComponent<Character>().CurrentNode == target)
                     {
+                        FindObjectOfType<AudioManager>().Play("Melee_Attack");
                         target.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
+                        FindObjectOfType<AudioManager>().Play("Adventurer_Death_2");
+
                         Destroy(target, 3f);
                         GetComponent<Goblin>().ActionsLeft -= 1;
                         break;
