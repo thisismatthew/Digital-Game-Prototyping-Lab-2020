@@ -29,7 +29,6 @@ public class AudioManager : MonoBehaviour
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        Debug.Log("Attempting to play " + name);
         s.source.Play();
     }
 
@@ -51,11 +50,4 @@ public class AudioManager : MonoBehaviour
         s.source.UnPause();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space)){
-            Debug.Log("Play Dead");
-            Play("human_death");
-        }
-    }
 }

@@ -52514,6 +52514,14 @@ PrefabInstance:
       value: human_death
       objectReference: {fileID: 0}
     - target: {fileID: 5621580494076886540, guid: 881410fe35943aa4781bc0e4ceab87e2, type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5621580494076886540, guid: 881410fe35943aa4781bc0e4ceab87e2, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5621580494076886540, guid: 881410fe35943aa4781bc0e4ceab87e2, type: 3}
       propertyPath: sounds.Array.data[0].volume
       value: 0.573
       objectReference: {fileID: 0}
