@@ -7158,6 +7158,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin_V2
       objectReference: {fileID: 0}
+    - target: {fileID: 1488902905406463591, guid: 1a09e939d91335e4986259f9901b17cc, type: 3}
+      propertyPath: m_Speed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488902905406463591, guid: 1a09e939d91335e4986259f9901b17cc, type: 3}
+      propertyPath: m_Acceleration
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a09e939d91335e4986259f9901b17cc, type: 3}
 --- !u!4 &305733943 stripped
@@ -26947,6 +26955,14 @@ PrefabInstance:
     - target: {fileID: 1488902905406463589, guid: 1a09e939d91335e4986259f9901b17cc, type: 3}
       propertyPath: m_Name
       value: Goblin_V2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488902905406463591, guid: 1a09e939d91335e4986259f9901b17cc, type: 3}
+      propertyPath: m_Speed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488902905406463591, guid: 1a09e939d91335e4986259f9901b17cc, type: 3}
+      propertyPath: m_Acceleration
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a09e939d91335e4986259f9901b17cc, type: 3}
