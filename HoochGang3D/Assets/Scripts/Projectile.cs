@@ -64,30 +64,39 @@ public class Projectile : MonoBehaviour
         Vector3 isometricDown = new Vector3(-1,0,-1);
         Vector3 isometricRight = new Vector3(1,0,-1);
 
+        int forwardZAngle = 0;
+        int backZAngle = 0;
+        int leftZAngle = 0;
+        int rightZAngle = 0;
+        int isoUpZAngle = 0;
+        int isoDownZAngle = 0;
+        int isoLeftZAngle = 0;
+        int isoRightZAngle = 0;
+
         //find the direction that the target is in
         Vector3 dir = Vector3.Normalize(transform.position - targetPos);
 
         if(name == "GoblinProjectile(Clone)")
         {
-            int forwardZAngle = 208;
-            int backZAngle = 25;
-            int leftZAngle = 280;
-            int rightZAngle = 95;
-            int isoUpZAngle = 150;
-            int isoDownZAngle = 333;
-            int isoLeftZAngle = 241;
-            int isRightZAngle = 60;
+            forwardZAngle = 208;
+            backZAngle = 25;
+            leftZAngle = 280;
+            rightZAngle = 95;
+            isoUpZAngle = 150;
+            isoDownZAngle = 333;
+            isoLeftZAngle = 241;
+            isoRightZAngle = 60;
         }
         else if(name == "AdventurerProjectile(Clone)")
         {
-            int forwardZAngle = 208;
-            int backZAngle = 29;
-            int leftZAngle = 334;
-            int rightZAngle = 155;
-            int isoUpZAngle = 267;
-            int isoDownZAngle = 87;
-            int isoLeftZAngle = 357;
-            int isRightZAngle = 177;
+            forwardZAngle = 208;
+            backZAngle = 29;
+            leftZAngle = 334;
+            rightZAngle = 155;
+            isoUpZAngle = 87;
+            isoDownZAngle = 267;
+            isoLeftZAngle = 357;
+            isoRightZAngle = 177;
         }
         else
         {
@@ -99,45 +108,45 @@ public class Projectile : MonoBehaviour
             //set rotation of projectile in Z axis to 25
             //Debug.Log("Rotated Z axis to 208 degrees");
             //Debug.Log(spriteTransform.name);
-            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+208));
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+forwardZAngle));
         }
         else if(Vector3.Dot(dir, Vector3.back) > 0.8) //up + left
         {
             //set rotation of projectile in Z axis to 25
             //Debug.Log("Rotated Z axis to 25 degrees");
-            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+25));
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+backZAngle));
         }
         else if(Vector3.Dot(dir, Vector3.left) > 0.8) //up + right
         {
             //set rotation of projectile in Z axis to 280
             //Debug.Log("Rotated Z axis to 280 degrees");
-            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+280));
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+leftZAngle));
         }
         else if(Vector3.Dot(dir, Vector3.right) > 0.8) //down + left
         {
             //set rotation of projectile in Z axis to 95
             //Debug.Log("Rotated Z axis to 95 degrees");
-            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+95));
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+rightZAngle));
         }
         else if(Vector3.Dot(dir, isometricUp) > 0.9)
         {
             //set rotation of projectile in Z axis to 150
-            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+150));
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+isoUpZAngle));
         }
         else if(Vector3.Dot(dir, isometricDown) > 0.9)
         {
             //set rotation of projectile in Z axis to 333
-            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+333));
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+isoDownZAngle));
         }
         else if(Vector3.Dot(dir, isometricLeft) > 0.9)
         {
             //set rotation of projectile in Z axis to 241
-            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+241));
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+isoLeftZAngle));
         }
         else if(Vector3.Dot(dir, isometricRight) > 0.9)
         {
             //set rotation of projectile in Z axis to 60
-            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+60));
+            spriteTransform.Rotate(new Vector3(0, 0, -spriteTransform.rotation.eulerAngles.z+isoRightZAngle));
         }
         else
         {
