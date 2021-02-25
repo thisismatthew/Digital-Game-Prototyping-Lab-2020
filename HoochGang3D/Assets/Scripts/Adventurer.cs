@@ -29,6 +29,7 @@ public class Adventurer : Character
 
     private void OnMouseDown()
     {
+        Debug.Log("Clicked on an Adventurer");
         //check if game is over
         if (tm.gameObject.GetComponent<GameManager>().gameIsOver)
         {
@@ -52,8 +53,11 @@ public class Adventurer : Character
         }
         if (!CCInRange())
         {
+            Debug.Log("Failed here!");
             return;
         }
+
+        Debug.Log("Passed All Checks!");
 
         tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(this.gameObject);
         if (tm.currentCharacter.GetComponent<Goblin>().ActionsLeft == 0)
@@ -67,7 +71,7 @@ public class Adventurer : Character
     private bool CCInRange()
     {
         float dist = Vector3.Distance(currentNode.transform.position, tm.currentCharacter.GetComponent<Character>().CurrentNode.transform.position);
-        if (dist <= tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Range*5)
+        if (dist <= tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Range*5.5f)
         {
             return true;
         }

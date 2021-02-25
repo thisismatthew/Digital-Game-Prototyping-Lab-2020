@@ -110,6 +110,8 @@ public class TurnManager : MonoBehaviour
             {
                 if (!goblin.GetComponent<Goblin>().TurnTaken)
                 {
+                    //play new goblin turn bottle sound
+                    FindObjectOfType<AudioManager>().Play("Goblins_Turn_Bottle");
                     currentCharacter = goblin;
                     break;
                 }
