@@ -21923,6 +21923,10 @@ PrefabInstance:
       propertyPath: debug
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7248364577177485077, guid: a31f9985c7ec42147ba56d2a3b9ee589, type: 3}
+      propertyPath: unfocusedCameraSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7248364577177485082, guid: a31f9985c7ec42147ba56d2a3b9ee589, type: 3}
       propertyPath: m_RootOrder
       value: 8
