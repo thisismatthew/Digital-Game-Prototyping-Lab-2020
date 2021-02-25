@@ -123,7 +123,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Goblin_Movement
-    clip: {fileID: 8300000, guid: 14549b3451251af4f8f1701644de4541, type: 3}
+    clip: {fileID: 8300000, guid: a6b4d7bdd24ed1446926288fe1f9edb2, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
@@ -135,8 +135,8 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Adventurer_Turns_March
-    clip: {fileID: 8300000, guid: ec69b7289e0285548a1fa91737bbf564, type: 3}
-    volume: 0.5
+    clip: {fileID: 8300000, guid: 9d415e6986a89ae40a840d603077aafd, type: 3}
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}

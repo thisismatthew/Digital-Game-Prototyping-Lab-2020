@@ -124,6 +124,8 @@ public class TurnManager : MonoBehaviour
                     goblin.GetComponent<Goblin>().TurnTaken = false;
                     goblin.GetComponent<Goblin>().ActionsLeft = 2;
                 }
+                
+                FindObjectOfType<AudioManager>().Play("Adventurer_Turns_March");
                 currentCharacter = adventurers[0];
                 playersTurn = false;
 
@@ -155,6 +157,8 @@ public class TurnManager : MonoBehaviour
                     adventurer.GetComponent<Adventurer>().TurnTaken = false;
                 currentCharacter = goblins[0];
                 playersTurn = true;
+                //TODO adventurer turns happen so quickly that the audio gets stopped before it starts. 
+                //FindObjectOfType<AudioManager>().Stop("Adventurer_Turns_March");
             }
             //cameraController.timer = 5f;
             cameraController.UnFocus();

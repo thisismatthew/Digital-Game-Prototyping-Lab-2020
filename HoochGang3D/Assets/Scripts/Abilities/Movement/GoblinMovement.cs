@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class GoblinMovement : Movement
 {
+    private bool moving = false;
     public override void DisplayRange()
     {
         foreach (GameObject n in nm.nodes)
@@ -25,9 +26,12 @@ public class GoblinMovement : Movement
 
     public override void Execute(GameObject goal)
     {
+        FindObjectOfType<AudioManager>().Play("Goblin_Movement");
         base.Execute();
         agent.destination = goal.transform.position;
         gameObject.GetComponent<Goblin>().CurrentNode = goal;
         GetComponent<Goblin>().ActionsLeft -= 1;
     }
+
+
 }

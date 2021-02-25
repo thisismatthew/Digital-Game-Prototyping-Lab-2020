@@ -21,6 +21,7 @@ public class WaveManager : MonoBehaviour
 
     public void SpawnCurrentWave()
     {
+        FindObjectOfType<AudioManager>().Play("Wave_Begin_1");
         Vector3 spawnpoint;
         GameObject addedCharacter;
         foreach(Node n in waves[currentWaveIndex].startingNodes)
