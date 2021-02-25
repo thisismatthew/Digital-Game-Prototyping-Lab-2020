@@ -26990,11 +26990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1506554840731020137, guid: 1a09e939d91335e4986259f9901b17cc, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6057619105385025664, guid: 1a09e939d91335e4986259f9901b17cc, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6057619105385025664, guid: 1a09e939d91335e4986259f9901b17cc, type: 3}
       propertyPath: m_MaskInteraction
@@ -27566,6 +27566,10 @@ PrefabInstance:
     - target: {fileID: 6630430117539458132, guid: b192f1afd61afe646805ec87147104fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773664191378235016, guid: b192f1afd61afe646805ec87147104fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7773664191378235023, guid: b192f1afd61afe646805ec87147104fa, type: 3}
       propertyPath: m_SortingOrder
