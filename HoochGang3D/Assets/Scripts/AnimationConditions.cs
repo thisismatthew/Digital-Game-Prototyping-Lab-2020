@@ -13,7 +13,6 @@ public class AnimationConditions : MonoBehaviour
     public float distanceToDest;
     public bool movingAway = false;
     
-
     // Start is called before the first frame update
     void Start()
     {
@@ -50,10 +49,8 @@ public class AnimationConditions : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-
-
         //setting movement 
-        if (Vector3.Distance(transform.position, agent.destination) > arrivalRadius)
+        if(agent.velocity != Vector3.zero || Vector3.Distance(transform.position, agent.destination) > arrivalRadius)
         {
             animator.SetFloat("Speed", 0.2f);
         }
@@ -61,6 +58,5 @@ public class AnimationConditions : MonoBehaviour
         {
             animator.SetFloat("Speed", 0f);
         }
-
     }
 }
