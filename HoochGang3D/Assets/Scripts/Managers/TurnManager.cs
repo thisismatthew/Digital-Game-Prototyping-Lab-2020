@@ -132,7 +132,7 @@ public class TurnManager : MonoBehaviour
                 //also call the first move from the AI
                 currentCharacter.GetComponent<Adventurer>().TakeTurn();
             }
-            cameraController.CentreCameraOnTransform(currentCharacter.transform.position);
+            //cameraController.CentreCameraOnTransform(currentCharacter.transform.position);
         }
 
         if (!playersTurn)
@@ -161,6 +161,7 @@ public class TurnManager : MonoBehaviour
                 //FindObjectOfType<AudioManager>().Stop("Adventurer_Turns_March");
             }
             //cameraController.timer = 5f;
+            cameraController.CentreCameraOnTransform(currentCharacter.transform.position);
             cameraController.UnFocus();
         }
 

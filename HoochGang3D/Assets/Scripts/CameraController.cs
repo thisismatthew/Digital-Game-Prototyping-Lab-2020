@@ -26,6 +26,7 @@ public class CameraController : MonoBehaviour
         startingOrthographicSize = thisCamera.orthographicSize;
         unfocused = !centred;
         worldCentre = new Vector3(60f,0f,60f);
+        maxZoom = unfocusedCameraSize;
     }
 
     // Update is called once per frame
@@ -127,6 +128,7 @@ public class CameraController : MonoBehaviour
         if(!unfocused && thisCamera.orthographicSize < unfocusedCameraSize)
         {
             thisCamera.orthographicSize += zoomSpeed;
+            thisCamera.orthographicSize = Mathf.Clamp(thisCamera.orthographicSize, minZoom, maxZoom);  
             //transform.position = Vector3.Lerp(positionToCentreOn, transform.position, 0.5f);
         }
     }

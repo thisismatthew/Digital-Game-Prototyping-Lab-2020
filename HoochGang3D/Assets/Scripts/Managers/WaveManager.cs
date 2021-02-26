@@ -10,6 +10,7 @@ public class WaveManager : MonoBehaviour
     public Wave[] waves;
     private bool noMoreWaves = false;
     public TurnManager tm;
+    public CameraController cam;
 
     public void Start()
     {
@@ -28,6 +29,7 @@ public class WaveManager : MonoBehaviour
         {
             spawnpoint = n.transform.position;
             addedCharacter = (Instantiate(waves[currentWaveIndex]._enemyPrefab, spawnpoint, Quaternion.identity)); //spawn an enemy for each 
+            cam.CentreCameraOnTransform(addedCharacter.transform.position);
             tm.adventurers.Add(addedCharacter);
         }
 
