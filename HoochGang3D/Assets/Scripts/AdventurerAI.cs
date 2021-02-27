@@ -15,6 +15,7 @@ public class AdventurerAI : MonoBehaviour
     private TurnManager tm;
     public NavMeshAgent agent;
     public float chasePercent = .50f; //1 is 50% chance, 2 is 75% chance etc.
+    [SerializeField] private int timeToMove = 5;
 
     public void Start()
     {
@@ -141,7 +142,7 @@ public class AdventurerAI : MonoBehaviour
         //modified version of GoToWell that takes in a transform instead of finding the well
 
         //wait one second on begining this coroutine
-        yield return new WaitForSeconds(5); //value can be changed
+        yield return new WaitForSeconds(timeToMove); //value can be changed
 
         //find all nodes within range
         //TODO check to make sure that the nodes arent occupied by walls or other characters. 
@@ -209,7 +210,7 @@ public class AdventurerAI : MonoBehaviour
             float shortestDistance = Mathf.Infinity;//set shortest distance to infinity
             foreach(GameObject g in targetsWithinRange)
             {
-                float distanceToGameObject = Vector3.Distance(transform.position, target.transform.position);//calculate distance between us and the other object
+                float distanceToGameObject = Vector3.Distance(transform.position, g.transform.position);//calculate distance between us and the other object
                 if(distanceToGameObject < shortestDistance)//always runs the first time since shortestdistance in infinite
                 {
                     shortestDistance = distanceToGameObject;
@@ -220,7 +221,7 @@ public class AdventurerAI : MonoBehaviour
             List<GameObject> gameObjectsWithShortestRange = new List<GameObject>();
             foreach(GameObject g in targetsWithinRange)
             {
-                if(Vector3.Distance(transform.position, target.transform.position) == shortestDistance)
+                if(Vector3.Distance(transform.position, g.transform.position) == shortestDistance)
                 {
                     gameObjectsWithShortestRange.Add(g);
                 }
