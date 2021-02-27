@@ -1,12 +1,36 @@
 fileFormatVersion: 2
 guid: b38c84cb64f58c14baf40ecbbdea65b5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1626498756299900917
+    second: Goblin_Melee_Sheet_0
+  - first:
+      213: 5477359567649565724
+    second: Goblin_Melee_Sheet_1
+  - first:
+      213: 8103477124668340984
+    second: Goblin_Melee_Sheet_2
+  - first:
+      213: -6475456547132744102
+    second: Goblin_Melee_Sheet_3
+  - first:
+      213: -7092654296084737153
+    second: Goblin_Melee_Sheet_4
+  - first:
+      213: -623791477277464793
+    second: Goblin_Melee_Sheet_5
+  - first:
+      213: -6820533505823476822
+    second: Goblin_Melee_Sheet_6
+  - first:
+      213: -1137789388362925118
+    second: Goblin_Melee_Sheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -35,13 +59,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,9 +74,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -73,13 +97,205 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Goblin_Melee_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 807
+        width: 188
+        height: 198
+      alignment: 9
+      pivot: {x: 0.5784793, y: 0.5062108}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7ced4500c729610800000000000000
+      internalID: 1626498756299900917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Melee_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 807
+        width: 181
+        height: 198
+      alignment: 9
+      pivot: {x: 0.45245057, y: 0.49379167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ce6d8a18d730c40800000000000000
+      internalID: 5477359567649565724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Melee_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 807
+        width: 207
+        height: 198
+      alignment: 9
+      pivot: {x: 0.41090694, y: 0.5248413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa3c55c285557070800000000000000
+      internalID: 8103477124668340984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Melee_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 807
+        width: 193
+        height: 198
+      alignment: 9
+      pivot: {x: 0.6146708, y: 0.52483976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5edcad249e8226a0800000000000000
+      internalID: -6475456547132744102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Melee_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 57
+        width: 207
+        height: 206
+      alignment: 9
+      pivot: {x: 0.6247328, y: 0.50000054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7398370f74d19d90800000000000000
+      internalID: -7092654296084737153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Melee_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 56
+        width: 224
+        height: 206
+      alignment: 9
+      pivot: {x: 0.67564446, y: 0.51790583}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727e5f6d4f8d757f0800000000000000
+      internalID: -623791477277464793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Melee_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 57
+        width: 237
+        height: 206
+      alignment: 9
+      pivot: {x: 0.6608222, y: 0.52387446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3fdb6c9e89851a0800000000000000
+      internalID: -6820533505823476822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Melee_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 57
+        width: 200
+        height: 206
+      alignment: 9
+      pivot: {x: 0.43237853, y: 0.5298429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb3b6d5492c530f0800000000000000
+      internalID: -1137789388362925118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b6cb49a4d8de2694aa0b0c342898b6ad
     internalID: 0
     vertices: []
     indices: 

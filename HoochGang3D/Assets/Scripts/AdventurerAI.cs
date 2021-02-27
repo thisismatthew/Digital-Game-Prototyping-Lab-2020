@@ -262,22 +262,47 @@ public class AdventurerAI : MonoBehaviour
 
     private void MeleeAttack(GameObject target)
     {
+        //
+        if (FacingAway(target.transform))
+        {
+            gameObject.GetComponentInChildren<Animator>().Play("Adventurer_melee");
+        }
+        else
+        {
+            gameObject.GetComponentInChildren<Animator>().Play("Adventurer_melee_away");
+        }
         //works similarly to shank
         Debug.Log("Melee attack");
         target.gameObject.GetComponentInChildren<Animator>().Play("Goblin_death");
-        Destroy(target, 10f);
+        Destroy(target, 1f);
         StartCoroutine(tm.NextCharacter()); //move to next character
     }
 
     private void FireProjectile(Transform target)
     {
+        if (FacingAway(target))
+        {
+            gameObject.GetComponentInChildren<Animator>().Play("Adventurer_ranged");
+        }
+        else
+        {
+            gameObject.GetComponentInChildren<Animator>().Play("Adventurer_ranged_away");
+        }
         //works similarly to bottle rocket, but uses the range on line of sight
-        if(Vector3.Distance(transform.position, target.position) < los.Range*6) //sight range and shooting range are the same, if the ai can see you, it will shoot you
+        if (Vector3.Distance(transform.position, target.position) < los.Range*6) //sight range and shooting range are the same, if the ai can see you, it will shoot you
         {
             GameObject firedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
             Projectile projectileScript = firedProjectile.GetComponent<Projectile>();
             projectileScript.Seek(target);
             StartCoroutine(tm.NextCharacter()); //move to next character
         }
+    }
+
+    private bool FacingAway(Transform target)
+    {
+        if ((transform.position.x < target.position.x) || (transform.position.z < target.position.z))
+            return false;
+        else
+            return true;
     }
 }
