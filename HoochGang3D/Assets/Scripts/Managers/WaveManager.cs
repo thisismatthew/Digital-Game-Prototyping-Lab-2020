@@ -28,6 +28,10 @@ public class WaveManager : MonoBehaviour
         {
             spawnpoint = n.transform.position;
             addedCharacter = (Instantiate(waves[currentWaveIndex]._enemyPrefab, spawnpoint, Quaternion.identity)); //spawn an enemy for each 
+            if(currentWaveIndex != 0)
+            {
+                tm.cameraController.CentreCameraOnTransform(addedCharacter.transform.position);
+            }
             tm.adventurers.Add(addedCharacter);
         }
 

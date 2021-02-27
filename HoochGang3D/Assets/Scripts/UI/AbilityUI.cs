@@ -49,6 +49,8 @@ public class AbilityUI : MonoBehaviour
 
     public void MoveAbility()
     {
+        tm.cameraController.CentreCameraOnTransform(tm.currentCharacter.transform.position);
+
         if(GetCurrentAbilities().CurrentAbility is GoblinMovement)
         {
             GetCurrentAbilities().CurrentAbility = null;
@@ -80,6 +82,8 @@ public class AbilityUI : MonoBehaviour
 
     public void ShankAbility()
     {
+        tm.cameraController.CentreCameraOnTransform(tm.currentCharacter.transform.position);
+
         if(GetCurrentAbilities().CurrentAbility is StandardShank)
         {
             tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
@@ -109,6 +113,8 @@ public class AbilityUI : MonoBehaviour
 
     public void BottleRocketAbility()
     {
+        tm.cameraController.CentreCameraOnTransform(tm.currentCharacter.transform.position);
+
         if(GetCurrentAbilities().CurrentAbility is BottleRocket)
         {
             tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
@@ -140,6 +146,8 @@ public class AbilityUI : MonoBehaviour
 
     public void Pass()
     {
+        tm.cameraController.CentreCameraOnTransform(tm.currentCharacter.transform.position);
+
         if(GetCurrentAbilities().CurrentAbility is Pass)
         {
             tm.currentCharacter.GetComponent<Abilities>().CurrentAbility = null;
