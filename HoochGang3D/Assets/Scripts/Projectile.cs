@@ -55,6 +55,7 @@ public class Projectile : MonoBehaviour
             enemy.gameObject.GetComponentInChildren<Animator>().Play("goblin_death");
             FindObjectOfType<AudioManager>().Play("Goblin_Death_1");
         }
+
         Destroy(enemy.gameObject, 3f);
     }
 

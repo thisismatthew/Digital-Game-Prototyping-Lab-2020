@@ -32,9 +32,15 @@ public class StandardShank : Attack
 
     public override void Execute(GameObject target)
     {
+        if(FacingAway(target.transform))
+            gameObject.GetComponentInChildren<Animator>().Play("goblin_melee");
+        else
+            gameObject.GetComponentInChildren<Animator>().Play("goblin_melee_away");
+
         base.Execute();
         if (target.CompareTag("Adventurer"))
         {
+            
             FindObjectOfType<AudioManager>().Play("Melee_Attack");
             target.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
             FindObjectOfType<AudioManager>().Play("Adventurer_Death_1");
@@ -61,5 +67,13 @@ public class StandardShank : Attack
                 }
             }
         }
+    }
+
+    private bool FacingAway(Transform target)
+    {
+        if ((transform.position.x < target.position.x) || (transform.position.z < target.position.z))
+            return false;
+        else
+            return true;
     }
 }

@@ -38,6 +38,11 @@ public class BottleRocket : Attack
 
     public override void Execute(GameObject _gameObject)
     {
+        if (FacingAway(target.transform))
+            gameObject.GetComponentInChildren<Animator>().Play("goblin_ranged");
+        else
+            gameObject.GetComponentInChildren<Animator>().Play("goblin_ranged_away");
+
         base.Execute();
 
         //find out if the game object is a node, or if the gameobject is a character
@@ -72,5 +77,13 @@ public class BottleRocket : Attack
         }
 
         Debug.Log("What am I shooting at? (Enemy behind obstacle)");
+    }
+
+    private bool FacingAway(Transform target)
+    {
+        if ((transform.position.x < target.position.x) || (transform.position.z < target.position.z))
+            return false;
+        else
+            return true;
     }
 }
