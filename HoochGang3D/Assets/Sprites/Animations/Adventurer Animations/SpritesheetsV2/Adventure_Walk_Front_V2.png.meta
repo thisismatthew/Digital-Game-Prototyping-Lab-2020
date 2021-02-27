@@ -1,0 +1,310 @@
+fileFormatVersion: 2
+guid: c529f3b3757d60e41a13381248b24750
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2479465747051701454
+    second: Adventure_Walk_Front_V2_0
+  - first:
+      213: 2253275282030795703
+    second: Adventure_Walk_Front_V2_1
+  - first:
+      213: 1489046497411484751
+    second: Adventure_Walk_Front_V2_2
+  - first:
+      213: 6466477430487698796
+    second: Adventure_Walk_Front_V2_3
+  - first:
+      213: -1523309441861999319
+    second: Adventure_Walk_Front_V2_4
+  - first:
+      213: 125301409391098606
+    second: Adventure_Walk_Front_V2_5
+  - first:
+      213: 7693902757561931069
+    second: Adventure_Walk_Front_V2_6
+  - first:
+      213: -6872409236050509424
+    second: Adventure_Walk_Front_V2_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_V2_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 559
+        width: 422
+        height: 406
+      alignment: 9
+      pivot: {x: 0.45338365, y: 0.48485848}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4e3cdc5f4d86220800000000000000
+      internalID: 2479465747051701454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_V2_1
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 543
+        width: 343
+        height: 422
+      alignment: 9
+      pivot: {x: 0.27417207, y: 0.5174815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb1d9e3eed354f10800000000000000
+      internalID: 2253275282030795703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_V2_2
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 553
+        width: 212
+        height: 492
+      alignment: 9
+      pivot: {x: 0.45940357, y: 0.42003217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c404c66e72aa410800000000000000
+      internalID: 1489046497411484751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_V2_3
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 552
+        width: 248
+        height: 510
+      alignment: 9
+      pivot: {x: 0.39093116, y: 0.41321135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6dcc4056fa8db950800000000000000
+      internalID: 6466477430487698796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_V2_4
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 66
+        width: 229
+        height: 476
+      alignment: 9
+      pivot: {x: 0.40335763, y: 0.40184605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92521da222e1cdae0800000000000000
+      internalID: -1523309441861999319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_V2_5
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 55
+        width: 340
+        height: 407
+      alignment: 9
+      pivot: {x: 0.2468662, y: 0.51208377}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeabc9cc7f82db100800000000000000
+      internalID: 125301409391098606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_V2_6
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 47
+        width: 417
+        height: 415
+      alignment: 9
+      pivot: {x: 0.49705186, y: 0.5118509}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3590e04bcb36ca60800000000000000
+      internalID: 7693902757561931069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventure_Walk_Front_V2_7
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 55
+        width: 342
+        height: 406
+      alignment: 9
+      pivot: {x: 0.34181795, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091881e163c40a0a0800000000000000
+      internalID: -6872409236050509424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8e81c1c1f437234408c4b6fb5a6e61cf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
