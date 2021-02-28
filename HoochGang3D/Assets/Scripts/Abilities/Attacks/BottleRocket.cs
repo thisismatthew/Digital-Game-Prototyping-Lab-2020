@@ -38,11 +38,6 @@ public class BottleRocket : Attack
 
     public override void Execute(GameObject _gameObject)
     {
-        if (FacingAway(target.transform))
-            gameObject.GetComponentInChildren<Animator>().Play("goblin_ranged");
-        else
-            gameObject.GetComponentInChildren<Animator>().Play("goblin_ranged_away");
-
         base.Execute();
 
         //find out if the game object is a node, or if the gameobject is a character
@@ -59,7 +54,12 @@ public class BottleRocket : Attack
             target = _gameObject;
         }
 
-        if(Vector3.Distance(transform.position, target.transform.position) < range*6)
+        if (FacingAway(target.transform))
+            gameObject.GetComponentInChildren<Animator>().Play("goblin_ranged");
+        else
+            gameObject.GetComponentInChildren<Animator>().Play("goblin_ranged_away");
+
+        if (Vector3.Distance(transform.position, target.transform.position) < range*6)
         {
             Ray ray = new Ray(transform.position, (target.transform.position - transform.position));
             if (Physics.Raycast(ray, out RaycastHit hit))
