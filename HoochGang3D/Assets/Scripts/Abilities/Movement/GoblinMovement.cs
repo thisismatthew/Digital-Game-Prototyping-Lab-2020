@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class GoblinMovement : Movement
 {
-    private bool moving = false;
+    //private bool moving = false;
     public override void DisplayRange()
     {
         foreach (GameObject n in nm.nodes)
