@@ -143,6 +143,7 @@ MonoBehaviour:
   currentNode: {fileID: 0}
   tm: {fileID: 0}
   nm: {fileID: 0}
+  actionsLeft: 0
   agentUI: {fileID: 1562415363811174449}
   _meshRenderer: {fileID: 1488902905406463585}
   stealthGoblinMaterial: {fileID: 2100000, guid: d2d5b796c3dfa344da5a2af85af90c2a, type: 2}
@@ -179,7 +180,7 @@ MonoBehaviour:
   isAttack: 0
   agent: {fileID: 0}
   moveMaterial: {fileID: 2100000, guid: 43786be90bde26b4d803d83b4f824951, type: 2}
-  moveColor: {r: 0.4943396, g: 1, b: 0.6492055, a: 1}
+  moveColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
 --- !u!114 &1696556681180957482
 MonoBehaviour:
   m_ObjectHideFlags: 0
