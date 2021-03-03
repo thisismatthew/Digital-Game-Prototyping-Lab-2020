@@ -32,10 +32,12 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            doMovement = !doMovement;
-        }*/
+           //doMovement = !doMovement;
+           Debug.Log("Quit application");
+           Application.Quit();
+        }
 
         /*if(!doMovement)
         {
