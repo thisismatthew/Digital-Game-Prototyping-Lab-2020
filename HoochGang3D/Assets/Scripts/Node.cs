@@ -53,10 +53,10 @@ public class Node : MonoBehaviour
             return;
         }
         //gotta be pointing at a gameobject
-        if (EventSystem.current.IsPointerOverGameObject())
+       /* if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
-        }
+        }*/
         //object is in range of the ability. 
         if (!IsNodeInRange())
         {
