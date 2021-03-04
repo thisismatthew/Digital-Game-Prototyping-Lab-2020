@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class Projectile : MonoBehaviour
 {
@@ -56,7 +57,18 @@ public class Projectile : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Goblin_Death_1");
         }
 
+        Kill(enemy);
+    }
+
+    public static void Kill(Transform enemy)
+    {
+        Destroy(enemy.GetComponent<AnimationConditions>());
+        Destroy(enemy.GetComponent<NavMeshAgent>());
+        Destroy(enemy.GetComponent<AdventurerAI>());
+        Destroy(enemy.GetComponent<LineOfSight>());
+        Destroy(enemy.GetComponent<Adventurer>());
         Destroy(enemy.gameObject, 3f);
+        FindObjectOfType<TurnManager>().adventurers.Remove(enemy.gameObject);
     }
 
     private void PointAtTarget(Vector3 targetPos)

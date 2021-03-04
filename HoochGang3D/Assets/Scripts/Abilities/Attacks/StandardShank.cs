@@ -45,7 +45,8 @@ public class StandardShank : Attack
             target.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
             FindObjectOfType<AudioManager>().Play("Adventurer_Death_1");
 
-            Destroy(target, 3f);
+            //Destroy(target, 3f);
+            Projectile.Kill(target.transform);
             GetComponent<Goblin>().ActionsLeft -= 1;
         }
         else
@@ -60,7 +61,8 @@ public class StandardShank : Attack
                         target.gameObject.GetComponentInChildren<Animator>().Play("Adventurer_death");
                         FindObjectOfType<AudioManager>().Play("Adventurer_Death_2");
 
-                        Destroy(target, 3f);
+                        //Destroy(target, 3f);
+                        Projectile.Kill(target.transform);
                         GetComponent<Goblin>().ActionsLeft -= 1;
                         break;
                     }

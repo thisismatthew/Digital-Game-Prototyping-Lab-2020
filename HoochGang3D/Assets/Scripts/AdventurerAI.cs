@@ -275,7 +275,7 @@ public class AdventurerAI : MonoBehaviour
         //works similarly to shank
         Debug.Log("Melee attack");
         target.gameObject.GetComponentInChildren<Animator>().Play("Goblin_death");
-        Destroy(target, 1f);
+        Projectile.Kill(target.transform);
         StartCoroutine(tm.NextCharacter()); //move to next character
     }
 
