@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.AI;
@@ -64,7 +64,7 @@ public class Node : MonoBehaviour
         }
         //execute the ability of the current character passing this node's gameobject
         tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(gameObject);
-        if (tm.currentCharacter.GetComponent<Goblin>().ActionsLeft == 0)
+        if (tm.currentCharacter.GetComponent<Goblin>().ActionsLeft <= 0)
         {
             tm.currentCharacter.GetComponent<Goblin>().TurnTaken = true;
             //cycle the character in the turn manager. 

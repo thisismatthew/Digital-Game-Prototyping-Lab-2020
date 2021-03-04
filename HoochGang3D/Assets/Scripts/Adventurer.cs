@@ -60,7 +60,7 @@ public class Adventurer : Character
         Debug.Log("Passed All Checks!");
 
         tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(this.gameObject);
-        if (tm.currentCharacter.GetComponent<Goblin>().ActionsLeft == 0)
+        if (tm.currentCharacter.GetComponent<Goblin>().ActionsLeft <= 0)
         {
             tm.currentCharacter.GetComponent<Goblin>().TurnTaken = true;
             //cycle the character in the turn manager. 
