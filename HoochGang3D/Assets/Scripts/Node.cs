@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.AI;
+
 public class Node : MonoBehaviour
 {
     private Renderer rend;
@@ -57,6 +58,13 @@ public class Node : MonoBehaviour
         {
             return;
         }*/
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            if(EventSystem.current.currentSelectedGameObject.layer == 5)
+            {
+                return;
+            }
+        }
         //object is in range of the ability. 
         if (!IsNodeInRange())
         {

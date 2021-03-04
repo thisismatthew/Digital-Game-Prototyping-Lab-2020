@@ -39,6 +39,13 @@ public class Adventurer : Character
         {
             return;
         }*/
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            if(EventSystem.current.currentSelectedGameObject.layer == 5)
+            {
+                return;
+            }
+        }
         if (tm.currentCharacter.CompareTag(this.tag))
         {
             return; //don't interact during Adventurer turns
