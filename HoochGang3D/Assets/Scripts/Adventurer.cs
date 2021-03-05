@@ -60,11 +60,8 @@ public class Adventurer : Character
         }
         if (!CCInRange())
         {
-            Debug.Log("Failed here!");
             return;
         }
-
-        Debug.Log("Passed All Checks!");
 
         tm.currentCharacter.GetComponent<Abilities>().CurrentAbility.Execute(this.gameObject);
         if (tm.currentCharacter.GetComponent<Goblin>().ActionsLeft <= 0)

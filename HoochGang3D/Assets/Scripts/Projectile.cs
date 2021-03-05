@@ -6,10 +6,11 @@ public class Projectile : MonoBehaviour
     private Transform target;
     public float speed = 70f;
     [SerializeField] private Transform spriteTransform;
+    private static NodeManager nm;
     public void Start()
     {
         FindObjectOfType<AudioManager>().Play("Ranged_Attack");
-
+        nm = GameObject.Find("GameManager").GetComponent<NodeManager>();
     }
 
     public void Seek(Transform _target)
@@ -69,6 +70,7 @@ public class Projectile : MonoBehaviour
         Destroy(enemy.GetComponent<Adventurer>());
         Destroy(enemy.gameObject, 3f);
         FindObjectOfType<TurnManager>().adventurers.Remove(enemy.gameObject);
+        nm.ResetAllNodes();
     }
 
     private void PointAtTarget(Vector3 targetPos)
