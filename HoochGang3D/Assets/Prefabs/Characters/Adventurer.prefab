@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTag: 
-  range: 2
+  range: 3
   lineOfSightMaterial: {fileID: 2100000, guid: a0e3f2a98b62b7a419331c5e2b0d092d, type: 2}
   lineOfSightColor: {r: 1, g: 0.27348557, b: 0.22075468, a: 1}
 --- !u!114 &2471914571575025126
