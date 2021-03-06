@@ -63,7 +63,7 @@ public class TurnManager : MonoBehaviour
             }
         }
 
-        if (currentCharacter == null || !currentCharacter.gameObject.activeSelf) //last condition is just to skip enemy turn until Enemy AI is implemented
+        if (currentCharacter == null || !currentCharacter.gameObject.activeSelf || currentCharacter.GetComponent<Character>().ActionsLeft <= 0) //last condition is just to skip enemy turn until Enemy AI is implemented
         {
             StartCoroutine(NextCharacter());
         }
